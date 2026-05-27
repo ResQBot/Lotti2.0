@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+    <ros2_control name="Lotti2Flipper" type="system" rw_rate="50">
+        <hardware>
+            <plugin>lotti2_flipper_interface/FlipperInterface</plugin>
+            <param name="device">/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTA2HIEQ-if00-port0</param>
+           <!--  <param name="max_torque">0.006</param> -->
+            <!-- <param name="gear_ratio">1.0</param> -->
+            <param name="use_hardware">1</param>
+        </hardware>
+
+        <joint name="flipper_fr_joint">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+            <state_interface name="temp"/>
+        </joint>
+
+        <joint name="flipper_fl_joint">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+            <state_interface name="temp"/>
+        </joint>
+
+        <joint name="flipper_rr_joint">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+            <state_interface name="temp"/>
+        </joint>
+
+        <joint name="flipper_rl_joint">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+            <state_interface name="temp"/>
+        </joint>
+    </ros2_control>
+
+
+
+    <ros2_control name="Lotti2Chains" type="system">
+        <hardware>
+            <plugin>lotti2_drive_interface/DriveInterface</plugin>
+            <param name="device">/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0</param>
+            <param name="e_conversion">21</param>  <!-- motorRPM to eRPM equal to number of polepairs-->
+            <param name="gear_ratio">9</param>      <!-- gearbox ratio -->
+            <param name="Kt">0.198</param>          <!-- Kt value for the motor [Nm/A] -->
+            <param name="use_hardware">0</param>
+        </hardware>
+        <joint name="left_chain_joint">
+            <command_interface name="velocity"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+            <state_interface name="temp"/>
+        </joint>
+        <joint name="right_chain_joint">
+            <command_interface name="velocity"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+            <state_interface name="temp"/>
+        </joint>
+    </ros2_control>
+
+</robot>

@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+<!-- Main Body -->
+    <xacro:property name="body_length" value="0.7"/>
+    <xacro:property name="body_width" value="0.33"/>
+    <xacro:property name="body_height" value="0.15"/>
+    <xacro:property name="body_mass" value="25.0"/>
+
+    <!--    <joint name="world_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="body_link"/>
+    </joint>  -->
+
+    <link name="body_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 ${(body_height/2)+0.02}"/>
+            <geometry>
+            <box size="${body_length} ${body_width} ${body_height-0.04}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 ${(body_height/2)}"/>
+            <geometry>
+            <box size="0.1 0.1 0.1"/>
+            <!-- <box size="${body_length} ${body_width} ${body_height}"/> -->
+            </geometry>
+        </collision>
+        <innertial></innertial>
+        <!-- <xacro:inertial_box mass="${body_mass}" x="${body_length}" y="${body_width}" z="${body_height}">
+            <origin rpy="0 0 0" xyz="0 0 ${(body_height/2)}"/>
+        </xacro:inertial_box> -->
+    </link>
+
+
+    <!-- Chains (represented by wheels) -->
+    <!-- wheel macro-->
+    <xacro:property name="wheel_length" value="0.15"/>
+    <xacro:property name="wheel_radius" value="${0.22/2}"/>
+    <xacro:property name="wheel_mass" value="1"/>
+    <xacro:property name="wheel_seperation" value="${body_width - wheel_length}"/>
+
+    <xacro:macro name="chain_link" params="position">
+        <link name="${position}_chain_link">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${wheel_radius*2} ${wheel_length} ${wheel_radius*2}"/>
+                </geometry>
+                <material name="white"/>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+                <geometry>
+                    <box size="${wheel_radius*2} ${wheel_length} ${wheel_radius*2}"/>
+                </geometry>
+            </collision>
+            <xacro:inertial_box mass="${wheel_mass}" x="${wheel_radius*2}" y="${wheel_length}" z="${wheel_radius*2}">
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+            </xacro:inertial_box>
+        </link>
+    </xacro:macro>
+
+    <!-- Left Chain-->
+    <joint name="left_chain_joint" type="continuous">
+        <origin xyz="0 ${wheel_seperation/2} ${wheel_radius}" rpy="0 0 0"/>
+        <parent link="body_link"/>
+        <child link="left_chain_link"/>
+        <axis xyz="0 -1 0"/>
+    </joint>
+
+    <xacro:chain_link position="left"/>
+
+    <!-- Right Chain-->
+    <joint name="right_chain_joint" type="continuous">
+        <origin xyz="0 ${-wheel_seperation/2} ${wheel_radius}" rpy="0 0 0"/>
+        <parent link="body_link"/>
+        <child link="right_chain_link"/>
+        <axis xyz="0 1 0"/>
+    </joint>   
+
+    <xacro:chain_link position="right"/>
+
+
+    <!-- Flippers -->
+    <xacro:property name="flipper_length" value="0.4"/>
+    <xacro:property name="flipper_width" value="0.05"/>
+    <xacro:property name="flipper_height" value="0.2"/>
+    <xacro:property name="flipper_mass" value="3.0"/>
+
+    <!-- Flipper link macro -->
+    <xacro:macro name="flipper_link" params="position">
+        <link name="flipper_${position}_link">
+            <visual>
+                <origin xyz="${(flipper_height/2) - (flipper_length/2)} 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${flipper_length} ${flipper_width} ${flipper_height}"/>
+                </geometry>
+                <material name="red"/>
+            </visual>
+            <collision>
+                <origin xyz="${(flipper_height/2) - (flipper_length/2)} 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${flipper_length} ${flipper_width} ${flipper_height}"/>
+                </geometry>
+            </collision>
+            <xacro:inertial_box mass="${flipper_mass}" x="${flipper_length}" y="${flipper_width}" z="${flipper_height}">
+                <origin xyz="${(flipper_height/2) - (flipper_length/2)} 0 0" rpy="0 0 0"/>
+            </xacro:inertial_box>
+        </link>
+    </xacro:macro>
+
+
+    <!-- Front Left Flipper-->
+    <joint name="flipper_fr_joint" type="continuous">
+        <origin xyz="${body_length/2 - flipper_height/2} ${-(body_width/2) - (flipper_width/2)} ${flipper_height/2}" rpy="0 ${pi} 0"/>
+        <parent link="body_link"/>
+        <child link="flipper_fr_link"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <xacro:flipper_link position="fr"/>
+
+
+    <!-- Front Right Flipper-->
+    <joint name="flipper_fl_joint" type="continuous">
+        <origin xyz="${(body_length/2) - (flipper_height/2)} ${(body_width/2) + (flipper_width/2)} ${flipper_height/2}" rpy="0 ${pi} 0"/>
+        <parent link="body_link"/>
+        <child link="flipper_fl_link"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <xacro:flipper_link position="fl"/>
+
+
+    <!-- Rear Left Flipper-->
+    <joint name="flipper_rr_joint" type="continuous">
+        <origin xyz="${-(body_length/2) + (flipper_height/2)} ${-(body_width/2) - (flipper_width/2)} ${flipper_height/2}" rpy="0 0 0"/>
+        <parent link="body_link"/>
+        <child link="flipper_rr_link"/>
+        <axis xyz="0 -1 0"/>
+    </joint>
+
+    <xacro:flipper_link position="rr"/>
+
+
+    <!-- Rear Right Flipper-->
+    <joint name="flipper_rl_joint" type="continuous">
+        <origin xyz="${-(body_length/2) + (flipper_height/2)} ${(body_width/2) + (flipper_width/2)} ${flipper_height/2}" rpy="0 0 0"/>
+        <parent link="body_link"/>
+        <child link="flipper_rl_link"/>
+        <axis xyz="0 -1 0"/>
+    </joint>
+
+    <xacro:flipper_link position="rl"/>
+
+
+</robot>

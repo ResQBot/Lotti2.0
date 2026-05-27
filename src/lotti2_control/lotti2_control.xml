@@ -1,0 +1,27 @@
+<library path="lotti2_control">
+    <!-- list all hardware interfaces that are specified in this package-->
+
+    <class name="lotti2_flipper_interface/FlipperInterface"
+      type="lotti2_flipper_interface::FlipperInterface"
+      base_class_type="hardware_interface::SystemInterface">
+        <description>
+            Interface to drive Lotti's flippers
+        </description>
+    </class>
+    
+    <class name="lotti2_drive_interface/DriveInterface"
+      type="lotti2_drive_interface::DriveInterface"
+      base_class_type="hardware_interface::SystemInterface">
+        <description>
+            Interface to drive Lotti's tracks
+        </description>
+    </class>
+
+    <class name="lotti2_arm_interface/ArmInterface"
+      type="lotti2_arm_interface::ArmInterface"
+      base_class_type="hardware_interface::SystemInterface">
+        <description>
+            Interface to drive Lotti's arm
+        </description>
+    </class>
+</library>

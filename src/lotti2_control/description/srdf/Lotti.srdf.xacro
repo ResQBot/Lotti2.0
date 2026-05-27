@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Lotti3">
+
+    <!-- include files for parts -->    
+    <!-- <xacro:include filename="lotti_arm_group.xacro"/> -->
+    <xacro:include filename="lotti_body_group.xacro"/>
+
+<!--
+    <group name="full_lotti">
+        <group name="lotti_body_group" />
+        <group name="lotti_arm_group" />
+    </group>
+-->
+
+  <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. 
+        This tag disables collision checking between a specified pair of links. -->
+<!--    <disable_collisions link1="left_main_wheel_link" link2="arm_link1_link" reason="Never" />
+    <disable_collisions link1="right_main_wheel_link" link2="arm_link1_link" reason="Never" />
+    <disable_collisions link1="flipper_fl_link" link2="arm_link1_link" reason="Never" />
+    <disable_collisions link1="flipper_fr_link" link2="arm_link1_link" reason="Never" />
+    <disable_collisions link1="flipper_rl_link" link2="arm_link1_link" reason="Never" />
+    <disable_collisions link1="flipper_rr_link" link2="arm_link1_link" reason="Never" />
+
+    <disable_collisions link1="arm_link2_link" link2="left_main_wheel_link" reason="Never" />
+    <disable_collisions link1="arm_link2_link" link2="right_main_wheel_link" reason="Never" />
+
+    <disable_collisions link1="left_main_wheel_link" link2="arm_link3_link" reason="Never" />
+    <disable_collisions link1="right_main_wheel_link" link2="arm_link3_link" reason="Never" />
+    <disable_collisions link1="flipper_rl_link" link2="arm_link3_link" reason="Never" />
+    <disable_collisions link1="flipper_rr_link" link2="arm_link3_link" reason="Never" />
+
+    <disable_collisions link1="arm_link4_link" link2="left_main_wheel_link" reason="Never" />
+    <disable_collisions link1="arm_link4_link" link2="right_main_wheel_link" reason="Never" />
+
+    <disable_collisions link1="arm_link5_link" link2="left_main_wheel_link" reason="Never" />
+    <disable_collisions link1="arm_link5_link" link2="right_main_wheel_link" reason="Never" />
+
+    <disable_collisions link1="arm_link6_link" link2="left_main_wheel_link" reason="Never" />
+    <disable_collisions link1="arm_link6_link" link2="right_main_wheel_link" reason="Never" />
+
+    <disable_collisions link1="gripper_link" link2="left_main_wheel_link" reason="Never" />
+    <disable_collisions link1="gripper_link" link2="right_main_wheel_link" reason="Never" />
+-->
+</robot>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Lotti2">
+
+<!-- included files for properties -->
+    <xacro:include filename="urdf_inertial_shapes.xacro" />
+    <xacro:include filename="urdf_materials.xacro"/>
+
+<!-- include files for parts -->    
+    <!-- <xacro:include filename="Lotti_arm.xacro"/> --> 
+    <xacro:include filename="Lotti_body.xacro"/>
+    <!-- <xacro:include filename="Lotti_lidar.xacro"/> -->
+
+<!-- include controllers -->
+<!-- <xacro:include filename="Lotti_gazebo_control.xacro"/> -->
+    <xacro:include filename="$(find lotti2_control)/ros2_control/Lotti2.ros2_control.xacro"/> 
+</robot>
