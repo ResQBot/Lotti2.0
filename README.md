@@ -1,6 +1,6 @@
 # Lotti2.0 by Res.Q Bots Austria
 
-Lotti2.0 is the seccond generation of our tracked USER (**U**rban **S**earch and **E**xploration **R**obot).
+Lotti2.0 is the seccond generation of our tracked **U**rban **S**earch and **E**xploration **R**obot (or USER).
 
 We hope that any info you find in this repository helps you in your quest to develop your own USER, or robot of any other kind.
 If you have any questions or want to partner up, feel free to contact us.
