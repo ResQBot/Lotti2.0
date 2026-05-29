@@ -35,13 +35,12 @@ def generate_launch_description():
             print(f"--> [SKIPPED] {config['name']} skipped: Hardware target {config['device']} is not connected.")
 
     #launch the subscriber dashboard
-    launch_nodes.append(
-        Node(
-            package='lotti_vision', 
-            executable='camera_dashboard',
-            name='camera_dashboard',
-            output='screen'
-        )
-    )
-
-    return LaunchDescription(launch_nodes)
+    #launch_nodes.append(
+    #       Node(
+    #        package='lotti_vision', 
+    #        executable='camera_dashboard',
+    #        name='camera_dashboard',
+    #         output='screen'
+    #    )
+    #)
+    #return LaunchDescription(launch_nodes)
