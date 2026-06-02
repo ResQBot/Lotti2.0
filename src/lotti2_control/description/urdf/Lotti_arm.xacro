@@ -4,11 +4,405 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-
 <!-- Main Body info -->
   <xacro:property name="body_length" value="0.7"/>
   <xacro:property name="body_width" value="0.33"/>
   <xacro:property name="body_height" value="0.15"/>
+  <xacro:property name="body_mass" value="25.0"/>
+
+
+  <joint name="arm_base_joint" type="fixed">
+    <origin xyz="${body_length/2 - 0.1} 0 ${body_height}" rpy="0 0 0" />
+    <parent link="body_link" />
+    <child link="arm_base_link" />
+  </joint>
+
+
+  <link name="arm_base_link">
+    <inertial>
+      <origin
+        xyz="-0.0002249 -1.7664E-07 0.028417"
+        rpy="0 0 0" />
+      <mass
+        value="0.095547" />
+      <inertia
+        ixx="2.247E-05"
+        ixy="-3.7313E-10"
+        ixz="-2.9379E-07"
+        iyy="2.2991E-05"
+        iyz="-1.4294E-10"
+        izz="2.4917E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
   
+
+  <link name="arm1_link">
+    <inertial>
+      <origin
+        xyz="0.00015473 0.0066378 0.039559"
+        rpy="0 0 0" />
+      <mass
+        value="0.13887" />
+      <inertia
+        ixx="4.3388E-05"
+        ixy="2.9379E-07"
+        ixz="3.6171E-10"
+        iyy="4.8223E-05"
+        iyz="-4.4856E-06"
+        izz="4.5877E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  <joint name="arm1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.048"
+      rpy="0 0 0" />
+    <parent
+      link="arm_base_link" />
+    <child
+      link="arm1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.0"
+      upper="3.0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+  <link name="arm2_link">
+    <inertial>
+      <origin
+        xyz="-0.09 0.009887 -2.6229E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.044594" />
+      <inertia
+        ixx="1.1591E-05"
+        ixy="-2.6124E-20"
+        ixz="-5.3542E-20"
+        iyy="0.00016075"
+        iyz="-9.8066E-22"
+        izz="0.00015494" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -0.2" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  <joint name="arm2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.04285 0.04755"
+      rpy="0 0 0" />
+    <parent
+      link="arm1_link" />
+    <child
+      link="arm2_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.1"
+      upper="3.2"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+  <link name="arm3_link">
+    <inertial>
+      <origin
+        xyz="0.0037748 -0.022075 0.02755"
+        rpy="0 0 0" />
+      <mass
+        value="0.23565" />
+      <inertia
+        ixx="7.7834E-05"
+        ixy="1.2652E-06"
+        ixz="-4.8745E-06"
+        iyy="7.7833E-05"
+        iyz="4.8747E-06"
+        izz="7.3141E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  <joint name="arm3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.18 -0.017 0"
+      rpy="0 0.0 0" />
+    <parent
+      link="arm2_link" />
+    <child
+      link="arm3_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.5"
+      upper="0.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+  <link name="arm4_link">
+    <inertial>
+      <origin
+        xyz="0.13759 -0.0029301 7.5985E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.14345" />
+      <inertia
+        ixx="3.2616E-05"
+        ixy="2.1538E-06"
+        ixz="8.6476E-11"
+        iyy="9.3258E-05"
+        iyz="-8.6904E-08"
+        izz="8.4066E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  <joint name="arm4_joint"
+    type="revolute">
+    <origin
+      xyz="0.04285 -0.02585 0.0551"
+      rpy="0 0 0" />
+    <parent
+      link="arm3_link" />
+    <child
+      link="arm4_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.5"
+      upper="3.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+  <link name="arm5_link">
+    <inertial>
+      <origin
+        xyz="0.063464 0.023999 0.0010452"
+        rpy="0 0 0" />
+      <mass
+        value="0.10145" />
+      <inertia
+        ixx="2.9716E-05"
+        ixy="-6.7226E-06"
+        ixz="-1.6102E-06"
+        iyy="3.9581E-05"
+        iyz="-1.1874E-06"
+        izz="4.0743E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  <joint name="arm5_joint"
+    type="revolute">
+    <origin
+      xyz="0.18185 -0.0325 0"
+      rpy="0 0 0" />
+    <parent
+      link="arm4_link" />
+    <child
+      link="arm5_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.0"
+      upper="2.0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+  <link name="arm6_link">
+    <inertial>
+      <origin
+        xyz="0.012243 -5.2736E-16 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.016119" />
+      <inertia
+        ixx="2.0956E-06"
+        ixy="2.3665E-20"
+        ixz="3.1918E-21"
+        iyy="2.6467E-06"
+        iyz="-1.192E-14"
+        izz="2.6067E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://lotti2_control/description/meshes/arm6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  <joint name="arm6_joint"
+    type="revolute">
+    <origin
+      xyz="0.096443 0.0316 0"
+      rpy="0 0 0" />
+    <parent
+      link="arm5_link" />
+    <child
+      link="arm6_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.5"
+      upper="3.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+
 
 </robot>
