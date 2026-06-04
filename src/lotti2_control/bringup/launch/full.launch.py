@@ -113,17 +113,17 @@ def generate_launch_description():
         arguments=["joint_state_broadcaster"],
     )
 
-    """
+    
     arm_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=[
-            "lotti2_arm_controller",
+            "lotti2_arm_group_controller",
             "--param-file",
             lotti2_controllers,
         ],
     )
-    """
+    
     drive_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -155,14 +155,14 @@ def generate_launch_description():
     )
 
     # Delay start of controllers after `joint_state_broadcaster`
-    """
+    
     delay_arm_controller = RegisterEventHandler(
         event_handler=OnProcessExit(
             target_action=joint_state_broadcaster_spawner,
             on_exit=[arm_controller_spawner],
         )
     )
-    """
+    
     
     delay_drive_controller = RegisterEventHandler(
         event_handler=OnProcessExit(
@@ -178,20 +178,20 @@ def generate_launch_description():
         )
     )
 
-    """
+    
     # Get parameters for the Servo node
-    servo_yaml = load_yaml("lotti2_control", "config/lotti_servo_config.yaml")
+    servo_yaml = load_yaml("lotti2_control", "config/lotti2_servo_config.yaml")
     servo_params = {"moveit_servo": servo_yaml}
 
     moveit_config = (
-        MoveItConfigsBuilder("lotti")
+        MoveItConfigsBuilder("lotti2")
         .robot_description(file_path="config/Lotti.urdf.xacro")
         .to_moveit_configs()
     )
 
     servo_node = Node(
         package="moveit_servo",
-        executable="servo_node_main",
+        executable="servo_node",
         parameters=[
             servo_params,
             moveit_config.robot_description,
@@ -207,7 +207,7 @@ def generate_launch_description():
             on_exit=[servo_node],
         )
     )
-    """
+    
 
     joy_node = Node(
         package='joy',
@@ -233,10 +233,10 @@ def generate_launch_description():
         robot_state_pub_node,
         joint_state_broadcaster_spawner,
         delay_rviz_after_joint_state_broadcaster_spawner,
-        #delay_arm_controller,
+        delay_arm_controller,
         delay_drive_controller,
         delay_flipper_controller,
-        #delay_servo_node,
+        delay_servo_node,
         joy_node,
         delay_teleop,
     ]
