@@ -140,7 +140,7 @@ class TeleOp(Node):
 
         # gripper controlls
         self.__gripper_msg = JointJog()
-        self.__gripper_msg.joint_names = ["arm1_joint","arm2_joint", "arm3_joint", "arm4_joint", "arm5_joint", "arm6_joint"]
+        self.__gripper_msg.joint_names = ["arm1_joint","arm2_joint", "arm3_joint", "arm4_joint", "arm5_joint", "arm6_joint", "arm7_joint"]
         self.__gripper_msg.duration = 0.05
 
         # Init class ->create subscriber, create timer
@@ -166,8 +166,8 @@ class TeleOp(Node):
 
 
 
-"""     # the servo_node service needs to be called to start
-    def __callServo(self):
+     # the servo_node service needs to be called to start
+    """def __callServo(self):
         self.__cli = self.create_client(ServoCommandType, '/servo_node/switch_command_type')
         while not self.__cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
@@ -175,8 +175,8 @@ class TeleOp(Node):
         request.command_type = ServoCommandType.Request.TWIST
         self.__future = self.__cli.call(request)
         rclpy.spin_until_future_complete(self, self.__future)
-        return self.__future.result() """
-
+        return self.__future.result() 
+    """
 
 
     def __checkCMDOutputEnable(self):
@@ -363,16 +363,16 @@ class TeleOp(Node):
             self.__arm_msg.twist.linear.y = - self.__d_pad_x
             self.__arm_msg.twist.linear.z = self.__d_pad_y
             self.__arm_msg.twist.angular.z = self.__left_stick_x        
-            self.__arm_msg.twist.angular.y = 0.0
+            self.__arm_msg.twist.angular.y = - self.__right_stick_y
             self.__arm_msg.twist.angular.x = tilt
 
             # construct joint message
             joint1 = float(self.__button_rb -self.__button_lb)
             joint2 = float(self.__button_x - self.__button_a)
             joint3 = float(-self.__button_y + self.__button_b)
-            joint6 = float(self.__right_stick_press - self.__left_stick_press)
+            gripper = float(self.__right_stick_press - self.__left_stick_press)
     
-            self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_x, self.__right_stick_y, joint6]
+            self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_x, self.__right_stick_y, tilt, gripper]
 
         else:
             self.__arm_msg.twist.linear.x = 0.0
@@ -382,7 +382,7 @@ class TeleOp(Node):
             self.__arm_msg.twist.angular.y = 0.0
             self.__arm_msg.twist.angular.x = 0.0
 
-            self.__gripper_msg.velocities = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+            self.__gripper_msg.velocities = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
         # add time stamps and seq number
         self.__gripper_msg.header.stamp = self.get_clock().now().to_msg()

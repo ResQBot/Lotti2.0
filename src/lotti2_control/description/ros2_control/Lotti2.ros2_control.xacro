@@ -118,6 +118,12 @@
             <state_interface name="position"/>
             <state_interface name="velocity"/>
         </joint>
+        <joint name="arm7_joint">
+            <command_interface name="position"/>
+            <command_interface name="velocity"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+        </joint>
     </ros2_control>
     
 </robot>

@@ -81,6 +81,7 @@ lotti2_arm_group_controller:
     - arm4_joint
     - arm5_joint
     - arm6_joint
+    - arm7_joint
     command_interfaces:
     - position
     - velocity
