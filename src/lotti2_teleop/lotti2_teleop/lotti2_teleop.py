@@ -360,11 +360,11 @@ class TeleOp(Node):
             # linear x-y-z is for linear motion relative to the reference link
             # angular x-y-z is for rotation around the reference links axes
             self.__arm_msg.twist.linear.x = self.__left_stick_y
-            self.__arm_msg.twist.linear.y = - self.__d_pad_x
-            self.__arm_msg.twist.linear.z = self.__d_pad_y
-            self.__arm_msg.twist.angular.z = self.__left_stick_x        
+            self.__arm_msg.twist.linear.y = self.__left_stick_x   
+            self.__arm_msg.twist.linear.z = tilt
+            self.__arm_msg.twist.angular.z = self.__right_stick_x     
             self.__arm_msg.twist.angular.y = - self.__right_stick_y
-            self.__arm_msg.twist.angular.x = tilt
+            self.__arm_msg.twist.angular.x = self.__d_pad_x
 
             # construct joint message
             joint1 = float(self.__button_rb -self.__button_lb)
