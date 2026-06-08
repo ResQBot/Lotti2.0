@@ -84,10 +84,8 @@ lotti2_arm_group_controller:
     - arm7_joint
     command_interfaces:
     - position
-    - velocity
     state_interfaces:
     - position
-    - velocity
 
     allow_partial_joints_goal: true
     open_loop_control: true
@@ -96,6 +94,6 @@ lotti2_arm_group_controller:
     allow_nonzero_velocity_at_trajectory_end: true
     constraints:
       stopped_velocity_tolerance: 0.01
-      goal_time: 0.02
+      goal_time: 0.1
 
-    update_rate: 50
+    update_rate: 25

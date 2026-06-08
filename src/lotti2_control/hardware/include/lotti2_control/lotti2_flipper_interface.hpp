@@ -23,7 +23,6 @@
 #include <chrono>
 #include <cstdint>
 #include <memory>
-
 #include "string"
 #include "vector"
 // ros2_control
@@ -42,7 +41,6 @@
 #include "rclcpp_lifecycle/state.hpp"
 // hardware
 #include <unistd.h>
-
 #include "serialPort/SerialPort.h"
 #include "unitreeMotor/unitreeMotor.h"
 

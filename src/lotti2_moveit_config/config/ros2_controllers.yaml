@@ -22,8 +22,6 @@ lotti2_arm_group_controller:
       - arm7_joint
     command_interfaces:
       - position
-      - velocity
     state_interfaces:
       - position
-      - velocity
     allow_nonzero_velocity_at_trajectory_end: true

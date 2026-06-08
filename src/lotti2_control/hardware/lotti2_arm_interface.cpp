@@ -50,6 +50,7 @@ hardware_interface::CallbackReturn ArmInterface::on_init(
     gear_ratio_         = stof(info_.hardware_parameters["gear_ratio"]);
     motor_resolution_   = stoi(info_.hardware_parameters["resolution"]);
     motor_acceleration_ = static_cast<uint8_t>(stoi(info_.hardware_parameters["acceleration"]));
+    motor_speed_        = static_cast<uint16_t>(stoi(info_.hardware_parameters["motor_speed"]));
     use_hardware_       = stoi(info_.hardware_parameters["use_hardware"]);
     if (!(use_hardware_ == 0 || use_hardware_ == 1)) {
         RCLCPP_ERROR(get_logger(), "ArmInterface: Invalid value for \"use_hardware\" in ros2_control file");
@@ -67,19 +68,16 @@ hardware_interface::CallbackReturn ArmInterface::on_configure(
     // set current positional buffer and command buffer to 0
     for (std::size_t i = 0; i < info_.joints.size(); i++) {
         arm_pos_[i]     = 0;
-        arm_spd_[i]     = 0;
         arm_pos_cmd_[i] = 0;
-        arm_spd_cmd_[i] = 0;
+        new_pos_[i]     = false;
     }
 
     // prepare serial connection only if use_hardware is set to "true"
     if (use_hardware_ == 1) {
-        if (arm_comms_.connected()) {
-            arm_comms_.disconnect();
-        }
+        // open serial communication
         arm_comms_.connect(device_);
         // set motor command mode
-        arm_comms_.setReq(0x82, info_.joints.size(), 0x05);
+        arm_comms_.setReq(0x82, 0x05);
     }
 
     // always reset values when configuring hardware
@@ -96,27 +94,21 @@ hardware_interface::CallbackReturn ArmInterface::on_configure(
 
 hardware_interface::CallbackReturn ArmInterface::on_cleanup(
   const rclcpp_lifecycle::State& /*previous_state*/) {
-    // if serial connection was established, close it
-    if (arm_comms_.connected()) {
-        arm_comms_.disconnect();
-    }
-
     return hardware_interface::CallbackReturn::SUCCESS;
 }
 
 hardware_interface::CallbackReturn ArmInterface::on_activate(
   const rclcpp_lifecycle::State& /*previous_state*/) {
     if (use_hardware_ == 1) {
-        if (!arm_comms_.connected()) {
-            RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Motors not connected");
-            return hardware_interface::CallbackReturn::ERROR;
-        }
         // enable motors
-        arm_comms_.setReq(0xF3, info_.joints.size(), 1);
+        arm_comms_.setReq(0xF3, 1);
         // set synchronous movement flag
-        arm_comms_.setReq(0x4A, info_.joints.size(), use_sync_);
+        arm_comms_.setReq(0x4A, use_sync_);
         // set zero positions
-        arm_comms_.setReq(0x92, info_.joints.size(), 0);
+        arm_comms_.setReq(0x92, 0);
+        // set regular updates
+        arm_comms_.setReq(0x01, 0x31);
+        // arm_comms_.setReq(0x01, 0x32);
     }
     // command and state should be equal when starting
     for (const auto& [name, descr] : joint_command_interfaces_) {
@@ -139,25 +131,22 @@ hardware_interface::return_type ArmInterface::read(
             RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Motors not connected");
             return hardware_interface::return_type::ERROR;
         }
-
-        for (std::size_t i = 0; i < info_.joints.size(); i++) {
-            // set motor id to choose which motor to poll from
-            uint8_t motor_id = static_cast<uint8_t>(i) + 1;
+        while (new_pos_[0] != true || new_pos_[1] != true || new_pos_[2] != true ||
+               new_pos_[3] != true || new_pos_[4] != true || new_pos_[5] != true) {
+            std::pair<uint8_t, uint64_t> answer_ = arm_comms_.readPos();
+            int ind                              = static_cast<int>(answer_.first) - 1;
             // get motor position in motor steps and convert to radiant
-            arm_pos_[i] = (static_cast<double>(arm_comms_.readPos(motor_id)) * 2 * M_PI) / (motor_resolution_ * gear_ratio_);
+            arm_pos_[ind] = (static_cast<double>(answer_.second) * 2 * M_PI) / (motor_resolution_ * gear_ratio_);
             // set state interface to current value
-            set_state(info_.joints[i].name + "/position", arm_pos_[i]);
-            // get motor speed in rpm and convert to rad/s
-            arm_spd_[i] = (static_cast<double>(arm_comms_.readSpd(motor_id)) * 2 * M_PI) / (60 * motor_resolution_ * gear_ratio_);
-            // set state interface to current value
-            set_state(info_.joints[i].name + "/velocity", arm_spd_[i]);
+            set_state(info_.joints[ind].name + "/position", arm_pos_[ind]);
+            new_pos_[ind] = true;
+            std::cout << "motor " << static_cast<int>(ind) << " pos: " << arm_pos_[ind] << std::endl;
         }
     }
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
     else {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
             set_state(info_.joints[i].name + "/position", get_command(info_.joints[i].name + "/position"));
-            set_state(info_.joints[i].name + "/velocity", get_command(info_.joints[i].name + "/velocity"));
         }
     }
 
@@ -168,15 +157,15 @@ hardware_interface::return_type ArmInterface::write(
   const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) {
     // only perform write if use_hardware is set to 1
     if (use_hardware_ == 1) {
-        for (std::size_t i = 0; i < info_.joints.size(); i++) {
+        for (std::size_t i = 0; i < 6; i++) {
             // select motor
             uint8_t motor_id = static_cast<uint8_t>(i) + 1;
             // convert arm position from radiant to motor steps
             arm_pos_cmd_[i] = static_cast<uint32_t>((get_command(info_.joints[i].name + "/position") * gear_ratio_ * motor_resolution_) / (2 * M_PI));
             // convert arm speed from rad/s to rpm
-            arm_spd_cmd_[i] = static_cast<uint16_t>((get_command(info_.joints[i].name + "/velocity") * 60 * gear_ratio_) / (2 * M_PI));
             // send commands to arm comms
-            arm_comms_.setArmValues(motor_id, arm_spd_cmd_[i], motor_acceleration_, arm_pos_cmd_[i]);
+            arm_comms_.setArmValues(motor_id, motor_speed_, motor_acceleration_, arm_pos_cmd_[i]);
+            new_pos_[i] = false;
         }
 
         // the motors can be programmed to start movement on a command (this enables better synchronization)

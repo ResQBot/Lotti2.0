@@ -12,6 +12,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sstream"
 
+#include "lotti2_arm_interface.hpp"
 
 class ArmComms {
 
@@ -22,7 +23,6 @@ class ArmComms {
         timeout_ms_ = 1000;
         serial_conn_.Open(serial_device);
         serial_conn_.SetBaudRate(LibSerial::BaudRate::BAUD_38400);
-        prepSync();
     }
 
 
@@ -36,9 +36,12 @@ class ArmComms {
     }
 
 
-    void setReq(uint8_t cmd, size_t motor_count, int mode) {
+    void setReq(uint8_t cmd, int mode) {
         std::string command_;
         switch (cmd) {
+            case 0x01:
+                command_ = "enable auto-update";
+                break;
             case 0xF3:
                 command_ = "enable motor";
                 break;
@@ -52,86 +55,117 @@ class ArmComms {
                 command_ = "set synchronous execution mode";
                 break;
         }
-        bool ackStatus;
+        // bool ackStatus;
         uint8_t motor_id;
-        for (size_t i = 0; i < motor_count; i++) {
-            ackStatus = false;
-            motor_id  = static_cast<uint8_t>(i) + 1;
+        for (size_t i = 0; i < 6; i++) {
+            //  ackStatus = false;
+            motor_id = static_cast<uint8_t>(i) + 1;
+            // while (!ackStatus) {
+            sendRequest(cmd, motor_id, static_cast<uint8_t>(mode));  // issue the request to the motors
+                                                                     //  ackStatus = waitingForACK(req_len, reqRxBuffer);         // Wait for the motors to answer
+                                                                     //  if (ackStatus == true) {                                 // Received answer
+                                                                     //      if (reqRxBuffer[2] == cmd && reqRxBuffer[3] == 1) {  // motor confirms mode set
+                                                                     //          break;
+                                                                     //      }
+                                                                     //      else {  // motor error setting mode (connection is good, since data was received. Check program)
+                                                                     //          std::cout << "ArmInterface failed to request " << command_ << " from motor " << motor_id << ". Retrying ..." << std::endl;
+                                                                     //      }
+                                                                     //  }
+                                                                     //  // if failed to receive mode confirmation
+                                                                     //  // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the slave address and baud rate
+                                                                     //  else {
+                                                                     //      std::cout << "ArmInterface failed to receive feedback from motor" << motor_id << ". Retrying ..." << std::endl;
+                                                                     //  }
+            // }
+            serial_conn_.FlushIOBuffers();
+        }
+    }
+
+    /*
+        int64_t readPos(uint8_t motor_id) {
+            bool ackStatus = false;
+            int64_t motor_pos;
             while (!ackStatus) {
-                sendRequest(cmd, motor_id, static_cast<uint8_t>(mode));  // issue the request to the motors
-                ackStatus = waitingForACK(req_len, reqRxBuffer);         // Wait for the motors to answer
-                if (ackStatus == true) {                                 // Received answer
-                    if (reqRxBuffer[2] == cmd && reqRxBuffer[3] == 1) {  // motor confirms mode set
-                        break;
-                    }
-                    else {  // motor error setting mode (connection is good, since data was received. Check program)
-                        std::cout << "ArmInterface failed to request " << command_ << " from motor " << motor_id << ". Retrying ...";
-                    }
+                sendRequest(0x31, motor_id, 0);                   // issue a query position information command for id-motor
+                ackStatus = waitingForACK(pos_len, posRxBuffer);  // Wait for the motor to answer
+                if (ackStatus == true) {                          // Received location information
+                    motor_pos = static_cast<int64_t>(
+                      static_cast<uint64_t>(posRxBuffer[3]) << 48 |
+                      static_cast<uint64_t>(posRxBuffer[4]) << 40 |
+                      static_cast<uint64_t>(posRxBuffer[5]) << 32 |
+                      static_cast<uint64_t>(posRxBuffer[6]) << 24 |
+                      static_cast<uint64_t>(posRxBuffer[7]) << 16 |
+                      static_cast<uint64_t>(posRxBuffer[8]) << 8 |
+                      static_cast<uint64_t>(posRxBuffer[9]) << 0);
+                    break;
                 }
-                // if failed to receive mode confirmation
+                // if failed to receive location information
+                // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the device address and baud rate
+                else {
+                    RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Failed to get position data. Retrying ...");
+                }
+            }
+            return (motor_pos);
+        }
+
+
+        int16_t readSpd(uint8_t motor_id) {
+            bool ackStatus = false;
+            int16_t motor_spd;
+            while (!ackStatus) {
+                sendRequest(0x32, motor_id, 0);                   // issue a query velocity information command for id-motor
+                ackStatus = waitingForACK(spd_len, spdRxBuffer);  // Wait for the motor to answer
+                if (ackStatus == true) {                          // Received velocity information
+                    motor_spd = static_cast<int16_t>(
+                      static_cast<uint16_t>(spdRxBuffer[4]) << 8 |
+                      static_cast<uint16_t>(spdRxBuffer[5]) << 0);
+                }
+                // if failed to receive velocity information
                 // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the slave address and baud rate
                 else {
-                    std::cout << "ArmInterface failed to receive feedback from motor" << motor_id << ". Retrying ...";
+                    RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Failed to get velocity data. Retrying ...");
                 }
             }
+            return (motor_spd);
         }
-    }
+    */
+    std::pair<uint8_t, int64_t> readPos() {
+        while (true) {
+            uint8_t motor_id;
+            int64_t motor_pos;
+            std::vector<uint8_t> rxMsg;
+            unsigned char r;
+            while (r != 0xFB) {
+                serial_conn_.ReadByte(r);  // read received data
+            }
+            serial_conn_.Read(rxMsg, 9);
 
+            std::cout << std::hex;
+            for (int g = 0; g < 8; g++) {
+                std::cout << static_cast<int>(rxMsg[g]) << " ";
+            }
+            std::cout << std::endl;
 
-    int64_t
-    readPos(uint8_t motor_id) {
-        bool ackStatus = false;
-        int64_t motor_pos;
-        while (!ackStatus) {
-            sendRequest(0x31, motor_id, 0);                   // issue a query position information command for id-motor
-            ackStatus = waitingForACK(pos_len, posRxBuffer);  // Wait for the motor to answer
-            if (ackStatus == true) {                          // Received location information
+            if (rxMsg[1] != 0x31) {
+                std::cout << "ERROR reading position data" << std::endl;
+            }
+            else {
+                motor_id  = rxMsg[0];
                 motor_pos = static_cast<int64_t>(
-                  static_cast<uint64_t>(posRxBuffer[3]) << 48 |
-                  static_cast<uint64_t>(posRxBuffer[4]) << 40 |
-                  static_cast<uint64_t>(posRxBuffer[5]) << 32 |
-                  static_cast<uint64_t>(posRxBuffer[6]) << 24 |
-                  static_cast<uint64_t>(posRxBuffer[7]) << 16 |
-                  static_cast<uint64_t>(posRxBuffer[8]) << 8 |
-                  static_cast<uint64_t>(posRxBuffer[9]) << 0);
-                break;
-            }
-            // if failed to receive location information
-            // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the device address and baud rate
-            else {
-                RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Failed to get position data. Retrying ...");
+                  static_cast<uint64_t>(rxMsg[2]) << 40 |
+                  static_cast<uint64_t>(rxMsg[3]) << 32 |
+                  static_cast<uint64_t>(rxMsg[4]) << 24 |
+                  static_cast<uint64_t>(rxMsg[5]) << 16 |
+                  static_cast<uint64_t>(rxMsg[6]) << 8 |
+                  static_cast<uint64_t>(rxMsg[7]) << 0);
+                return {motor_id, motor_pos};
             }
         }
-        return (motor_pos);
     }
-
-
-    int16_t readSpd(uint8_t motor_id) {
-        bool ackStatus = false;
-        int16_t motor_spd;
-        while (!ackStatus) {
-            sendRequest(0x32, motor_id, 0);                   // issue a query velocity information command for id-motor
-            ackStatus = waitingForACK(spd_len, spdRxBuffer);  // Wait for the motor to answer
-            if (ackStatus == true) {                          // Received velocity information
-                motor_spd = static_cast<int16_t>(
-                  static_cast<uint16_t>(spdRxBuffer[4]) << 8 |
-                  static_cast<uint16_t>(spdRxBuffer[5]) << 0);
-            }
-            // if failed to receive velocity information
-            // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the slave address and baud rate
-            else {
-                RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Failed to get velocity data. Retrying ...");
-            }
-        }
-        return (motor_spd);
-    }
-
 
     void setArmValues(uint8_t motor_id, uint16_t speed, uint8_t accel, uint32_t position) {
         cmdTxMsg.clear();                                                 // clear old TxMsg buffer
-        cmdTxBuffer[0]  = 0xFA;                                           // frame header
         cmdTxBuffer[1]  = motor_id;                                       // motor address
-        cmdTxBuffer[2]  = 0xF5;                                           // function code for setting sync mode
         cmdTxBuffer[3]  = static_cast<uint8_t>((speed >> 8) & 0xFF);      // higher 8 bit speed
         cmdTxBuffer[4]  = static_cast<uint8_t>((speed >> 0) & 0xFF);      // lower 8 bit speed
         cmdTxBuffer[5]  = accel;                                          // acceleration
@@ -140,13 +174,19 @@ class ArmComms {
         cmdTxBuffer[8]  = static_cast<uint8_t>((position >> 8) & 0xFF);   // position command bit15 - bit8
         cmdTxBuffer[9]  = static_cast<uint8_t>((position >> 0) & 0xFF);   // position command bit7  - bit0
         cmdTxBuffer[10] = getCheckSum(cmdTxBuffer, 10);                   // Calculate checksum
-        for (std::size_t i = 0; i < 5; i++) {
+        for (std::size_t i = 0; i < 11; i++) {
             cmdTxMsg[i] = cmdTxBuffer[i];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
         }
         serial_conn_.FlushIOBuffers();  // just in case
         serial_conn_.Write(cmdTxMsg);   // the serial port issues a command to read the real-time position
-
         // return messages are switched off, since position is polled regularly anyways
+        /*
+                std::cout << "sent " << std::hex;
+                for (int num = 0; num < 11; num++) {
+                    std::cout << static_cast<int>(cmdTxMsg[num]) << " ";
+                }
+                std::cout << std::endl;
+        */
     }
 
 
@@ -169,30 +209,36 @@ class ArmComms {
     LibSerial::SerialPort serial_conn_;
     int timeout_ms_;  // timeout before connection error is called
     // for motor communication
-    std::vector<uint8_t> cmdTxMsg;
-    std::vector<uint8_t> syncTxMsg;
+    std::vector<uint8_t> cmdTxMsg  = {0xFA, 0, 0xF5, 0, 0, 0, 0, 0, 0, 0, 0};
+    std::vector<uint8_t> syncTxMsg = {0xFA, 0x00, 0x4B, 0x45};
     std::vector<uint8_t> reqMsg;
-    uint8_t cmdTxBuffer[20];
-    uint8_t syncTxBuffer[4] = {0xFA, 0x00, 0x4B, 0};
-    uint8_t reqTxBuffer[5]  = {0xFA, 0, 0, 0, 0};
-    uint8_t posRxBuffer[10];
-    uint8_t spdRxBuffer[6];
+    uint8_t cmdTxBuffer[11] = {0xFA, 0, 0xF5, 0, 0, 0, 0, 0, 0, 0, 0};
+    uint8_t reqTxBuffer[7]  = {0xFA, 0, 0, 0, 0, 0, 0};
+    // uint8_t posRxBuffer[10];
+    // uint8_t spdRxBuffer[6];
     uint8_t reqRxBuffer[5];
-    uint8_t pos_len = 10;
-    uint8_t spd_len = 6;
-    uint8_t req_len = 5;
+    // uint8_t pos_len  = 10;
+    // uint8_t spd_len  = 6;
+    // uint8_t req_len  = 5;
+    int update_rate_ = 40;
 
-    void sendRequest(uint8_t cmd, u_int8_t id, uint8_t mode) {
+    void sendRequest(uint8_t cmd, uint8_t id, uint8_t mode) {
         reqMsg.clear();
         reqTxBuffer[1] = id;
         reqTxBuffer[2] = cmd;
         switch (cmd) {
+            case 0x01:
+                reqTxBuffer[3] = mode;
+                reqTxBuffer[4] = static_cast<uint8_t>((update_rate_ >> 8) & 0xFF);
+                reqTxBuffer[5] = static_cast<uint8_t>(update_rate_ & 0xFF);
+                reqTxBuffer[6] = getCheckSum(reqTxBuffer, 6);
+                break;
             case 0xF3:                  // enable motor
                 reqTxBuffer[3] = mode;  // 1 = enable, 0 = disable
                 reqTxBuffer[4] = getCheckSum(reqTxBuffer, 4);
                 break;
             case 0x82:                  // set motor command mode
-                reqTxBuffer[3] = 0x05;  // choose absolute axis position control mode
+                reqTxBuffer[3] = mode;  // choose absolute axis position control mode
                 reqTxBuffer[4] = getCheckSum(reqTxBuffer, 4);
                 break;
             case 0x92:  // set zero position
@@ -209,12 +255,20 @@ class ArmComms {
                 reqTxBuffer[3] = getCheckSum(reqTxBuffer, 3);
                 break;
         }
-        if (cmd == 0x92 || cmd == 0x32 || cmd == 0x32) {
+        if (cmd == 0x92 || cmd == 0x31 || cmd == 0x32) {
+            reqMsg.resize(4);
             for (std::size_t i = 0; i < 4; i++) {
                 reqMsg[i] = reqTxBuffer[i];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
             }
         }
+        else if (cmd == 0x01) {
+            reqMsg.resize(7);
+            for (std::size_t i = 0; i < 7; i++) {
+                reqMsg[i] = reqTxBuffer[i];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
+            }
+        }
         else {
+            reqMsg.resize(5);
             for (std::size_t i = 0; i < 5; i++) {
                 reqMsg[i] = reqTxBuffer[i];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
             }
@@ -233,33 +287,27 @@ class ArmComms {
         return (static_cast<uint8_t>(sum & 0xFF));  // return checksum
     }
 
-
-    bool waitingForACK(uint8_t len, uint8_t (&rxBuffer)[]) {
-        bool retVal;  // return value to flag success/error
-        std::vector<uint8_t> rxMsg;
-        serial_conn_.Read(rxMsg, len, 500);  // read received data
-        for (std::size_t i = 0; i < len; i++) {
-            rxBuffer[i] = rxMsg[i];
-        }
-        if (rxBuffer[0] == 0xFB) {  // check received header
-            if (rxBuffer[len - 1] == getCheckSum(rxBuffer, len - 1)) {
-                retVal = true;  // checksum correct
+    /*
+        bool waitingForACK(uint8_t len, uint8_t (&rxBuffer)[]) {
+            bool retVal;  // return value to flag success/error
+            std::vector<uint8_t> rxMsg;
+            serial_conn_.Read(rxMsg, len, 1000);  // read received data
+            for (std::size_t i = 0; i < len; i++) {
+                rxBuffer[i] = rxMsg[i];
+            }
+            if (rxBuffer[0] == 0xFB) {  // check received header
+                if (rxBuffer[len - 1] == getCheckSum(rxBuffer, len - 1)) {
+                    retVal = true;  // checksum correct
+                }
+                else {
+                    retVal = false;  // Verification error, return false
+                }
             }
             else {
-                retVal = false;  // Verification error, return false
+                retVal = false;  // wrong header
             }
+            return (retVal);
         }
-        else {
-            retVal = false;  // wrong header
-        }
-        return (retVal);
-    }
-
-    void prepSync() {
-        syncTxBuffer[4] = getCheckSum(syncTxBuffer, 3);
-        for (std::size_t i = 0; i < 4; i++) {
-            syncTxMsg[i] = syncTxBuffer[i];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
-        }
-    }
+            */
 };
 #endif  // LOTTI2_CONTROL__ARM_COMMS_HPP

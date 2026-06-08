@@ -74,13 +74,13 @@ class ArmInterface : public hardware_interface::SystemInterface {
     double gear_ratio_;
     int motor_resolution_;
     uint8_t motor_acceleration_;
+    uint16_t motor_speed_;
     int use_hardware_;
     uint8_t use_sync_;
     // data conversion
     double arm_pos_[6];
-    double arm_spd_[6];
     uint32_t arm_pos_cmd_[6];
-    uint16_t arm_spd_cmd_[6];
+    bool new_pos_[6];
 
     // motor members
     ArmComms arm_comms_;
