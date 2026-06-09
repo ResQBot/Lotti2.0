@@ -24,6 +24,7 @@ class ArmComms {
         timeout_ms_ = 1000;
         serial_conn_.Open(serial_device);
         serial_conn_.SetBaudRate(LibSerial::BaudRate::BAUD_115200);
+        serial_conn_.FlushIOBuffers();
     }
 
 
@@ -65,14 +66,16 @@ class ArmComms {
             }
             if (posRxBuffer[1] == (motor_id + 1) && posRxBuffer[2] == 0x31 && posRxBuffer[9] == getCheckSum(posRxBuffer, 9)) {
                 motor_pos = static_cast<int64_t>(
-                  static_cast<uint64_t>(posRxBuffer[3]) << 40 |
-                  static_cast<uint64_t>(posRxBuffer[4]) << 32 |
-                  static_cast<uint64_t>(posRxBuffer[5]) << 24 |
-                  static_cast<uint64_t>(posRxBuffer[6]) << 16 |
-                  static_cast<uint64_t>(posRxBuffer[7]) << 8 |
-                  static_cast<uint64_t>(posRxBuffer[8]) << 0);
+                  static_cast<uint64_t>(posRxBuffer[3]) << 56 |
+                  static_cast<uint64_t>(posRxBuffer[4]) << 48 |
+                  static_cast<uint64_t>(posRxBuffer[5]) << 40 |
+                  static_cast<uint64_t>(posRxBuffer[6]) << 32 |
+                  static_cast<uint64_t>(posRxBuffer[7]) << 24 |
+                  static_cast<uint64_t>(posRxBuffer[8]) << 16);
+                motor_pos = motor_pos / 0xffff;
 
                 success = true;
+                std::cout << motor_pos << std::endl;
             }
         }
         return (motor_pos);
