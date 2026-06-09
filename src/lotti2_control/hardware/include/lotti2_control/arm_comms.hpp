@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <time.h>
 #include <unistd.h>
 #include <cstdlib>
 #include <cstring>
@@ -22,7 +23,7 @@ class ArmComms {
     void connect(const std::string& serial_device) {
         timeout_ms_ = 1000;
         serial_conn_.Open(serial_device);
-        serial_conn_.SetBaudRate(LibSerial::BaudRate::BAUD_38400);
+        serial_conn_.SetBaudRate(LibSerial::BaudRate::BAUD_115200);
     }
 
 
@@ -37,7 +38,7 @@ class ArmComms {
 
 
     void setReq(uint8_t cmd, int mode) {
-        std::string command_;
+        /*std::string command_;
         switch (cmd) {
             case 0x01:
                 command_ = "enable auto-update";
@@ -54,114 +55,95 @@ class ArmComms {
             case 0x4A:
                 command_ = "set synchronous execution mode";
                 break;
-        }
+        }*/
         // bool ackStatus;
         uint8_t motor_id;
-        for (size_t i = 0; i < 6; i++) {
+        for (size_t i = 1; i < 7; i++) {
             //  ackStatus = false;
-            motor_id = static_cast<uint8_t>(i) + 1;
+            motor_id = static_cast<uint8_t>(i);
             // while (!ackStatus) {
             sendRequest(cmd, motor_id, static_cast<uint8_t>(mode));  // issue the request to the motors
-                                                                     //  ackStatus = waitingForACK(req_len, reqRxBuffer);         // Wait for the motors to answer
-                                                                     //  if (ackStatus == true) {                                 // Received answer
-                                                                     //      if (reqRxBuffer[2] == cmd && reqRxBuffer[3] == 1) {  // motor confirms mode set
-                                                                     //          break;
-                                                                     //      }
-                                                                     //      else {  // motor error setting mode (connection is good, since data was received. Check program)
-                                                                     //          std::cout << "ArmInterface failed to request " << command_ << " from motor " << motor_id << ". Retrying ..." << std::endl;
-                                                                     //      }
-                                                                     //  }
-                                                                     //  // if failed to receive mode confirmation
-                                                                     //  // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the slave address and baud rate
-                                                                     //  else {
-                                                                     //      std::cout << "ArmInterface failed to receive feedback from motor" << motor_id << ". Retrying ..." << std::endl;
-                                                                     //  }
+            usleep(3000);
+            //  ackStatus = waitingForACK(req_len, reqRxBuffer);         // Wait for the motors to answer
+            //  if (ackStatus == true) {                                 // Received answer
+            //      if (reqRxBuffer[2] == cmd && reqRxBuffer[3] == 1) {  // motor confirms mode set
+            //          break;
+            //      }
+            //      else {  // motor error setting mode (connection is good, since data was received. Check program)
+            //          std::cout << "ArmInterface failed to request " << command_ << " from motor " << motor_id << ". Retrying ..." << std::endl;
+            //      }
+            //  }
+            //  // if failed to receive mode confirmation
+            //  // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the slave address and baud rate
+            //  else {
+            //      std::cout << "ArmInterface failed to receive feedback from motor" << motor_id << ". Retrying ..." << std::endl;
+            //  }
             // }
-            serial_conn_.FlushIOBuffers();
         }
+        serial_conn_.FlushIOBuffers();
     }
 
-    /*
-        int64_t readPos(uint8_t motor_id) {
-            bool ackStatus = false;
-            int64_t motor_pos;
-            while (!ackStatus) {
-                sendRequest(0x31, motor_id, 0);                   // issue a query position information command for id-motor
-                ackStatus = waitingForACK(pos_len, posRxBuffer);  // Wait for the motor to answer
-                if (ackStatus == true) {                          // Received location information
-                    motor_pos = static_cast<int64_t>(
-                      static_cast<uint64_t>(posRxBuffer[3]) << 48 |
-                      static_cast<uint64_t>(posRxBuffer[4]) << 40 |
-                      static_cast<uint64_t>(posRxBuffer[5]) << 32 |
-                      static_cast<uint64_t>(posRxBuffer[6]) << 24 |
-                      static_cast<uint64_t>(posRxBuffer[7]) << 16 |
-                      static_cast<uint64_t>(posRxBuffer[8]) << 8 |
-                      static_cast<uint64_t>(posRxBuffer[9]) << 0);
-                    break;
-                }
-                // if failed to receive location information
-                // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the device address and baud rate
-                else {
-                    RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Failed to get position data. Retrying ...");
-                }
-            }
-            return (motor_pos);
-        }
 
-
-        int16_t readSpd(uint8_t motor_id) {
-            bool ackStatus = false;
-            int16_t motor_spd;
-            while (!ackStatus) {
-                sendRequest(0x32, motor_id, 0);                   // issue a query velocity information command for id-motor
-                ackStatus = waitingForACK(spd_len, spdRxBuffer);  // Wait for the motor to answer
-                if (ackStatus == true) {                          // Received velocity information
-                    motor_spd = static_cast<int16_t>(
-                      static_cast<uint16_t>(spdRxBuffer[4]) << 8 |
-                      static_cast<uint16_t>(spdRxBuffer[5]) << 0);
-                }
-                // if failed to receive velocity information
-                // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the slave address and baud rate
-                else {
-                    RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Failed to get velocity data. Retrying ...");
-                }
+    int64_t readPos(uint8_t motor_id) {
+        bool success = false;
+        int64_t motor_pos;
+        while (!success) {
+            std::cout << "sending position request" << std::endl;
+            serial_conn_.FlushIOBuffers();
+            sendRequest(0x31, motor_id + 1, 0);  // issue a query position information command for id-motor
+            uint8_t b;
+            while (b != 0xFB) {
+                serial_conn_.ReadByte(b);
             }
-            return (motor_spd);
-        }
-    */
-    std::pair<uint8_t, int64_t> readPos() {
-        while (true) {
-            uint8_t motor_id;
-            int64_t motor_pos;
-            std::vector<uint8_t> rxMsg;
-            unsigned char r;
-            while (r != 0xFB) {
-                serial_conn_.ReadByte(r);  // read received data
+            posRxBuffer[0] = b;
+            for (int i = 1; i < 10; i++) {
+                serial_conn_.ReadByte(b);
+                posRxBuffer[i] = b;
             }
-            serial_conn_.Read(rxMsg, 9);
 
-            std::cout << std::hex;
-            for (int g = 0; g < 8; g++) {
-                std::cout << static_cast<int>(rxMsg[g]) << " ";
+            std::cout << "received " << std::hex;
+            for (int l = 0; l < 10; l++) {
+                std::cout << static_cast<int>(posRxBuffer[l]) << " ";
             }
             std::cout << std::endl;
 
-            if (rxMsg[1] != 0x31) {
-                std::cout << "ERROR reading position data" << std::endl;
-            }
-            else {
-                motor_id  = rxMsg[0];
+            if (posRxBuffer[1] == (motor_id + 1) && posRxBuffer[2] == 0x31 && posRxBuffer[9] == getCheckSum(posRxBuffer, 9)) {
                 motor_pos = static_cast<int64_t>(
-                  static_cast<uint64_t>(rxMsg[2]) << 40 |
-                  static_cast<uint64_t>(rxMsg[3]) << 32 |
-                  static_cast<uint64_t>(rxMsg[4]) << 24 |
-                  static_cast<uint64_t>(rxMsg[5]) << 16 |
-                  static_cast<uint64_t>(rxMsg[6]) << 8 |
-                  static_cast<uint64_t>(rxMsg[7]) << 0);
-                return {motor_id, motor_pos};
+                  static_cast<uint64_t>(posRxBuffer[3]) << 40 |
+                  static_cast<uint64_t>(posRxBuffer[4]) << 32 |
+                  static_cast<uint64_t>(posRxBuffer[5]) << 24 |
+                  static_cast<uint64_t>(posRxBuffer[6]) << 16 |
+                  static_cast<uint64_t>(posRxBuffer[7]) << 8 |
+                  static_cast<uint64_t>(posRxBuffer[8]) << 0);
+
+                success = true;
             }
         }
+        std::cout << motor_pos << std::endl;
+        return (motor_pos);
     }
+
+    /*
+            int16_t readSpd(uint8_t motor_id) {
+                bool ackStatus = false;
+                int16_t motor_spd;
+                while (!ackStatus) {
+                    sendRequest(0x32, motor_id, 0);                   // issue a query velocity information command for id-motor
+                    ackStatus = waitingForACK(spd_len, spdRxBuffer);  // Wait for the motor to answer
+                    if (ackStatus == true) {                          // Received velocity information
+                        motor_spd = static_cast<int16_t>(
+                          static_cast<uint16_t>(spdRxBuffer[4]) << 8 |
+                          static_cast<uint16_t>(spdRxBuffer[5]) << 0);
+                    }
+                    // if failed to receive velocity information
+                    // 1. Check the connection of the serial cable; 2. Check whether the motor is powered on; 3. Check the slave address and baud rate
+                    else {
+                        RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Failed to get velocity data. Retrying ...");
+                    }
+                }
+                return (motor_spd);
+            }
+        */
 
     void setArmValues(uint8_t motor_id, uint16_t speed, uint8_t accel, uint32_t position) {
         cmdTxMsg.clear();                                                 // clear old TxMsg buffer
@@ -214,13 +196,10 @@ class ArmComms {
     std::vector<uint8_t> reqMsg;
     uint8_t cmdTxBuffer[11] = {0xFA, 0, 0xF5, 0, 0, 0, 0, 0, 0, 0, 0};
     uint8_t reqTxBuffer[7]  = {0xFA, 0, 0, 0, 0, 0, 0};
-    // uint8_t posRxBuffer[10];
+    uint8_t posRxBuffer[10];
     // uint8_t spdRxBuffer[6];
     uint8_t reqRxBuffer[5];
-    // uint8_t pos_len  = 10;
-    // uint8_t spd_len  = 6;
-    // uint8_t req_len  = 5;
-    int update_rate_ = 40;
+    int update_rate_ = 50;
 
     void sendRequest(uint8_t cmd, uint8_t id, uint8_t mode) {
         reqMsg.clear();
@@ -273,8 +252,8 @@ class ArmComms {
                 reqMsg[i] = reqTxBuffer[i];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
             }
         }
-        serial_conn_.FlushIOBuffers();  // just in case
-        serial_conn_.Write(reqMsg);     // the serial port issues a motor enable command
+        // serial_conn_.FlushIOBuffers();  // just in case
+        serial_conn_.Write(reqMsg);  // the serial port issues a motor enable command
     }
 
 

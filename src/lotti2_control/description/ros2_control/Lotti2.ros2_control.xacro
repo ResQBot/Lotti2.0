@@ -72,7 +72,7 @@
     </ros2_control>
 
 
-    <ros2_control name="Lotti2Arm" type="system" rw_rate="25">
+    <ros2_control name="Lotti2Arm" type="system" rw_rate="20">
         <hardware>
             <plugin>lotti2_arm_interface/ArmInterface</plugin>
             <param name="device">/dev/serial/by-id/usb-1a86_USB_Single_Serial_5957006408-if00</param>               <!-- name of serial device used to sommunicate with the motors -->

@@ -107,8 +107,7 @@ hardware_interface::CallbackReturn ArmInterface::on_activate(
         // set zero positions
         arm_comms_.setReq(0x92, 0);
         // set regular updates
-        arm_comms_.setReq(0x01, 0x31);
-        // arm_comms_.setReq(0x01, 0x32);
+        // arm_comms_.setReq(0x01, 0x31);
     }
     // command and state should be equal when starting
     for (const auto& [name, descr] : joint_command_interfaces_) {
@@ -131,16 +130,12 @@ hardware_interface::return_type ArmInterface::read(
             RCLCPP_ERROR(rclcpp::get_logger("ArmInterface"), "Motors not connected");
             return hardware_interface::return_type::ERROR;
         }
-        while (new_pos_[0] != true || new_pos_[1] != true || new_pos_[2] != true ||
-               new_pos_[3] != true || new_pos_[4] != true || new_pos_[5] != true) {
-            std::pair<uint8_t, uint64_t> answer_ = arm_comms_.readPos();
-            int ind                              = static_cast<int>(answer_.first) - 1;
+        for (uint8_t i = 0; i < 6; i++) {
             // get motor position in motor steps and convert to radiant
-            arm_pos_[ind] = (static_cast<double>(answer_.second) * 2 * M_PI) / (motor_resolution_ * gear_ratio_);
+            arm_pos_[i] = (static_cast<double>(arm_comms_.readPos(i)) * 2 * M_PI) / (motor_resolution_ * gear_ratio_);
             // set state interface to current value
-            set_state(info_.joints[ind].name + "/position", arm_pos_[ind]);
-            new_pos_[ind] = true;
-            std::cout << "motor " << static_cast<int>(ind) << " pos: " << arm_pos_[ind] << std::endl;
+            set_state(info_.joints[i].name + "/position", arm_pos_[i]);
+            std::cout << "motor " << static_cast<int>(i) << " pos: " << arm_pos_[i] << std::endl;
         }
     }
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
