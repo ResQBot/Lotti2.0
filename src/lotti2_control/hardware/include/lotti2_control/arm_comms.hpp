@@ -43,9 +43,8 @@ class ArmComms {
         for (size_t i = 1; i < 7; i++) {
             motor_id = static_cast<uint8_t>(i);
             sendRequest(cmd, motor_id, static_cast<uint8_t>(mode));  // issue the request to the motors
-            usleep(3000);
+            usleep(10000);
         }
-        serial_conn_.FlushIOBuffers();
     }
 
 
@@ -75,36 +74,30 @@ class ArmComms {
                 motor_pos = motor_pos / 0xffff;
 
                 success = true;
-                std::cout << motor_pos << std::endl;
             }
         }
         return (motor_pos);
     }
 
 
-    void setArmValues(uint8_t motor_id, uint16_t speed, uint8_t accel, uint32_t position) {
-        cmdTxMsg.clear();                                                 // clear old TxMsg buffer
-        cmdTxBuffer[1]  = motor_id;                                       // motor address
-        cmdTxBuffer[3]  = static_cast<uint8_t>((speed >> 8) & 0xFF);      // higher 8 bit speed
-        cmdTxBuffer[4]  = static_cast<uint8_t>((speed >> 0) & 0xFF);      // lower 8 bit speed
-        cmdTxBuffer[5]  = accel;                                          // acceleration
-        cmdTxBuffer[6]  = static_cast<uint8_t>((position >> 24) & 0xFF);  // position command bit31 - bit24
-        cmdTxBuffer[7]  = static_cast<uint8_t>((position >> 16) & 0xFF);  // position command bit23 - bit16
-        cmdTxBuffer[8]  = static_cast<uint8_t>((position >> 8) & 0xFF);   // position command bit15 - bit8
-        cmdTxBuffer[9]  = static_cast<uint8_t>((position >> 0) & 0xFF);   // position command bit7  - bit0
-        cmdTxBuffer[10] = getCheckSum(cmdTxBuffer, 10);                   // Calculate checksum
-        for (std::size_t i = 0; i < 11; i++) {
-            cmdTxMsg[i] = cmdTxBuffer[i];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
+    void setArmValues(uint8_t motor_id, uint8_t direction, uint16_t speed, uint8_t accel) {
+        cmdTxMsg.clear();  // clear old TxMsg buffer
+        cmdTxMsg.resize(7);
+        cmdTxBuffer[1] = motor_id;                                               // motor address
+        cmdTxBuffer[3] = static_cast<uint8_t>((speed >> 8) & 0xFF) + direction;  // higher 8 bit speed
+        cmdTxBuffer[4] = static_cast<uint8_t>((speed >> 0) & 0xFF);              // lower 8 bit speed
+        cmdTxBuffer[5] = accel;                                                  // acceleration
+        cmdTxBuffer[6] = getCheckSum(cmdTxBuffer, 6);                            // Calculate checksum
+        for (int l = 0; l < 7; l++) {
+            cmdTxMsg[l] = cmdTxBuffer[l];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
         }
-        serial_conn_.FlushIOBuffers();  // just in case
-        serial_conn_.Write(cmdTxMsg);   // the serial port issues a command to read the real-time position
-        // return messages are switched off, since position is polled regularly anyways
+        serial_conn_.Write(cmdTxMsg);  // the serial port sends the speed command
         /*
-                std::cout << "sent " << std::hex;
-                for (int num = 0; num < 11; num++) {
-                    std::cout << static_cast<int>(cmdTxMsg[num]) << " ";
-                }
-                std::cout << std::endl;
+        std::cout << "sent " << std::hex;
+        for (int num = 0; num < 7; num++) {
+            std::cout << static_cast<int>(cmdTxMsg[num]) << " ";
+        }
+        std::cout << std::endl;
         */
     }
 
@@ -128,11 +121,11 @@ class ArmComms {
     LibSerial::SerialPort serial_conn_;
     int timeout_ms_;  // timeout before connection error is called
     // for motor communication
-    std::vector<uint8_t> cmdTxMsg  = {0xFA, 0, 0xF5, 0, 0, 0, 0, 0, 0, 0, 0};
+    std::vector<uint8_t> cmdTxMsg;
     std::vector<uint8_t> syncTxMsg = {0xFA, 0x00, 0x4B, 0x45};
     std::vector<uint8_t> reqMsg;
-    uint8_t cmdTxBuffer[11] = {0xFA, 0, 0xF5, 0, 0, 0, 0, 0, 0, 0, 0};
-    uint8_t reqTxBuffer[5]  = {0xFA, 0, 0, 0, 0};
+    uint8_t cmdTxBuffer[7] = {0xFA, 0, 0xF6, 0, 0, 0, 0};
+    uint8_t reqTxBuffer[5] = {0xFA, 0, 0, 0, 0};
     uint8_t posRxBuffer[10];
     uint8_t reqRxBuffer[5];
 
@@ -178,6 +171,9 @@ class ArmComms {
         }
         // serial_conn_.FlushIOBuffers();  // just in case
         serial_conn_.Write(reqMsg);  // the serial port issues a motor enable command
+    }
+
+    void sendArm() {
     }
 
 

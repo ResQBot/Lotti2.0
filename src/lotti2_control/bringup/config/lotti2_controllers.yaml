@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 50 #Hz
+    update_rate: 25 #Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -31,7 +31,7 @@ lotti2_flipper_controller:
     - velocity
     - temp
 
-    update_rate: 50
+    update_rate: 25
 
 
 
@@ -83,8 +83,9 @@ lotti2_arm_group_controller:
     - arm6_joint
     - arm7_joint
     command_interfaces:
-    - position
+    - velocity
     state_interfaces:
+    - velocity
     - position
 
     allow_partial_joints_goal: true
@@ -96,4 +97,4 @@ lotti2_arm_group_controller:
       stopped_velocity_tolerance: 0.01
       goal_time: 0.1
 
-    update_rate: 20
+    update_rate: 25

@@ -74,16 +74,16 @@ class ArmInterface : public hardware_interface::SystemInterface {
     double gear_ratio_;
     int motor_resolution_;
     uint8_t motor_acceleration_;
-    uint16_t motor_speed_;
+    uint16_t max_motor_speed_;
     int use_hardware_;
     uint8_t use_sync_;
     // data conversion
     double arm_pos_[6];
-    uint32_t arm_pos_cmd_[6];
-    bool new_pos_[6];
-
+    uint16_t arm_vel_cmd_[6];
+    uint8_t arm_direction_[6];
     // motor members
     ArmComms arm_comms_;
+    uint16_t speed = 0;
 };
 }  // namespace lotti2_arm_interface
 #endif  // LOTTI2_CONTROL_LOTTI2_ARM_INTERFACE_HPP_
