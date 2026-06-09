@@ -92,26 +92,6 @@ class ArmComms {
             cmdTxMsg[l] = cmdTxBuffer[l];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
         }
         serial_conn_.Write(cmdTxMsg);  // the serial port sends the speed command
-        /*
-        std::cout << "sent " << std::hex;
-        for (int num = 0; num < 7; num++) {
-            std::cout << static_cast<int>(cmdTxMsg[num]) << " ";
-        }
-        std::cout << std::endl;
-        */
-    }
-
-
-    void startSync() {
-        serial_conn_.FlushIOBuffers();  // just in case
-        serial_conn_.Write(syncTxMsg);  // the serial port issues a command to all motors to start the synchronous movement
-        /*
-        // if not all motors react to the sync action call, repeat as often as needed
-        for (size_t i = 0; i <= 3; i++) {
-            serial_conn_.Write(TxMsg);   // the serial port issues a command to read the real-time position
-            usleep(1);
-        }
-        */
     }
 
 
@@ -122,7 +102,6 @@ class ArmComms {
     int timeout_ms_;  // timeout before connection error is called
     // for motor communication
     std::vector<uint8_t> cmdTxMsg;
-    std::vector<uint8_t> syncTxMsg = {0xFA, 0x00, 0x4B, 0x45};
     std::vector<uint8_t> reqMsg;
     uint8_t cmdTxBuffer[7] = {0xFA, 0, 0xF6, 0, 0, 0, 0};
     uint8_t reqTxBuffer[5] = {0xFA, 0, 0, 0, 0};

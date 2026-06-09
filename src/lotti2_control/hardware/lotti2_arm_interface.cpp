@@ -55,10 +55,6 @@ hardware_interface::CallbackReturn ArmInterface::on_init(
     if (!(use_hardware_ == 0 || use_hardware_ == 1)) {
         RCLCPP_ERROR(get_logger(), "ArmInterface: Invalid value for \"use_hardware\" in ros2_control file");
     }
-    use_sync_ = static_cast<uint8_t>(stoi(info_.hardware_parameters["use_synchronization"]));
-    if (!(use_sync_ == 0 || use_sync_ == 1)) {
-        RCLCPP_ERROR(get_logger(), "ArmInterface: Invalid value for \"use_synchronization\" in ros2_control file");
-    }
 
     return CallbackReturn::SUCCESS;
 }
@@ -101,8 +97,6 @@ hardware_interface::CallbackReturn ArmInterface::on_activate(
     if (use_hardware_ == 1) {
         // enable motors
         arm_comms_.setReq(0xF3, 1);
-        // set synchronous movement flag
-        arm_comms_.setReq(0x4A, use_sync_);
         // set zero positions
         arm_comms_.setReq(0x92, 0);
     }
@@ -169,10 +163,6 @@ hardware_interface::return_type ArmInterface::write(
             // send commands to arm comms
             arm_comms_.setArmValues(motor_id, arm_direction_[i], arm_vel_cmd_[i], motor_acceleration_);
             usleep(1000);
-        }
-        // the motors can be programmed to start movement on a command (this enables better synchronization)
-        if (use_sync_ == 1) {
-            arm_comms_.startSync();
         }
     }
 

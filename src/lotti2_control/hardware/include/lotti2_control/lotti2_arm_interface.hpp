@@ -76,7 +76,6 @@ class ArmInterface : public hardware_interface::SystemInterface {
     uint8_t motor_acceleration_;
     uint16_t max_motor_speed_;
     int use_hardware_;
-    uint8_t use_sync_;
     // data conversion
     double arm_pos_[6];
     uint16_t arm_vel_cmd_[6];
