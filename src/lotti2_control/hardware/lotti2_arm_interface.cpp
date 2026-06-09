@@ -94,6 +94,8 @@ hardware_interface::CallbackReturn ArmInterface::on_configure(
 
 hardware_interface::CallbackReturn ArmInterface::on_cleanup(
   const rclcpp_lifecycle::State& /*previous_state*/) {
+    arm_comms_.disconnect();
+
     return hardware_interface::CallbackReturn::SUCCESS;
 }
 
