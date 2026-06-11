@@ -219,8 +219,8 @@ hardware_interface::return_type DriveInterface::write(
     // if use_hardware is set to 1 -> use real hardware
     if (use_hardware_ == 1) {
         // caluclate motor eRPM to send: * (60/2Pi) to convert from rad/s to rpm, gear ratio for the gear box, e_conv_ is the factor between eRPM and motor rpm
-        motorCommands_[0].speed = static_cast<int32_t>(get_command(info_.joints[0].name + "/velocity") * (60 / (2 * M_PI)) * gear_ratio_ * e_conv_ * (-1));
-        motorCommands_[1].speed = static_cast<int32_t>(get_command(info_.joints[1].name + "/velocity") * (60 / (2 * M_PI)) * gear_ratio_ * e_conv_);
+        motorCommands_[0].speed = static_cast<int32_t>(get_command(info_.joints[0].name + "/velocity") * (60 / (2 * M_PI)) * gear_ratio_ * e_conv_);
+        motorCommands_[1].speed = static_cast<int32_t>(get_command(info_.joints[1].name + "/velocity") * (60 / (2 * M_PI)) * gear_ratio_ * e_conv_ * (-1));
         // send command to motor via can interface
         drive_comms_.sendSpd(motorCommands_[0].motor_id, motorCommands_[0].speed);
         drive_comms_.sendSpd(motorCommands_[1].motor_id, motorCommands_[1].speed);

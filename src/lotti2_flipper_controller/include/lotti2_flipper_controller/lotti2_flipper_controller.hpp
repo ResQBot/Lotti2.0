@@ -53,8 +53,7 @@ class FlipperController : public controller_interface::ControllerInterface {
     std::vector<std::string> joint_names_;
     std::vector<std::string> command_interface_types_;
     std::vector<std::string> state_interface_types_;
-    double max_speed_   = 3.1416 * 3 / 4;
-    double update_rate_ = 50.0;
+    double max_speed_ = 1.0;
 
     // for subscriber
     rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr fr_flipper_command_subscriber_;
@@ -70,7 +69,7 @@ class FlipperController : public controller_interface::ControllerInterface {
 
     // list all interfaces
     std::vector<std::reference_wrapper<hardware_interface::LoanedCommandInterface>>
-      joint_position_command_interface_;
+      joint_velocity_command_interface_;
     // std::vector<std::reference_wrapper<hardware_interface::LoanedCommandInterface>>
     // joint_effort_command_interface_;
     std::vector<std::reference_wrapper<hardware_interface::LoanedStateInterface>>
@@ -86,7 +85,7 @@ class FlipperController : public controller_interface::ControllerInterface {
     std::unordered_map<
       std::string, std::vector<std::reference_wrapper<hardware_interface::LoanedCommandInterface>> *>
       command_interface_map_ = {
-        {"position", &joint_position_command_interface_}};
+        {"velocity", &joint_velocity_command_interface_}};
     // mapping state interfaces
     std::unordered_map<
       std::string, std::vector<std::reference_wrapper<hardware_interface::LoanedStateInterface>> *>

@@ -37,6 +37,10 @@ class ArmComms {
         return serial_conn_.IsOpen();
     }
 
+    void clear() {
+        serial_conn_.FlushIOBuffers();
+    }
+
 
     void setReq(uint8_t cmd, int mode) {
         uint8_t motor_id;

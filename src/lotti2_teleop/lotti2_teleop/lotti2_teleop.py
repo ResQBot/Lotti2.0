@@ -49,7 +49,6 @@ class TeleOp(Node):
         super().__init__('tele_op')
 
         #define variables
-
         #axes
         self.__left_stick_x = float(0)
         self.__left_stick_x_lock = Lock()
@@ -112,6 +111,12 @@ class TeleOp(Node):
         self.__button_opt_left_pressed = bool(False)
         self.__button_opt_left_last_pressed = 0.0
 
+        # toggle servo mode
+        #- self.__servo_state = bool(True)
+        #- self.__servo_state_old = bool(False)
+        #- self.__button--_pressed
+        #- self.__button--_last_pressed
+
         # flipper controlls
         self.__flipper_speed = float (0.0)
         self.__fr_flipper_cmd = Float32()
@@ -136,11 +141,10 @@ class TeleOp(Node):
         # arm controlls
         self.__arm_msg = TwistStamped()
         self.__arm_msg.header.frame_id = "arm6_link"
-        self.__servo_active = bool(False)
 
-        # gripper controlls
+        # joint controlls
         self.__gripper_msg = JointJog()
-        self.__gripper_msg.joint_names = ["arm1_joint","arm2_joint", "arm3_joint", "arm4_joint", "arm5_joint", "arm6_joint", "arm7_joint"]
+        self.__gripper_msg.joint_names = ["arm1_joint","arm2_joint", "arm3_joint", "arm4_joint", "arm5_joint", "arm6_joint"]
         self.__gripper_msg.duration = 0.05
 
         # Init class ->create subscriber, create timer
@@ -155,32 +159,38 @@ class TeleOp(Node):
 
     def __readParams(self):
         # declare parameters
-        self.declare_parameter('Publish_rate', 25)              #[Hz]
+        self.declare_parameter('Publish_rate', 20)              #[Hz]
 
         # read parameters
         self.__Publish_rate = rclpy.parameter.Parameter(
             'Publish_rate',
             rclpy.Parameter.Type.DOUBLE,
-            25.0
+            20.0
         ) 
 
 
 
      # the servo_node service needs to be called to start
-    """def __callServo(self):
-        self.__cli = self.create_client(ServoCommandType, '/servo_node/switch_command_type')
-        while not self.__cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...')
-        request = ServoCommandType.Request()
-        request.command_type = ServoCommandType.Request.TWIST
-        self.__future = self.__cli.call(request)
-        rclpy.spin_until_future_complete(self, self.__future)
-        return self.__future.result() 
-    """
+#-    def __callServo(self):
+#-        self.__cli = self.create_client(ServoCommandType, '/servo_node/switch_command_type')
+#-        while not self.__cli.wait_for_service(timeout_sec=1.0):
+#-            self.get_logger().info('service not available, waiting again...')
+#-        request = ServoCommandType.Request()
+#-        if (self.__servo_state == 0):
+#-            request.command_type = ServoCommandType.Request.JOINT_JOG
+#-        elif (self.__servo_state == 1):
+#-            request.command_type = ServoCommandType.Request.TWIST
+#-        elif (self.__servo_state == 3):
+#-            request.command_type = ServoCommandType.Request.POSE
+#-        else:
+#-            self.get_logger().error("unexpected command mode for arm requested.")
+#-        self.__future = self.__cli.call(request)
+#-        rclpy.spin_until_future_complete(self, self.__future)
+#-        return self.__future.result() 
+    
 
 
     def __checkCMDOutputEnable(self):
-
         # ----- Enable button check -----
         # If there was no joy msg received before and the twist output somehow is ENABLED, DISABLE the twist output.
         if (self.__first_joy_msg_received == False and self.__joy_enabled != False):
@@ -192,25 +202,20 @@ class TeleOp(Node):
             if (self.__joy_enabled == False and self.__button_opt_right_pressed == False and self.__button_opt_right == 1):
                     self.__button_opt_right_pressed = True
                     self.__button_opt_right_last_pressed = time.time()
-            
             # check if button is pressed long enough.
             elif (self.__joy_enabled == False and self.__button_opt_right_pressed == True and self.__button_opt_right == 1):
                 # messure how long the start button is pressed
                 time_difference = time.time() - self.__button_opt_right_last_pressed
-
                 # If the start button is pressed long enough, enable the controlles
                 if (time_difference > 1):
                     self.__joy_enabled = True
-                        
             # After the output was enabled, wait for the button to be released befor the button_pressed var is set to false.
             elif (self.__joy_enabled == True and self.__button_opt_right_pressed == True and self.__button_opt_right == 0):
                 self.__button_opt_right_pressed = False
-            
             # if joy is disabled and the start_button was pressed but is released before the output could be 
             # enabled, the button_pressed var is set to false to receive a new button press.
             elif (self.__joy_enabled == False and self.__button_opt_right_pressed == True and self.__button_opt_right == 0):
                 self.__button_opt_right_pressed = False
-
             # if joy is enabled and the enable button is pressed, disable the output.
             elif (self.__joy_enabled == True and self.__button_opt_right_pressed == False and self.__button_opt_right == 1):
                 self.__joy_enabled = False
@@ -223,25 +228,21 @@ class TeleOp(Node):
             else:
                 if (self.__joy_enabled == False and self.__joy_enabled_old == True):
                     self.get_logger().info("Tele Op: DISABLED")
-
             # Set the old state to the new state
             self.__joy_enabled_old = self.__joy_enabled
 
 
 
     def __checkArmMode(self):
-
         # ----- Enable button check -----
         # If there was no joy msg received before and the arm mode is ENABLED, DISABLE it.
         if (self.__first_joy_msg_received == False and self.__arm_enabled != False):
             self.__arm_enabled = False
-        
         elif (self.__first_joy_msg_received == True):
             # if current mode equals old mode and button is newly pressed, start timer
             if (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left == 1 and self.__button_opt_left_pressed == False):
                 self.__button_opt_left_pressed = True
                 self.__button_opt_left_last_pressed = time.time()
-
             # if timer has been started before
             elif (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left == 1 and self.__button_opt_left_pressed == True):
                 # messure how long the start button has been pressed
@@ -250,20 +251,47 @@ class TeleOp(Node):
                 if (time_difference > 1):
                     self.__arm_enabled = not self.__arm_enabled
                     if (self.__arm_enabled == True):
-                        
                         self.get_logger().info("Control Mode: ARM")
                     else:
                         self.get_logger().info("Control Mode: BODY")
-            
             # if mode has been switched, wait until start button is released, then change old mode status to enable new switch cycle
             elif (self.__arm_enabled == self.__arm_enabled_old and self.__button_opt_left_pressed == True and self.__button_opt_left == 0):
                 self.__button_opt_left_pressed = False
                 self.__arm_enabled_old = not self.__arm_enabled_old 
-            
             # if button is not pressed long enough, reset
             elif (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left_pressed == True and self.__button_opt_left == 0):
                 self.__button_opt_left_pressed = False
 
+
+
+    def __toggleServoMode(self):
+        # ----- Enable button check -----
+        # If there was no joy msg received before and the arm mode is ENABLED, DISABLE it.
+        if (self.__first_joy_msg_received == False and self.__arm_enabled != False):
+            self.__arm_enabled = False
+        elif (self.__first_joy_msg_received == True):
+            # if current mode equals old mode and button is newly pressed, start timer
+            if (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left == 1 and self.__button_opt_left_pressed == False):
+                self.__button_opt_left_pressed = True
+                self.__button_opt_left_last_pressed = time.time()
+            # if timer has been started before
+            elif (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left == 1 and self.__button_opt_left_pressed == True):
+                # messure how long the start button has been pressed
+                time_difference = time.time() - self.__button_opt_left_last_pressed
+                # If the start button has been pressed long enough, switch mode
+                if (time_difference > 1):
+                    self.__arm_enabled = not self.__arm_enabled
+                    if (self.__arm_enabled == True):
+                        self.get_logger().info("Control Mode: ARM")
+                    else:
+                        self.get_logger().info("Control Mode: BODY")
+            # if mode has been switched, wait until start button is released, then change old mode status to enable new switch cycle
+            elif (self.__arm_enabled == self.__arm_enabled_old and self.__button_opt_left_pressed == True and self.__button_opt_left == 0):
+                self.__button_opt_left_pressed = False
+                self.__arm_enabled_old = not self.__arm_enabled_old 
+            # if button is not pressed long enough, reset
+            elif (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left_pressed == True and self.__button_opt_left == 0):
+                self.__button_opt_left_pressed = False
 
 
     def __checkDir(self):
@@ -271,7 +299,6 @@ class TeleOp(Node):
         if (self.__direction != self.__direction_old and self.__button_space == 1 and self.__button_space_pressed == False):
                 self.__button_space_pressed = True
                 self.__button_space_last_pressed = time.time()
-
         # if timer has been started before
         elif (self.__direction != self.__direction_old and self.__button_space == 1 and self.__button_space_pressed == True):
             # messure how long the start button has been pressed
@@ -283,12 +310,10 @@ class TeleOp(Node):
                     self.get_logger().info("Drive forward")
                 elif (self.__direction == True):
                     self.get_logger().info("Drive backward")
-            
         # if mode has been switched, wait until start button is released, then change old mode status to enable new switch cycle
         elif (self.__direction == self.__direction_old and self.__button_space_pressed == True and self.__button_space == 0):
             self.__button_space_pressed = False
             self.__direction_old = not self.__direction_old
-        
         # if button is not pressed long enough, reset
         elif (self.__direction != self.__direction_old and self.__button_space_pressed == True and self.__button_space == 0):
             self.__button_space_pressed = False
@@ -296,7 +321,6 @@ class TeleOp(Node):
 
 
     def __calcAndSendFlippers(self):
-        
         # check if arm mode is active        
         if (self.__arm_enabled == False):
             # right trigger lowers flippers, left trigger lifts flippers
@@ -321,7 +345,6 @@ class TeleOp(Node):
 
 
     def __calcAndSendChains(self):
-
         # check for arm mode and construct messages to be sent
         if (self.__arm_enabled == False):
             # corrections for driving backwards
@@ -339,7 +362,6 @@ class TeleOp(Node):
         else:       
             self.__chain_msg.twist.linear.x = 0.0
             self.__chain_msg.twist.angular.z = 0.0
-
         # the message of format TwistStamped needs a time stamp.
         self.__chain_msg.header.stamp = self.get_clock().now().to_msg()
         # send movement commands
@@ -349,13 +371,11 @@ class TeleOp(Node):
 
 
     def __calc_and_send_arm(self):
-
         # check for arm mode 
         if (self.__arm_enabled == True):
-
             # calc arm tilt        
             tilt = abs((self.__right_trigger -1)/2) + (self.__left_trigger -1)/2
-
+            
             # construct arm message
             # linear x-y-z is for linear motion relative to the reference link
             # angular x-y-z is for rotation around the reference links axes
@@ -365,14 +385,14 @@ class TeleOp(Node):
             self.__arm_msg.twist.angular.z = self.__right_stick_x     
             self.__arm_msg.twist.angular.y = - self.__right_stick_y
             self.__arm_msg.twist.angular.x = self.__d_pad_x
-
+            
             # construct joint message
             joint1 = float(self.__button_rb -self.__button_lb)
             joint2 = float(self.__button_x - self.__button_a)
             joint3 = float(-self.__button_y + self.__button_b)
-            gripper = float(self.__right_stick_press - self.__left_stick_press)
-    
-            self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_x, self.__right_stick_y, tilt, gripper]
+            #gripper = float(self.__right_stick_press - self.__left_stick_press)
+            
+            self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_x, self.__right_stick_y, tilt]
 
         else:
             self.__arm_msg.twist.linear.x = 0.0
@@ -382,7 +402,7 @@ class TeleOp(Node):
             self.__arm_msg.twist.angular.y = 0.0
             self.__arm_msg.twist.angular.x = 0.0
 
-            self.__gripper_msg.velocities = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+            self.__gripper_msg.velocities = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
         # add time stamps and seq number
         self.__gripper_msg.header.stamp = self.get_clock().now().to_msg()
@@ -407,7 +427,6 @@ class TeleOp(Node):
 
     def __joyCallback(self, msg):
         # save controller input to local variables
-
         #axes
         self.__left_stick_x_lock.acquire()
         self.__left_stick_x = msg.axes[left_stick_x]
@@ -486,7 +505,6 @@ class TeleOp(Node):
         self.__button_space = msg.buttons[space_button]
         self.__button_space_lock.release()
 
-
         # Check if there was a joy msgs since the node was started
         if (self.__first_joy_msg_received == False):
             self.__first_joy_msg_received = True
@@ -494,7 +512,6 @@ class TeleOp(Node):
 
 
     def __createSubscribers(self):
-
         self._joy_sub = self.create_subscription(
             Joy,
             'joy',
@@ -505,7 +522,6 @@ class TeleOp(Node):
 
 
     def __createPublishers(self):
-
         self.__chain_publisher = self.create_publisher(
             TwistStamped,
             'cmd/chains',

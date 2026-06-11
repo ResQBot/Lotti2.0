@@ -257,7 +257,7 @@
     <child
       link="arm4_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
       lower="-3.3"
       upper="3.3"

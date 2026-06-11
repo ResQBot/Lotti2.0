@@ -75,7 +75,7 @@ class FlipperInterface : public hardware_interface::SystemInterface {
     double unitree_ratio_ = 6.33;
     int use_hardware_;
     int motor_error_type_[4];
-
+    int dir_[4];
 
     // --- Add Unitree SDK members here ---
     std::unique_ptr<SerialPort> serial_;

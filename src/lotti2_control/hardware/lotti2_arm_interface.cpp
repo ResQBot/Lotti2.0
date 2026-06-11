@@ -73,6 +73,10 @@ hardware_interface::CallbackReturn ArmInterface::on_configure(
         arm_comms_.connect(device_);
         // set motor command mode
         arm_comms_.setReq(0x82, 0x05);
+        // enable motors
+        arm_comms_.setReq(0xF3, 1);
+        // set zero positions
+        arm_comms_.setReq(0x92, 0);
     }
 
     // always reset values when configuring hardware
@@ -95,10 +99,7 @@ hardware_interface::CallbackReturn ArmInterface::on_cleanup(
 hardware_interface::CallbackReturn ArmInterface::on_activate(
   const rclcpp_lifecycle::State& /*previous_state*/) {
     if (use_hardware_ == 1) {
-        // enable motors
-        arm_comms_.setReq(0xF3, 1);
-        // set zero positions
-        arm_comms_.setReq(0x92, 0);
+        arm_comms_.clear();
     }
     // command and state should be equal when starting
     for (const auto& [name, descr] : joint_command_interfaces_) {
@@ -129,9 +130,14 @@ hardware_interface::return_type ArmInterface::read(
             // get motor position in motor steps and convert to radiant
             arm_pos_[i] = (static_cast<double>(arm_comms_.readPos(i)) * 2 * M_PI) / (motor_resolution_ * gear_ratio_);
             // set state interface to current value
-            set_state(info_.joints[i].name + "/position", arm_pos_[i]);
             set_state(info_.joints[i].name + "/velocity", get_command(info_.joints[i].name + "/velocity"));
         }
+        set_state(info_.joints[0].name + "/position", -arm_pos_[0]);
+        set_state(info_.joints[1].name + "/position", -arm_pos_[1]);
+        set_state(info_.joints[2].name + "/position", -arm_pos_[2]);
+        set_state(info_.joints[3].name + "/position", arm_pos_[3]);
+        set_state(info_.joints[4].name + "/position", -arm_pos_[4]);
+        set_state(info_.joints[5].name + "/position", -arm_pos_[5]);
     }
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
     else {

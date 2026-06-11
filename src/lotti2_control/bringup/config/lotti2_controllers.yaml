@@ -1,18 +1,23 @@
 controller_manager:
   ros__parameters:
-    update_rate: 25 #Hz
+    update_rate: 50 #Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
       
     lotti2_arm_group_controller:
       type: joint_trajectory_controller/JointTrajectoryController
+      is_async: true
+      update_rate: 20
 
     lotti2_flipper_controller:
       type: lotti2_flipper_controller/FlipperController
+      is_async: true
+      update_rate: 25
 
     lotti2_drive_controller:
       type: diff_drive_controller/DiffDriveController
+      update_rate: 50
 
 
 
@@ -24,14 +29,13 @@ lotti2_flipper_controller:
     - flipper_rr_joint
     - flipper_rl_joint
     command_interfaces:
-    - position
+    - velocity
     state_interfaces:
     - position
     - effort
     - velocity
     - temp
 
-    update_rate: 25
 
 
 
@@ -97,4 +101,3 @@ lotti2_arm_group_controller:
       stopped_velocity_tolerance: 0.01
       goal_time: 0.1
 
-    update_rate: 25

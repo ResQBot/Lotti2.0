@@ -67,7 +67,7 @@ class DriveComms {
 
         // Clear input buffer
         tcflush(fd_, TCIFLUSH);
-        std::cout << "Serial port opened: " << device << " @ " << baudrate_ << " baud\n";
+        std::cout << "Serial port opened: " << device << std::endl;
     }
 
 

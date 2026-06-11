@@ -126,7 +126,7 @@ controller_interface::CallbackReturn FlipperController::on_configure(const rclcp
 
 controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp_lifecycle::State &) {
     // clear out vectors in case of restart
-    joint_position_command_interface_.clear();
+    joint_velocity_command_interface_.clear();
     joint_position_state_interface_.clear();
     joint_velocity_state_interface_.clear();
     joint_effort_state_interface_.clear();
@@ -148,9 +148,7 @@ controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp
 controller_interface::return_type FlipperController::update(
   const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/) {
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        double pos_cmd = joint_position_state_interface_[i].get().get_optional().value();
-        pos_cmd += flipper_cmd_[i] * (max_speed_ / update_rate_);
-        (void)joint_position_command_interface_[i].get().set_value(pos_cmd);
+        (void)joint_velocity_command_interface_[i].get().set_value(flipper_cmd_[i] * max_speed_);
     }
 
     return controller_interface::return_type::OK;
