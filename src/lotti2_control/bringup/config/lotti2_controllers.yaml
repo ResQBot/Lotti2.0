@@ -38,7 +38,6 @@ lotti2_flipper_controller:
 
 
 
-
 lotti2_drive_controller:
   ros__parameters:
     left_wheel_names: ["left_chain_joint"]
@@ -66,7 +65,7 @@ lotti2_drive_controller:
 
     # Velocity and acceleration limits
     # Whenever a min_* is unspecified, default to -max_*
-    linear.x.max_velocity: 12.0      # set to 1.0 so speed is a % of max speed
+    linear.x.max_velocity: 12.0      
     linear.x.max_acceleration: 6.0  
     linear.x.max_jerk: NAN
 

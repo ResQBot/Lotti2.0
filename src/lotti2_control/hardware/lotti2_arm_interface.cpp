@@ -71,12 +71,17 @@ hardware_interface::CallbackReturn ArmInterface::on_configure(
     if (use_hardware_ == 1) {
         // open serial communication
         arm_comms_.connect(device_);
-        // set motor command mode
-        arm_comms_.setReq(0x82, 0x05);
-        // enable motors
-        arm_comms_.setReq(0xF3, 1);
-        // set zero positions
-        arm_comms_.setReq(0x92, 0);
+        if (arm_comms_.connected()) {
+            // set motor command mode
+            arm_comms_.setReq(0x82, 0x05);
+            usleep(1000);
+            // enable motors
+            arm_comms_.setReq(0xF3, 1);
+            usleep(1000);
+            // set zero positions
+            arm_comms_.setReq(0x92, 0);
+            usleep(1000);
+        }
     }
 
     // always reset values when configuring hardware
@@ -168,7 +173,7 @@ hardware_interface::return_type ArmInterface::write(
             arm_vel_cmd_[i] = static_cast<uint16_t>(abs((get_command(info_.joints[i].name + "/velocity") * 60 * gear_ratio_) / (2 * M_PI)));
             // send commands to arm comms
             arm_comms_.setArmValues(motor_id, arm_direction_[i], arm_vel_cmd_[i], motor_acceleration_);
-            usleep(1000);
+            usleep(1300);
         }
     }
 

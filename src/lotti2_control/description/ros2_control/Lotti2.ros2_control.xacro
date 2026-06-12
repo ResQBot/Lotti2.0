@@ -8,7 +8,7 @@
             <param name="device">/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTA362Q0-if00-port0</param>
            <!--  <param name="max_torque">0.006</param> -->
             <param name="gear_ratio">3.43</param>
-            <param name="use_hardware">1</param>
+            <param name="use_hardware">0</param>
         </hardware>
 
         <joint name="flipper_fr_joint">
@@ -53,7 +53,7 @@
             <param name="e_conversion">21</param>  <!-- motorRPM to eRPM equal to number of polepairs-->
             <param name="gear_ratio">9</param>      <!-- gearbox ratio -->
             <param name="Kt">0.198</param>          <!-- Kt value for the motor [Nm/A] -->
-            <param name="use_hardware">0</param>
+            <param name="use_hardware">1</param>
         </hardware>
         <joint name="left_chain_joint">
             <command_interface name="velocity"/>
@@ -78,7 +78,7 @@
             <param name="device">/dev/serial/by-id/usb-1a86_USB_Single_Serial_5957006408-if00</param>               <!-- name of serial device used to sommunicate with the motors -->
             <param name="gear_ratio">25.0</param>       <!-- gear ration of cycloidal gears in arm assembly -->
             <param name="resolution">16384</param>      <!-- steps per one full motor rotation-->
-            <param name="acceleration">240</param>      <!-- motor acceleration | max 255-->
+            <param name="acceleration">80</param>      <!-- motor acceleration | max 255-->
             <param name="max_motor_speed">3000</param>          <!-- motor speed in rpm | max 3000 -->
             <param name="use_hardware">0</param>        <!-- set to 1 of physical hardware is used. Set to 0 if only digital representation is used -->
         </hardware>

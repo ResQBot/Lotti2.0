@@ -204,10 +204,10 @@
     <child
       link="arm3_link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit
-      lower="-3.3"
-      upper="0.1"
+      lower="-0.1"
+      upper="3.3"
       effort="0"
       velocity="0" />
   </joint>
