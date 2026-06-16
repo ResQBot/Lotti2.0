@@ -53,7 +53,7 @@
             <param name="e_conversion">21</param>  <!-- motorRPM to eRPM equal to number of polepairs-->
             <param name="gear_ratio">9</param>      <!-- gearbox ratio -->
             <param name="Kt">0.198</param>          <!-- Kt value for the motor [Nm/A] -->
-            <param name="use_hardware">1</param>
+            <param name="use_hardware">0</param>
         </hardware>
         <joint name="left_chain_joint">
             <command_interface name="velocity"/>

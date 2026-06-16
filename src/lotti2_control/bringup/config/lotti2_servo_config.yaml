@@ -62,6 +62,7 @@ joint_limit_margin: 0.05 # added as a buffer to joint limits [radians]. If movin
 leaving_singularity_threshold_multiplier: 1.0 # Multiply the hard stop limit by this when leaving singularity (see https://github.com/ros-planning/moveit2/pull/620)
 
 ## Topic names
+pose_command_in_topic: cmd/arm/position # Topic for incomming position commands
 cartesian_command_in_topic: cmd/arm/joy_twiststamped  # Topic for incoming Cartesian twist commands
 joint_command_in_topic: cmd/arm/joy_joint # Topic for incoming joint angle commands
 joint_topic: /joint_states

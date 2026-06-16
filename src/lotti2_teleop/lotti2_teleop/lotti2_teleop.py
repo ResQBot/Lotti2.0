@@ -5,7 +5,7 @@ import sys
 from moveit_msgs.srv import ServoCommandType
 
 from sensor_msgs.msg import Joy
-from geometry_msgs.msg import TwistStamped
+from geometry_msgs.msg import TwistStamped, PoseStamped
 from control_msgs.msg import JointJog
 from std_msgs.msg import Float32
 from threading import Lock
@@ -146,6 +146,19 @@ class TeleOp(Node):
         self.__gripper_msg = JointJog()
         self.__gripper_msg.joint_names = ["arm1_joint","arm2_joint", "arm3_joint", "arm4_joint", "arm5_joint", "arm6_joint"]
         self.__gripper_msg.duration = 0.05
+
+        # poses
+        self.__pose_msg = PoseStamped()
+        # default rest position
+        self.__pose_msg.header.frame_id = "body_link"
+        self.__pose_msg.pose.position.x = 0.3927
+        self.__pose_msg.pose.position.y = 0.0008
+        self.__pose_msg.pose.position.z = 0.34935
+        self.__pose_msg.pose.orientation.x = 0.0
+        self.__pose_msg.pose.orientation.y = 0.0
+        self.__pose_msg.pose.orientation.z = 0.0
+        self.__pose_msg.pose.orientation.w = 1.0
+
 
         # Init class ->create subscriber, create timer
         self.__readParams()
@@ -407,11 +420,13 @@ class TeleOp(Node):
         # add time stamps and seq number
         self.__gripper_msg.header.stamp = self.get_clock().now().to_msg()
         self.__arm_msg.header.stamp = self.get_clock().now().to_msg()
+        self.__pose_msg.header.stamp = self.get_clock().now().to_msg()
 
         # send arm commands
         if (self.__joy_enabled == True):
             self.__arm_publisher.publish(self.__arm_msg)
             self.__gripper_publisher.publish(self.__gripper_msg)
+            self.__pose_publisher.publish(self.__pose_msg)
         
 
 
@@ -561,6 +576,12 @@ class TeleOp(Node):
         self.__gripper_publisher = self.create_publisher(
             JointJog,
             "cmd/arm/joy_joint",
+            1
+        )
+
+        self.__pose_publisher = self.create_publisher(
+            PoseStamped,
+            "cmd/arm/position",
             1
         )
 
