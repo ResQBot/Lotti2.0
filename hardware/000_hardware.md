@@ -132,18 +132,6 @@ The remaining actuator and precision mechanical components are manufactured usin
 
 ---
 
-# 📁 Repository Structure
-
-```text
-Lotti2_Main Assembly
-├── Center Module
-├── Passive E-Module
-├── Active E-Module
-└── Manipulator Arm Assembly
-```
-
----
-
 # 🏆 RoboCup 2026
 
 This robot was developed for participation in the **RoboCup Rescue League World Championship 2026** in **Incheon, South Korea**.
