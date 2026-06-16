@@ -20,13 +20,13 @@ Contains the complete robotic arm system and its mechanical structure.
 
 The modular design allows for easier maintenance, transportation, and rapid assembly during competitions.
 
-- • **Center Module**
+• **Center Module**
 Contains the main electronic components, including the power distribution system, onboard computers, and the motors for the flipper mechanism.
-- • **Passive E-Module**
+• **Passive E-Module**
 Includes the supported and bearing-mounted shafts without active drivetrain components.
-- • **Active E-Module**
+• **Active E-Module**
 Contains the chain drive motors and the drivetrain system responsible for powering the tracks and their transmission shafts.
-- • **Manipulator Arm Assembly**
+• **Manipulator Arm Assembly**
 Contains the complete robotic arm system and its mechanical structure.
 
 Bill of Materials (BOM)
