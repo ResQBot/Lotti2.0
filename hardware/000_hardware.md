@@ -6,7 +6,7 @@ The documentation explains the file structure and design logic, and includes a c
 
 The main assembly, `Lotti2_Main Assembly`, contains the complete robot, including the manipulator arm.
 To simplify transportation, the robot is designed to be separated into three main sections consisting of several subassemblies:
-• **Center Module**
+**Center Module**
 Contains the main electronic components, including the power distribution system, onboard computers, and the motors for the flipper mechanism.
 
 • **Passive E-Module**
