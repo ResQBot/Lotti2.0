@@ -120,7 +120,7 @@ Several additional custom parts are used throughout the robot.
 
 ### FDM Printed Components
 
-Most structural and non-load-critical components are manufactured using FDM printing with:
+Most non-load-critical components are manufactured using FDM printing with:
 
 * Nobufil ABSx
 * Nobufil PCTG
