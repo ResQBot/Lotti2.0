@@ -161,6 +161,9 @@ hardware_interface::return_type DriveInterface::read(
         // read can buffer and extract state interface data from motorStates_
         for (size_t i = 0; i < info_.joints.size(); i++) {
             motorStates_[i] = drive_comms_.readCANFrame(motorStates_[i].motor_id);
+            if (i == 0) {
+                motorStates_[i].velocity *= -1;
+            }
             // switch for error cases
             switch (motorStates_[i].error_code) {
                 case 1:
