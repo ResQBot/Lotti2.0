@@ -77,7 +77,7 @@ The modular design provides several advantages:
 | 7        | Greenworks G24B4 Battery               | 6    | Used with custom battery management system | https://greenworkstools.eu/products/24v-battery-4ah                         |
 | 8        | Timing Belt                            | 4    | –                                          | –                                                                           |
 | 9        | Waterjet-Cut Parts                     | –    | Custom manufactured                        | –                                                                           |
-| 10       | Tower Profile                          | –    | Custom structural profile                  | –                                                                           |
+| 10       | Tower Profile                          | –    | --                  | –                                                                           |
 | 11       | Emergency Stop Switch                  | 1    | Safety system                              | https://www.conrad.at                                                       |
 | 12       | Cameras                                | –    | Vision system                              | –                                                                           |
 | 13       | Livox MID-360                          | 1    | LiDAR sensor                               | https://www.livoxtech.com/de/mid-360                                        |
