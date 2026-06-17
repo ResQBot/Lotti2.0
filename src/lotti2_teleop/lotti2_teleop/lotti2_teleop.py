@@ -1,6 +1,8 @@
 import rclpy
 from rclpy.node import Node
 import time
+import sys
+from moveit_msgs.srv import ServoCommandType
 
 from sensor_msgs.msg import Joy
 from geometry_msgs.msg import TwistStamped
@@ -133,12 +135,12 @@ class TeleOp(Node):
 
         # arm controlls
         self.__arm_msg = TwistStamped()
-        self.__arm_msg.header.frame_id = ""
+        self.__arm_msg.header.frame_id = "arm6_link"
         self.__servo_active = bool(False)
 
         # gripper controlls
         self.__gripper_msg = JointJog()
-        self.__gripper_msg.joint_names = ["arm_link1_joint","arm_link2_joint", "arm_link3_joint", "arm_link4_joint", "arm_link5_joint"]
+        self.__gripper_msg.joint_names = ["arm1_joint","arm2_joint", "arm3_joint", "arm4_joint", "arm5_joint", "arm6_joint", "arm7_joint"]
         self.__gripper_msg.duration = 0.05
 
         # Init class ->create subscriber, create timer
@@ -164,15 +166,17 @@ class TeleOp(Node):
 
 
 
-    # the servo_node service needs to be called to start
-    def __callServo(self):
-        self.__cli = self.create_client(Trigger, '/servo_node/start_servo')
+     # the servo_node service needs to be called to start
+    """def __callServo(self):
+        self.__cli = self.create_client(ServoCommandType, '/servo_node/switch_command_type')
         while not self.__cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
-        self.__future = self.__cli.call_async(Trigger.Request())
+        request = ServoCommandType.Request()
+        request.command_type = ServoCommandType.Request.TWIST
+        self.__future = self.__cli.call(request)
         rclpy.spin_until_future_complete(self, self.__future)
-        return self.__future.result()
-
+        return self.__future.result() 
+    """
 
 
     def __checkCMDOutputEnable(self):
@@ -292,11 +296,11 @@ class TeleOp(Node):
 
 
     def __calcAndSendFlippers(self):
-
-        # right trigger lowers flippers, left trigger lifts flippers
-        self.__flipper_speed = ((self.__right_trigger + 1) / 2) - ((self.__left_trigger + 1) / 2)
-            
+        
+        # check if arm mode is active        
         if (self.__arm_enabled == False):
+            # right trigger lowers flippers, left trigger lifts flippers
+            self.__flipper_speed = ((self.__right_trigger + 1) / 2) - ((self.__left_trigger + 1) / 2)
             self.__fr_flipper_cmd.data = self.__button_y * self.__flipper_speed
             self.__fl_flipper_cmd.data = self.__button_x * self.__flipper_speed
             self.__rr_flipper_cmd.data = self.__button_b * self.__flipper_speed         
@@ -346,31 +350,29 @@ class TeleOp(Node):
 
     def __calc_and_send_arm(self):
 
-        # calc arm tilt        
-        tilt = abs((self.__right_trigger -1)/2) + (self.__left_trigger -1)/2
-
         # check for arm mode 
         if (self.__arm_enabled == True):
-            if (self.__servo_active == False):
-                self.__callServo()
-                self.__servo_active = True
-            
+
+            # calc arm tilt        
+            tilt = abs((self.__right_trigger -1)/2) + (self.__left_trigger -1)/2
+
             # construct arm message
             # linear x-y-z is for linear motion relative to the reference link
             # angular x-y-z is for rotation around the reference links axes
-            self.__arm_msg.twist.linear.x = self.__d_pad_x
-            self.__arm_msg.twist.linear.y = - self.__left_stick_y
-            self.__arm_msg.twist.linear.z = self.__d_pad_y
-            self.__arm_msg.twist.angular.z = self.__left_stick_x        
-            self.__arm_msg.twist.angular.y = 0.0
-            self.__arm_msg.twist.angular.x = tilt
+            self.__arm_msg.twist.linear.x = self.__left_stick_y
+            self.__arm_msg.twist.linear.y = self.__left_stick_x   
+            self.__arm_msg.twist.linear.z = tilt
+            self.__arm_msg.twist.angular.z = self.__right_stick_x     
+            self.__arm_msg.twist.angular.y = - self.__right_stick_y
+            self.__arm_msg.twist.angular.x = self.__d_pad_x
 
             # construct joint message
             joint1 = float(self.__button_rb -self.__button_lb)
             joint2 = float(self.__button_x - self.__button_a)
             joint3 = float(-self.__button_y + self.__button_b)
+            gripper = float(self.__right_stick_press - self.__left_stick_press)
     
-            self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_y, - self.__right_stick_x]
+            self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_x, self.__right_stick_y, tilt, gripper]
 
         else:
             self.__arm_msg.twist.linear.x = 0.0
@@ -380,7 +382,7 @@ class TeleOp(Node):
             self.__arm_msg.twist.angular.y = 0.0
             self.__arm_msg.twist.angular.x = 0.0
 
-            self.__gripper_msg.velocities = [0.0, 0.0, 0.0, 0.0, 0.0]
+            self.__gripper_msg.velocities = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
         # add time stamps and seq number
         self.__gripper_msg.header.stamp = self.get_clock().now().to_msg()
@@ -415,6 +417,10 @@ class TeleOp(Node):
         self.__left_stick_y = msg.axes[left_stick_y]
         self.__left_stick_y_lock.release()
 
+        self.__left_stick_press_lock.acquire()
+        self.__left_stick_press = msg.buttons[left_stick_button]
+        self.__left_stick_press_lock.release()
+
         self.__left_trigger_lock.acquire()
         self.__left_trigger = msg.axes[left_trigger]
         self.__left_trigger_lock.release()
@@ -422,10 +428,14 @@ class TeleOp(Node):
         self.__right_stick_x_lock.acquire()
         self.__right_stick_x = msg.axes[right_stick_x]
         self.__right_stick_x_lock.release()
-        
+
         self.__right_stick_y_lock.acquire()
         self.__right_stick_y = msg.axes[right_stick_y]
         self.__right_stick_y_lock.release()
+
+        self.__right_stick_press_lock.acquire()
+        self.__right_stick_press = msg.buttons[right_stick_button]
+        self.__right_stick_press_lock.release()
 
         self.__right_trigger_lock.acquire()
         self.__right_trigger = msg.axes[right_trigger]

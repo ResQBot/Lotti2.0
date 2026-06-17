@@ -82,7 +82,7 @@ install(
 )
 
 install(
-    DIRECTORY description/launch description/urdf description/srdf #description/meshes
+    DIRECTORY description/launch description/urdf description/srdf description/meshes
     DESTINATION share/lotti2_control/description
 )
 

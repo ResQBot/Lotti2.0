@@ -6,7 +6,7 @@
     <xacro:include filename="urdf_materials.xacro"/>
 
 <!-- include files for parts -->    
-    <!-- <xacro:include filename="Lotti_arm.xacro"/> --> 
+    <xacro:include filename="Lotti_arm.xacro"/> 
     <xacro:include filename="Lotti_body.xacro"/>
     <!-- <xacro:include filename="Lotti_lidar.xacro"/> -->
 

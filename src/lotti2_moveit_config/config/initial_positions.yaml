@@ -1,0 +1,9 @@
+# Default initial positions for Lotti2's ros2_control fake system
+
+initial_positions:
+  arm1_joint: 0
+  arm2_joint: 0
+  arm3_joint: 0
+  arm4_joint: 0
+  arm5_joint: 0
+  arm6_joint: 0

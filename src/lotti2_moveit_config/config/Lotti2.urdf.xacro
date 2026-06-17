@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Lotti2">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import Lotti2 urdf file -->
+    <xacro:include filename="$(find lotti2_control)/description/urdf/Lotti.urdf.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="Lotti2.ros2_control.xacro" />
+
+
+    <xacro:Lotti2_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

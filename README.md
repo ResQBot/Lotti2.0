@@ -10,6 +10,9 @@ If you have any questions or want to partner up, feel free to contact us.
 ### getting_started
 contains a (more or less) detailed introduction to the whole topic of using Ubuntu and ROS, using our ROS packages and how to develop your own. This is a work in progress and you will definitely need addittional information to get deeper into ROS development.
 
+### hardware
+contains all (more or less) the hardware information and the CAD files.
+
 ### resources
 contains user manuals, guidebooks, datasheets, etc. for motory, sensors, parts, ... used in our current robot.
 
