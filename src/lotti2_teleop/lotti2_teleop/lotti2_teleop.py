@@ -145,7 +145,7 @@ class TeleOp(Node):
         # joint controlls
         self.__gripper_msg = JointJog()
         self.__gripper_msg.joint_names = ["arm1_joint","arm2_joint", "arm3_joint", "arm4_joint", "arm5_joint", "arm6_joint"]
-        self.__gripper_msg.duration = 0.05
+        self.__gripper_msg.duration = 0.04
 
         # poses
         self.__pose_msg = PoseStamped()
@@ -164,6 +164,7 @@ class TeleOp(Node):
         self.__readParams()
         self.__createSubscribers()
         self.__createPublishers()
+        #self.__callServo()
         self.__createTimer()
 
         self.get_logger().info("Tele_OP initiated")
@@ -189,6 +190,8 @@ class TeleOp(Node):
 #-        while not self.__cli.wait_for_service(timeout_sec=1.0):
 #-            self.get_logger().info('service not available, waiting again...')
 #-        request = ServoCommandType.Request()
+#-        request.command_type = ServoCommandType.Request.TWIST
+#-
 #-        if (self.__servo_state == 0):
 #-            request.command_type = ServoCommandType.Request.JOINT_JOG
 #-        elif (self.__servo_state == 1):
@@ -277,36 +280,6 @@ class TeleOp(Node):
 
 
 
-    def __toggleServoMode(self):
-        # ----- Enable button check -----
-        # If there was no joy msg received before and the arm mode is ENABLED, DISABLE it.
-        if (self.__first_joy_msg_received == False and self.__arm_enabled != False):
-            self.__arm_enabled = False
-        elif (self.__first_joy_msg_received == True):
-            # if current mode equals old mode and button is newly pressed, start timer
-            if (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left == 1 and self.__button_opt_left_pressed == False):
-                self.__button_opt_left_pressed = True
-                self.__button_opt_left_last_pressed = time.time()
-            # if timer has been started before
-            elif (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left == 1 and self.__button_opt_left_pressed == True):
-                # messure how long the start button has been pressed
-                time_difference = time.time() - self.__button_opt_left_last_pressed
-                # If the start button has been pressed long enough, switch mode
-                if (time_difference > 1):
-                    self.__arm_enabled = not self.__arm_enabled
-                    if (self.__arm_enabled == True):
-                        self.get_logger().info("Control Mode: ARM")
-                    else:
-                        self.get_logger().info("Control Mode: BODY")
-            # if mode has been switched, wait until start button is released, then change old mode status to enable new switch cycle
-            elif (self.__arm_enabled == self.__arm_enabled_old and self.__button_opt_left_pressed == True and self.__button_opt_left == 0):
-                self.__button_opt_left_pressed = False
-                self.__arm_enabled_old = not self.__arm_enabled_old 
-            # if button is not pressed long enough, reset
-            elif (self.__arm_enabled != self.__arm_enabled_old and self.__button_opt_left_pressed == True and self.__button_opt_left == 0):
-                self.__button_opt_left_pressed = False
-
-
     def __checkDir(self):
         # if current mode equals old mode and button is newly pressed, start timer
         if (self.__direction != self.__direction_old and self.__button_space == 1 and self.__button_space_pressed == False):
@@ -362,9 +335,9 @@ class TeleOp(Node):
         if (self.__arm_enabled == False):
             # corrections for driving backwards
             if (self.__left_stick_y < 0):
-                self.__chains_angle = -self.__left_stick_x
+                self.__chains_angle = - self.__left_stick_x * abs(self.__left_stick_x) * 5
             else:
-                self.__chains_angle = self.__left_stick_x
+                self.__chains_angle = self.__left_stick_x * abs(self.__left_stick_x) * 5
             # check "backward driving" button for convenience
             if (self.__direction == True):
                 self.__chain_msg.twist.linear.x = -self.__left_stick_y

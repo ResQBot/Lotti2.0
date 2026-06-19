@@ -70,7 +70,6 @@ class FlipperInterface : public hardware_interface::SystemInterface {
 
   private:
     std::string device_;
-    double max_torque_;
     double gear_ratio_;
     double unitree_ratio_ = 6.33;
     int use_hardware_;

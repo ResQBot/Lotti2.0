@@ -6,13 +6,12 @@
         <hardware>
             <plugin>lotti2_flipper_interface/FlipperInterface</plugin>
             <param name="device">/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTA362Q0-if00-port0</param>
-           <!--  <param name="max_torque">0.006</param> -->
             <param name="gear_ratio">3.43</param>
             <param name="use_hardware">0</param>
         </hardware>
 
         <joint name="flipper_fr_joint">
-            <command_interface name="velocity"/>
+            <command_interface name="effort"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
             <state_interface name="effort"/>
@@ -20,7 +19,7 @@
         </joint>
 
         <joint name="flipper_fl_joint">
-            <command_interface name="velocity"/>
+            <command_interface name="effort"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
             <state_interface name="effort"/>
@@ -28,7 +27,7 @@
         </joint>
 
         <joint name="flipper_rr_joint">
-            <command_interface name="velocity"/>
+            <command_interface name="effort"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
             <state_interface name="effort"/>
@@ -36,7 +35,7 @@
         </joint>
 
         <joint name="flipper_rl_joint">
-            <command_interface name="velocity"/>
+            <command_interface name="effort"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
             <state_interface name="effort"/>

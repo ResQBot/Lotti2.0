@@ -203,7 +203,12 @@ hardware_interface::return_type DriveInterface::read(
         for (const auto& [name, descr] : joint_state_interfaces_) {
             if (descr.get_interface_name() == hardware_interface::HW_IF_POSITION) {
                 auto velo = get_command(descr.get_prefix_name() + "/" + hardware_interface::HW_IF_VELOCITY);
-                set_state(name, get_state(name) + period.seconds() * velo);
+                if (descr.get_prefix_name() == info_.joints[0].name) {
+                    set_state(name, get_state(name) + period.seconds() * (-velo));
+                }
+                else {
+                    set_state(name, get_state(name) + period.seconds() * velo);
+                }
             }
             else if (descr.get_interface_name() == hardware_interface::HW_IF_VELOCITY) {
                 set_state(name, get_command(name));

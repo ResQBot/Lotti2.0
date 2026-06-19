@@ -71,12 +71,12 @@ hardware_interface::CallbackReturn FlipperInterface::on_configure(
         motor_data_[i].q         = 0.0;
         motor_error_type_[i]     = 0;
         motor_cmd_[i].motorType  = MotorType::GO_M8010_6;
-        motor_cmd_[i].mode       = 1;      // static_cast<unsigned short>(queryMotorMode(MotorType::GO_M8010_6, MotorMode::FOC))
-        motor_cmd_[i].kp         = 0.6f;   // positional stiffness
-        motor_cmd_[i].kd         = 0.02f;  // velocity stiffness
-        motor_cmd_[i].q          = 0.0;    // position [rad]
-        motor_cmd_[i].dq         = 0.04f;  // speed    [Rads/s]
-        motor_cmd_[i].tau        = 0.0;    // torque  [Nm]
+        motor_cmd_[i].mode       = 1;    // static_cast<unsigned short>(queryMotorMode(MotorType::GO_M8010_6, MotorMode::FOC))
+        motor_cmd_[i].kp         = 0.0;  // positional stiffness
+        motor_cmd_[i].kd         = 0.0;  // velocity stiffness
+        motor_cmd_[i].q          = 0.0;  // position [rad]
+        motor_cmd_[i].dq         = 0.0;  // speed    [Rads/s]
+        motor_cmd_[i].tau        = 0.0;  // torque  [Nm]
 
         // setting motor IDs.
         switch (i) {
@@ -179,7 +179,7 @@ hardware_interface::return_type FlipperInterface::read(
                 motor_error_type_[i] = motor_data_[i].merror;
 
                 set_state(info_.joints[i].name + "/position", static_cast<double>(motor_data_[i].q) * dir_[i] / (6.33 * gear_ratio_));
-                set_state(info_.joints[i].name + "/velocity", get_command(info_.joints[i].name + "/velocity"));
+                set_state(info_.joints[i].name + "/velocity", static_cast<double>(motor_data_[i].dq));
                 set_state(info_.joints[i].name + "/effort", static_cast<double>(motor_data_[i].tau));
                 set_state(info_.joints[i].name + "/temp", static_cast<double>(motor_data_[i].temp));
             }
@@ -204,9 +204,19 @@ hardware_interface::return_type FlipperInterface::read(
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
     else {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
-            set_state(info_.joints[i].name + "/velocity", get_command(info_.joints[i].name + "/velocity"));
-            set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + (get_state(info_.joints[i].name + "/velocity") * period.seconds()));
-            set_state(info_.joints[i].name + "/effort", 0.0);
+            double vel_;
+            if (get_command(info_.joints[i].name + "/effort") > 0) {
+                vel_ = 1.0;
+            }
+            else if (get_command(info_.joints[i].name + "/effort") < 0) {
+                vel_ = -1.0;
+            }
+            else {
+                vel_ = 0.0;
+            }
+            set_state(info_.joints[i].name + "/velocity", 0.0);
+            set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + vel_ * period.seconds());
+            set_state(info_.joints[i].name + "/effort", get_command(info_.joints[i].name + "/effort"));
             set_state(info_.joints[i].name + "/temp", 22.0);
         }
     }
@@ -215,14 +225,25 @@ hardware_interface::return_type FlipperInterface::read(
 }
 
 hardware_interface::return_type FlipperInterface::write(
-  const rclcpp::Time& /*time*/, const rclcpp::Duration& period) {
+  const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) {
     // only perform write if use_hardware is set to 1
     if (use_hardware_ == 1) {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
             // check if motors are fine
             if (motor_error_type_[i] == 0 && motor_data_[i].correct) {
                 // set command values
-                motor_cmd_[i].q = motor_data_[i].q + static_cast<float>(get_command(info_.joints[i].name + "/velocity") * period.seconds() * gear_ratio_ * 6.33);
+                motor_cmd_[i].tau = static_cast<float>(get_command(info_.joints[i].name + "/effort") * dir_[i]);
+                // if flipper shouldn't move, set position, positional stiffness and velocity stiffness
+                if (get_command(info_.joints[i].name + "/effort") == 0.0) {
+                    motor_cmd_[i].q  = motor_data_[i].q;
+                    motor_cmd_[i].kp = 0.7f;
+                    motor_cmd_[i].kd = 0.1f;
+                }
+                else {
+                    motor_cmd_[i].q  = 0.0;
+                    motor_cmd_[i].kp = 0.0;
+                    motor_cmd_[i].kd = 0.0;
+                }
             }
         }
         // Send commands and receive data via serial port

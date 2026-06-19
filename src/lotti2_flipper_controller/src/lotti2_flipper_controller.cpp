@@ -119,6 +119,8 @@ controller_interface::CallbackReturn FlipperController::on_configure(const rclcp
 
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
         flipper_cmd_[i] = 0.0;
+        pos_cmd_[i]     = 0.0;
+        torque_cmd_[i]  = 0.0;
     }
 
     return CallbackReturn::SUCCESS;
@@ -126,7 +128,7 @@ controller_interface::CallbackReturn FlipperController::on_configure(const rclcp
 
 controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp_lifecycle::State &) {
     // clear out vectors in case of restart
-    joint_velocity_command_interface_.clear();
+    joint_effort_command_interface_.clear();
     joint_position_state_interface_.clear();
     joint_velocity_state_interface_.clear();
     joint_effort_state_interface_.clear();
@@ -148,8 +150,23 @@ controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp
 controller_interface::return_type FlipperController::update(
   const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/) {
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        (void)joint_velocity_command_interface_[i].get().set_value(flipper_cmd_[i] * max_speed_);
+        double dir_cmd = flipper_cmd_[i] / abs(flipper_cmd_[i]);
+        double dir_vel = joint_velocity_state_interface_[i].get().get_optional().value() / abs(joint_velocity_state_interface_[i].get().get_optional().value());
+        if (flipper_cmd_[i] != 0.0) {
+            if (dir_vel != dir_cmd) {
+                torque_cmd_[i] += dir_cmd * 0.1;
+                if (abs(torque_cmd_[i]) >= max_torque_) {
+                    torque_cmd_[i] = max_torque_ * dir_cmd;
+                }
+            }
+        }
+        else {
+            torque_cmd_[i] = 0.0;
+        }
+        std::cout << torque_cmd_[i];
+        (void)joint_effort_command_interface_[i].get().set_value(torque_cmd_[i]);
     }
+    std::cout << std::endl;
 
     return controller_interface::return_type::OK;
 }
