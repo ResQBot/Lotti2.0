@@ -163,10 +163,8 @@ controller_interface::return_type FlipperController::update(
         else {
             torque_cmd_[i] = 0.0;
         }
-        std::cout << torque_cmd_[i];
         (void)joint_effort_command_interface_[i].get().set_value(torque_cmd_[i]);
     }
-    std::cout << std::endl;
 
     return controller_interface::return_type::OK;
 }

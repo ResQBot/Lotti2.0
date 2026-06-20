@@ -84,10 +84,10 @@ class ArmComms {
     }
 
 
-    void setArmValues(uint8_t motor_id, uint8_t direction, uint16_t speed, uint8_t accel) {
+    bool setArmValues(uint8_t motor_id, uint8_t direction, uint16_t speed, uint8_t accel) {
         cmdTxMsg.clear();  // clear old TxMsg buffer
         cmdTxMsg.resize(7);
-        cmdTxBuffer[1] = motor_id;                                               // motor address
+        cmdTxBuffer[1] = motor_id + 1;                                           // motor address
         cmdTxBuffer[3] = static_cast<uint8_t>((speed >> 8) & 0xFF) + direction;  // higher 8 bit speed
         cmdTxBuffer[4] = static_cast<uint8_t>((speed >> 0) & 0xFF);              // lower 8 bit speed
         cmdTxBuffer[5] = accel;                                                  // acceleration
@@ -96,6 +96,8 @@ class ArmComms {
             cmdTxMsg[l] = cmdTxBuffer[l];  // write TxBuffer to TxMsg to be sent (conversion necessary due to LibSerial Write function)
         }
         serial_conn_.Write(cmdTxMsg);  // the serial port sends the speed command
+
+        return (true);
     }
 
 

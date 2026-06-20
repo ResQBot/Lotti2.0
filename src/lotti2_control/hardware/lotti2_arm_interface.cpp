@@ -50,8 +50,8 @@ hardware_interface::CallbackReturn ArmInterface::on_init(
     gear_ratio_         = stof(info_.hardware_parameters["gear_ratio"]);
     motor_resolution_   = stoi(info_.hardware_parameters["resolution"]);
     motor_acceleration_ = static_cast<uint8_t>(stoi(info_.hardware_parameters["acceleration"]));
-    max_motor_speed_    = static_cast<uint16_t>(stoi(info_.hardware_parameters["max_motor_speed"]));
-    use_hardware_       = stoi(info_.hardware_parameters["use_hardware"]);
+    // max_motor_speed_    = static_cast<uint16_t>(stoi(info_.hardware_parameters["max_motor_speed"]));
+    use_hardware_ = stoi(info_.hardware_parameters["use_hardware"]);
     if (!(use_hardware_ == 0 || use_hardware_ == 1)) {
         RCLCPP_ERROR(get_logger(), "ArmInterface: Invalid value for \"use_hardware\" in ros2_control file");
     }
@@ -159,9 +159,7 @@ hardware_interface::return_type ArmInterface::write(
   const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) {
     // only perform write if use_hardware is set to 1
     if (use_hardware_ == 1) {
-        for (std::size_t i = 0; i < 6; i++) {
-            // select motor
-            uint8_t motor_id = static_cast<uint8_t>(i) + 1;
+        for (size_t i = 0; i < 6; i++) {
             // set direction command bit
             if (get_command(info_.joints[i].name + "/velocity") < 0) {
                 arm_direction_[i] = 0b10000000;
@@ -171,9 +169,13 @@ hardware_interface::return_type ArmInterface::write(
             }
             // convert arm speed from rad/s to rpm
             arm_vel_cmd_[i] = static_cast<uint16_t>(abs((get_command(info_.joints[i].name + "/velocity") * 60 * gear_ratio_) / (2 * M_PI)));
+        }
+        for (uint8_t i = 0; i < 6; i++) {
             // send commands to arm comms
-            arm_comms_.setArmValues(motor_id, arm_direction_[i], arm_vel_cmd_[i], motor_acceleration_);
-            usleep(1300);
+            bool complete = arm_comms_.setArmValues(i, arm_direction_[i], arm_vel_cmd_[i], motor_acceleration_);
+            while (!complete) {
+                usleep(100);
+            }
         }
     }
 
