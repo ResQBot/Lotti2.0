@@ -80,6 +80,7 @@ class DriveInterface : public hardware_interface::SystemInterface {
     float gear_ratio_;
     float kt_;
     int use_hardware_;
+    float max_vel_;
 
     motorState motorStates_[2];
     motorCommand motorCommands_[2];

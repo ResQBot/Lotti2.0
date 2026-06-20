@@ -49,6 +49,7 @@ hardware_interface::CallbackReturn DriveInterface::on_init(
     e_conv_       = stof(info_.hardware_parameters["e_conversion"]);
     gear_ratio_   = stof(info_.hardware_parameters["gear_ratio"]);
     kt_           = stof(info_.hardware_parameters["Kt"]);
+    max_vel_      = stof(info_.hardware_parameters["max_velocity"]);
     use_hardware_ = std::__cxx11::stoi(info_.hardware_parameters["use_hardware"]);
     if (!(use_hardware_ == 0 || use_hardware_ == 1)) {
         RCLCPP_ERROR(get_logger(), "DriveInterface: Invalid value for \"use_hardware\" in ros2_control file");
@@ -186,8 +187,8 @@ hardware_interface::return_type DriveInterface::read(
                     break;
                 // if no errors occurred, parse motorStates data to state interfaces
                 default:
-                    // get actual speed from eRPM: / (e_conv * gear_ratio) to get motor rpm, then axis rpm, * (2Pi/60) to convert RPM into rad/s
-                    set_state(info_.joints[i].name + "/velocity", (motorStates_[i].velocity / (e_conv_ * gear_ratio_)) * (2 * M_PI / 60));
+                    // convert eRPM to rpm
+                    set_state(info_.joints[i].name + "/velocity", (motorStates_[i].velocity / (e_conv_ * gear_ratio_ * max_vel_)));
                     // calc torque from current using Kt value
                     set_state(info_.joints[i].name + "/effort", motorStates_[i].current * kt_);
                     set_state(info_.joints[i].name + "/temp", motorStates_[i].motor_temp);
@@ -200,20 +201,13 @@ hardware_interface::return_type DriveInterface::read(
 
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
     else {
-        for (const auto& [name, descr] : joint_state_interfaces_) {
-            if (descr.get_interface_name() == hardware_interface::HW_IF_POSITION) {
-                auto velo = get_command(descr.get_prefix_name() + "/" + hardware_interface::HW_IF_VELOCITY);
-                if (descr.get_prefix_name() == info_.joints[0].name) {
-                    set_state(name, get_state(name) + period.seconds() * (-velo));
-                }
-                else {
-                    set_state(name, get_state(name) + period.seconds() * velo);
-                }
-            }
-            else if (descr.get_interface_name() == hardware_interface::HW_IF_VELOCITY) {
-                set_state(name, get_command(name));
-            }
-        }
+        double vel0 = get_command(info_.joints[0].name + "/velocity") * 11.4;
+        double vel1 = get_command(info_.joints[1].name + "/velocity") * 11.4;
+        set_state(info_.joints[0].name + "/velocity", vel0);
+        set_state(info_.joints[1].name + "/velocity", vel1);
+
+        set_state(info_.joints[0].name + "/position", get_state(info_.joints[0].name + "/position") + vel0 * period.seconds() * (-1));
+        set_state(info_.joints[1].name + "/position", get_state(info_.joints[1].name + "/position") + vel1 * period.seconds());
     }
 
     return hardware_interface::return_type::OK;
@@ -223,9 +217,9 @@ hardware_interface::return_type DriveInterface::write(
   const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) {
     // if use_hardware is set to 1 -> use real hardware
     if (use_hardware_ == 1) {
-        // caluclate motor eRPM to send: * (60/2Pi) to convert from rad/s to rpm, gear ratio for the gear box, e_conv_ is the factor between eRPM and motor rpm
-        motorCommands_[0].speed = static_cast<int32_t>(get_command(info_.joints[0].name + "/velocity") * (60 / (2 * M_PI)) * gear_ratio_ * e_conv_);
-        motorCommands_[1].speed = static_cast<int32_t>(get_command(info_.joints[1].name + "/velocity") * (60 / (2 * M_PI)) * gear_ratio_ * e_conv_ * (-1));
+        // convert rpm to eRPM
+        motorCommands_[0].speed = static_cast<int32_t>(get_command(info_.joints[0].name + "/velocity") * gear_ratio_ * e_conv_ * max_vel_);
+        motorCommands_[1].speed = static_cast<int32_t>(get_command(info_.joints[1].name + "/velocity") * gear_ratio_ * e_conv_ * max_vel_ * (-1));
         // send command to motor via can interface
         drive_comms_.sendSpd(motorCommands_[0].motor_id, motorCommands_[0].speed);
         drive_comms_.sendSpd(motorCommands_[1].motor_id, motorCommands_[1].speed);

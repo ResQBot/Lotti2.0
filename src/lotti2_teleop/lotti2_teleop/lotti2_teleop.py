@@ -335,6 +335,7 @@ class TeleOp(Node):
         if (self.__arm_enabled == False):
             # corrections for driving backwards
             if (self.__left_stick_y < 0):
+                # weird formular to accelerate turning on the spot
                 self.__chains_angle = - self.__left_stick_x * abs(self.__left_stick_x) * 5
             else:
                 self.__chains_angle = self.__left_stick_x * abs(self.__left_stick_x) * 5

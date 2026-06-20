@@ -150,11 +150,11 @@ controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp
 controller_interface::return_type FlipperController::update(
   const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/) {
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        double dir_cmd = flipper_cmd_[i] / abs(flipper_cmd_[i]);
-        double dir_vel = joint_velocity_state_interface_[i].get().get_optional().value() / abs(joint_velocity_state_interface_[i].get().get_optional().value());
         if (flipper_cmd_[i] != 0.0) {
+            double dir_cmd = flipper_cmd_[i] / abs(flipper_cmd_[i]);
+            double dir_vel = joint_velocity_state_interface_[i].get().get_optional().value() / abs(joint_velocity_state_interface_[i].get().get_optional().value());
             if (dir_vel != dir_cmd) {
-                torque_cmd_[i] += dir_cmd * 0.1;
+                torque_cmd_[i] += flipper_cmd_[i] * 0.05;
                 if (abs(torque_cmd_[i]) >= max_torque_) {
                     torque_cmd_[i] = max_torque_ * dir_cmd;
                 }
