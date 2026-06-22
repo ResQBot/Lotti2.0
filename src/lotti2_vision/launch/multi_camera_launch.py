@@ -5,10 +5,10 @@ from launch_ros.actions import Node
 def generate_launch_description():
     # Define your ideal mapping setup
     possible_cameras = [
-        {'name': 'camera_1', 'device': '/dev/video0'},
-        {'name': 'camera_2', 'device': '/dev/video4'},
-        #{'name': 'camera_3', 'device': '/dev/video4'},
-        {'name': 'camera_4', 'device': '/dev/video10'}
+        {'name': 'camera_1', 'device': '/dev/video1'},
+        {'name': 'camera_2', 'device': '/dev/video3'},
+        {'name': 'camera_3', 'device': '/dev/video5'},
+        {'name': 'camera_4', 'device': '/dev/video9'}
     ]
 
     launch_nodes = []

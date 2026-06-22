@@ -74,13 +74,13 @@ hardware_interface::CallbackReturn ArmInterface::on_configure(
         if (arm_comms_.connected()) {
             // set motor command mode
             arm_comms_.setReq(0x82, 0x05);
-            usleep(1000);
+            usleep(2000);
             // enable motors
             arm_comms_.setReq(0xF3, 1);
-            usleep(1000);
+            usleep(2000);
             // set zero positions
             arm_comms_.setReq(0x92, 0);
-            usleep(1000);
+            usleep(2000);
         }
     }
 
@@ -147,7 +147,7 @@ hardware_interface::return_type ArmInterface::read(
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
     else {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
-            set_state(info_.joints[i].name + "/velocity", get_command(info_.joints[i].name + "/velocity"));
+            set_state(info_.joints[i].name + "/velocity", get_command(info_.joints[i].name + "/velocity") * 0.5);
             set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + get_command(info_.joints[i].name + "/velocity") * period.seconds());
         }
     }
@@ -172,10 +172,8 @@ hardware_interface::return_type ArmInterface::write(
         }
         for (uint8_t i = 0; i < 6; i++) {
             // send commands to arm comms
-            bool complete = arm_comms_.setArmValues(i, arm_direction_[i], arm_vel_cmd_[i], motor_acceleration_);
-            while (!complete) {
-                usleep(100);
-            }
+            arm_comms_.setArmValues(i, arm_direction_[i], arm_vel_cmd_[i], motor_acceleration_);
+            usleep(900);
         }
     }
 

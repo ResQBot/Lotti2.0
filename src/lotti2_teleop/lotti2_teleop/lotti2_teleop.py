@@ -376,7 +376,7 @@ class TeleOp(Node):
             # construct joint message
             joint1 = float(self.__button_rb -self.__button_lb)
             joint2 = float(self.__button_x - self.__button_a)
-            joint3 = float(-self.__button_y + self.__button_b)
+            joint3 = float(self.__button_y - self.__button_b)
             #gripper = float(self.__right_stick_press - self.__left_stick_press)
             
             self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_x, self.__right_stick_y, tilt]
