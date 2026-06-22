@@ -6,8 +6,8 @@
         <hardware>
             <plugin>lotti2_flipper_interface/FlipperInterface</plugin>
             <param name="device">/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTA2HIEQ-if00-port0</param>
-            <param name="gear_ratio">3.43</param>
-            <param name="use_hardware">1</param>
+            <param name="gear_ratio">2.5</param>
+            <param name="use_hardware">0</param>
         </hardware>
 
         <joint name="flipper_fr_joint">

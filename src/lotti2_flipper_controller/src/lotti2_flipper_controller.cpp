@@ -52,6 +52,16 @@ controller_interface::CallbackReturn FlipperController::on_init() {
     state_interface_types_ =
       auto_declare<std::vector<std::string>>("state_interfaces", state_interface_types_);
 
+    // innitiate PDI values
+    for (size_t i = 0; i < 4; i++) {
+        prevError[i]      = 0.0f;
+        proportional[i]   = 0.0f;
+        integrator[i]     = 0.0f;
+        differentiator[i] = 0.0f;
+        Time[i]           = 0.0f;
+    }
+
+
     return CallbackReturn::SUCCESS;
 }
 
@@ -84,19 +94,19 @@ controller_interface::InterfaceConfiguration FlipperController::state_interface_
 controller_interface::CallbackReturn FlipperController::on_configure(const rclcpp_lifecycle::State &) {
     // define callbacks for subscribers
     auto fr_callback = [this](std_msgs::msg::Float32 fr_flipper_msg_) -> void {
-        flipper_cmd_[0] = fr_flipper_msg_.data;
+        flipperCMD[0] = fr_flipper_msg_.data;
     };
 
     auto fl_callback = [this](std_msgs::msg::Float32 fl_flipper_msg_) -> void {
-        flipper_cmd_[1] = fl_flipper_msg_.data;
+        flipperCMD[1] = fl_flipper_msg_.data;
     };
 
     auto rr_callback = [this](std_msgs::msg::Float32 rr_flipper_msg_) -> void {
-        flipper_cmd_[2] = rr_flipper_msg_.data;
+        flipperCMD[2] = rr_flipper_msg_.data;
     };
 
     auto rl_callback = [this](std_msgs::msg::Float32 rl_flipper_msg_) -> void {
-        flipper_cmd_[3] = rl_flipper_msg_.data;
+        flipperCMD[3] = rl_flipper_msg_.data;
     };
 
     // configure subscribers to listen to command topics from teleop node
@@ -118,9 +128,9 @@ controller_interface::CallbackReturn FlipperController::on_configure(const rclcp
 
 
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        flipper_cmd_[i] = 0.0;
-        pos_cmd_[i]     = 0.0;
-        torque_cmd_[i]  = 0.0;
+        flipperCMD[i] = 0.0;
+        posCMD[i]     = 0.0;
+        torqueCMD[i]  = 0.0;
     }
 
     return CallbackReturn::SUCCESS;
@@ -148,23 +158,74 @@ controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp
 }
 
 controller_interface::return_type FlipperController::update(
-  const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/) {
+  const rclcpp::Time & /*time*/, const rclcpp::Duration &period) {
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        if (flipper_cmd_[i] != 0.0) {
-            double dir_cmd = flipper_cmd_[i] / abs(flipper_cmd_[i]);
-            double dir_vel = joint_velocity_state_interface_[i].get().get_optional().value() / abs(joint_velocity_state_interface_[i].get().get_optional().value());
-            if (dir_vel != dir_cmd) {
-                torque_cmd_[i] += flipper_cmd_[i] * 0.05;
-                if (abs(torque_cmd_[i]) >= max_torque_) {
-                    torque_cmd_[i] = max_torque_ * dir_cmd;
-                }
+        if (flipperCMD[i] != 0.0) {
+            // rudementary PID controller following tutorial by Phil's Lab https://www.youtube.com/watch?v=zOByx3Izf5U
+            // prep
+            float cmd_vel = flipperCMD[i] * maxSpeed;
+            float is_vel  = static_cast<float>(joint_velocity_state_interface_[i].get().get_optional().value());
+            float error   = cmd_vel - is_vel;
+            Time[i] += static_cast<float>(period.seconds());
+
+
+            // proportional component
+            proportional[i] = error * Kp_;
+
+            // integral component
+            integrator[i] = integrator[i] + 0.5f * Ki_ * Time[i] * (error + prevError[i]);
+            // anti wind-up
+            float limMinInt, limMaxInt;
+            if (maxSpeed > proportional[i]) {
+                limMaxInt = maxSpeed - proportional[i];
             }
+            else {
+                limMaxInt = 0.0f;
+            }
+            if (-maxSpeed < proportional[i]) {
+                limMinInt = -maxSpeed - proportional[i];
+            }
+            else {
+                limMinInt = 0.0f;
+            }
+            // clamp to limits
+            if (integrator[i] > limMaxInt) {
+                integrator[i] = limMaxInt;
+            }
+            else if (integrator[i] < limMinInt) {
+                integrator[i] = limMinInt;
+            }
+
+            // derivative (band-limited-differentiator)
+            differentiator[i] = (2.0f * (-Kd_) * (is_vel - prevVel[i]) + (2.0f * tau - Time[i]) * differentiator[i]) / (2.0f * tau + Time[i]);
+
+            // calc output
+            torqueCMD[i] = (proportional[i] + integrator[i] + differentiator[i]);
+            /*
+                        // clamp to limits
+                        if (torqueCMD[i] > maxTorque) {
+                            torqueCMD[i] = maxTorque;
+                        }
+                        else if (torqueCMD[i] < -maxTorque) {
+                            torqueCMD[i] = -maxTorque;
+                        }
+            */
+            // remember prev values
+            prevVel[i]   = is_vel;
+            prevError[i] = error;
         }
         else {
-            torque_cmd_[i] = 0.0;
+            torqueCMD[i]      = 0.0f;
+            Time[i]           = 0.0f;
+            proportional[i]   = 0.0f;
+            integrator[i]     = 0.0f;
+            differentiator[i] = 0.0f;
+            prevVel[i]        = 0.0f;
+            prevError[i]      = 0.0f;
         }
-        (void)joint_effort_command_interface_[i].get().set_value(torque_cmd_[i]);
+        (void)joint_effort_command_interface_[i].get().set_value(static_cast<double>(torqueCMD[i]));
     }
+    std::cout << torqueCMD[0] << " " << torqueCMD[1] << " " << torqueCMD[2] << " " << torqueCMD[3] << std::endl;
 
     return controller_interface::return_type::OK;
 }

@@ -69,12 +69,12 @@ class FlipperInterface : public hardware_interface::SystemInterface {
       const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) override;
 
   private:
-    std::string device_;
-    double gear_ratio_;
-    double unitree_ratio_ = 6.33;
-    int use_hardware_;
-    int motor_error_type_[4];
-    int dir_[4];
+    std::string device_;           // usb connector
+    double gear_ratio_;            // belt drive ratio + unitree ratio
+    double unitree_ratio_ = 6.33;  // unitree integrated gear ratio
+    int use_hardware_;             // use hardware or emulate
+    int motor_error_type_[4];      // errors sent by the motors
+    int dir_[4];                   // directional correction for motors according to positioning inside the robot
 
     // --- Add Unitree SDK members here ---
     std::unique_ptr<SerialPort> serial_;

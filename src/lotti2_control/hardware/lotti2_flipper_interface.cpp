@@ -178,8 +178,8 @@ hardware_interface::return_type FlipperInterface::read(
                 }
                 motor_error_type_[i] = motor_data_[i].merror;
 
-                set_state(info_.joints[i].name + "/position", static_cast<double>(motor_data_[i].q) * dir_[i] / (6.33 * gear_ratio_));
-                set_state(info_.joints[i].name + "/velocity", static_cast<double>(motor_data_[i].dq));
+                set_state(info_.joints[i].name + "/position", static_cast<double>(motor_data_[i].q) * dir_[i] / gear_ratio_);
+                set_state(info_.joints[i].name + "/velocity", static_cast<double>(motor_data_[i].dq) * dir_[i]);
                 set_state(info_.joints[i].name + "/effort", static_cast<double>(motor_data_[i].tau));
                 set_state(info_.joints[i].name + "/temp", static_cast<double>(motor_data_[i].temp));
             }
@@ -205,13 +205,7 @@ hardware_interface::return_type FlipperInterface::read(
     else {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
             double tor_ = get_command(info_.joints[i].name + "/effort");
-            double vel_;
-            if (abs(tor_) < 1.1) {
-                vel_ = 0.0;
-            }
-            else {
-                vel_ = tor_;
-            }
+            double vel_ = (tor_ / 2.5) * 3.1416;
             set_state(info_.joints[i].name + "/velocity", vel_);
             set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + vel_ * period.seconds());
             set_state(info_.joints[i].name + "/effort", tor_);
