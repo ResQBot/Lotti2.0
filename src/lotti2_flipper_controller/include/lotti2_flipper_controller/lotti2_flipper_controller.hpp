@@ -53,10 +53,11 @@ class FlipperController : public controller_interface::ControllerInterface {
     std::vector<std::string> joint_names_;
     std::vector<std::string> command_interface_types_;
     std::vector<std::string> state_interface_types_;
+
     // for PID controller
-    float Kp_ = 1.2f;  // proportional gain
+    float Kp_ = 0.8f;  // proportional gain
     float Ki_ = 0.0f;  // integral gain
-    float Kd_ = 0.0f;  // derivative gain
+    float Kd_ = 0.5f;  // derivative gain
     float tau = 2.0f;  // low-pass filter for derivative term
     float prevError[4];
     float prevVel[4];
@@ -69,9 +70,7 @@ class FlipperController : public controller_interface::ControllerInterface {
     float maxTorque = 2.5f;                          // max motor torque output before gearbox [Nm]
     float maxSpeed  = (3.1416f / 2.0f) * (45 / 18);  // max motor speed [Rad/s] = max flipper speed * belt ratio
     float flipperCMD[4];
-    float posCMD[4];
     float torqueCMD[4];
-
 
     // for subscriber
     rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr fr_flipper_command_subscriber_;

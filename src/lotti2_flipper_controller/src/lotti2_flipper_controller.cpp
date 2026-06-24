@@ -60,8 +60,6 @@ controller_interface::CallbackReturn FlipperController::on_init() {
         differentiator[i] = 0.0f;
         Time[i]           = 0.0f;
     }
-
-
     return CallbackReturn::SUCCESS;
 }
 
@@ -129,7 +127,6 @@ controller_interface::CallbackReturn FlipperController::on_configure(const rclcp
 
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
         flipperCMD[i] = 0.0;
-        posCMD[i]     = 0.0;
         torqueCMD[i]  = 0.0;
     }
 
@@ -183,7 +180,7 @@ controller_interface::return_type FlipperController::update(
                 limMaxInt = 0.0f;
             }
             if (-maxSpeed < proportional[i]) {
-                limMinInt = -maxSpeed - proportional[i];
+                limMinInt = -maxSpeed + proportional[i];
             }
             else {
                 limMinInt = 0.0f;

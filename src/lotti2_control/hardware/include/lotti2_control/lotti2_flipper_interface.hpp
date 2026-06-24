@@ -75,7 +75,7 @@ class FlipperInterface : public hardware_interface::SystemInterface {
     int use_hardware_;             // use hardware or emulate
     int motor_error_type_[4];      // errors sent by the motors
     int dir_[4];                   // directional correction for motors according to positioning inside the robot
-
+    double vel_[4];
     // --- Add Unitree SDK members here ---
     std::unique_ptr<SerialPort> serial_;
     MotorCmd motor_cmd_[4];    // Array of motor commands

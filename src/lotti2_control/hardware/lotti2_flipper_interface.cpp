@@ -205,9 +205,17 @@ hardware_interface::return_type FlipperInterface::read(
     else {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
             double tor_ = get_command(info_.joints[i].name + "/effort");
-            double vel_ = (tor_ / 2.5) * 3.1416;
-            set_state(info_.joints[i].name + "/velocity", vel_);
-            set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + vel_ * period.seconds());
+            if (tor_ > 0.8) {
+                vel_[i] = (tor_ - 0.8) * 1.5;
+            }
+            else if (tor_ < -0.8) {
+                vel_[i] += (tor_ + 0.8) * 1.5;
+            }
+            else {
+                vel_[i] = 0.0;
+            }
+            set_state(info_.joints[i].name + "/velocity", vel_[i]);
+            set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + vel_[i] * period.seconds());
             set_state(info_.joints[i].name + "/effort", tor_);
             set_state(info_.joints[i].name + "/temp", 22.0);
         }

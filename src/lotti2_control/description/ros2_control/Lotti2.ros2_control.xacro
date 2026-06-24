@@ -5,8 +5,8 @@
     <ros2_control name="Lotti2Flipper" type="system" rw_rate="25">
         <hardware>
             <plugin>lotti2_flipper_interface/FlipperInterface</plugin>
-            <param name="device">/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTA2HIEQ-if00-port0</param>
-            <param name="gear_ratio">2.5</param>
+            <param name="device">/dev/serial/by-id/usb-FTDI_USB__-__Serial_Converter_FTA362Q0-if00-port0</param>
+            <param name="gear_ratio">2</param>
             <param name="use_hardware">0</param>
         </hardware>
 
