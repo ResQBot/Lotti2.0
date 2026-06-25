@@ -52,14 +52,6 @@ controller_interface::CallbackReturn FlipperController::on_init() {
     state_interface_types_ =
       auto_declare<std::vector<std::string>>("state_interfaces", state_interface_types_);
 
-    // innitiate PDI values
-    for (size_t i = 0; i < 4; i++) {
-        prevError[i]      = 0.0f;
-        proportional[i]   = 0.0f;
-        integrator[i]     = 0.0f;
-        differentiator[i] = 0.0f;
-        Time[i]           = 0.0f;
-    }
     return CallbackReturn::SUCCESS;
 }
 
@@ -155,74 +147,11 @@ controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp
 }
 
 controller_interface::return_type FlipperController::update(
-  const rclcpp::Time & /*time*/, const rclcpp::Duration &period) {
+  const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/) {
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        if (flipperCMD[i] != 0.0) {
-            // rudementary PID controller following tutorial by Phil's Lab https://www.youtube.com/watch?v=zOByx3Izf5U
-            // prep
-            float cmd_vel = flipperCMD[i] * maxSpeed;
-            float is_vel  = static_cast<float>(joint_velocity_state_interface_[i].get().get_optional().value());
-            float error   = cmd_vel - is_vel;
-            Time[i] += static_cast<float>(period.seconds());
-
-
-            // proportional component
-            proportional[i] = error * Kp_;
-
-            // integral component
-            integrator[i] = integrator[i] + 0.5f * Ki_ * Time[i] * (error + prevError[i]);
-            // anti wind-up
-            float limMinInt, limMaxInt;
-            if (maxSpeed > proportional[i]) {
-                limMaxInt = maxSpeed - proportional[i];
-            }
-            else {
-                limMaxInt = 0.0f;
-            }
-            if (-maxSpeed < proportional[i]) {
-                limMinInt = -maxSpeed + proportional[i];
-            }
-            else {
-                limMinInt = 0.0f;
-            }
-            // clamp to limits
-            if (integrator[i] > limMaxInt) {
-                integrator[i] = limMaxInt;
-            }
-            else if (integrator[i] < limMinInt) {
-                integrator[i] = limMinInt;
-            }
-
-            // derivative (band-limited-differentiator)
-            differentiator[i] = (2.0f * (-Kd_) * (is_vel - prevVel[i]) + (2.0f * tau - Time[i]) * differentiator[i]) / (2.0f * tau + Time[i]);
-
-            // calc output
-            torqueCMD[i] = (proportional[i] + integrator[i] + differentiator[i]);
-            /*
-                        // clamp to limits
-                        if (torqueCMD[i] > maxTorque) {
-                            torqueCMD[i] = maxTorque;
-                        }
-                        else if (torqueCMD[i] < -maxTorque) {
-                            torqueCMD[i] = -maxTorque;
-                        }
-            */
-            // remember prev values
-            prevVel[i]   = is_vel;
-            prevError[i] = error;
-        }
-        else {
-            torqueCMD[i]      = 0.0f;
-            Time[i]           = 0.0f;
-            proportional[i]   = 0.0f;
-            integrator[i]     = 0.0f;
-            differentiator[i] = 0.0f;
-            prevVel[i]        = 0.0f;
-            prevError[i]      = 0.0f;
-        }
-        (void)joint_effort_command_interface_[i].get().set_value(static_cast<double>(torqueCMD[i]));
+        torqueCMD[i] = flipperCMD[i] * maxTorque;
+        (void)joint_effort_command_interface_[i].get().set_value(torqueCMD[i]);
     }
-    std::cout << torqueCMD[0] << " " << torqueCMD[1] << " " << torqueCMD[2] << " " << torqueCMD[3] << std::endl;
 
     return controller_interface::return_type::OK;
 }

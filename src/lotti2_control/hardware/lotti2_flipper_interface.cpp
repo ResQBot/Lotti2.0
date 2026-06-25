@@ -71,12 +71,12 @@ hardware_interface::CallbackReturn FlipperInterface::on_configure(
         motor_data_[i].q         = 0.0;
         motor_error_type_[i]     = 0;
         motor_cmd_[i].motorType  = MotorType::GO_M8010_6;
-        motor_cmd_[i].mode       = 1;    // static_cast<unsigned short>(queryMotorMode(MotorType::GO_M8010_6, MotorMode::FOC))
-        motor_cmd_[i].kp         = 0.0;  // positional stiffness
-        motor_cmd_[i].kd         = 0.0;  // velocity stiffness
-        motor_cmd_[i].q          = 0.0;  // position [rad]
-        motor_cmd_[i].dq         = 0.0;  // speed    [Rads/s]
-        motor_cmd_[i].tau        = 0.0;  // torque  [Nm]
+        motor_cmd_[i].mode       = 1;     // static_cast<unsigned short>(queryMotorMode(MotorType::GO_M8010_6, MotorMode::FOC))
+        motor_cmd_[i].kp         = 0.0f;  // positional stiffness
+        motor_cmd_[i].kd         = 0.1f;  // velocity stiffness
+        motor_cmd_[i].q          = 0.0;   // position [rad]
+        motor_cmd_[i].dq         = 0.0;   // speed    [Rads/s]
+        motor_cmd_[i].tau        = 0.0;   // torque  [Nm]
 
         // setting motor IDs.
         switch (i) {
@@ -204,19 +204,11 @@ hardware_interface::return_type FlipperInterface::read(
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
     else {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
-            double tor_ = get_command(info_.joints[i].name + "/effort");
-            if (tor_ > 0.8) {
-                vel_[i] = (tor_ - 0.8) * 1.5;
-            }
-            else if (tor_ < -0.8) {
-                vel_[i] += (tor_ + 0.8) * 1.5;
-            }
-            else {
-                vel_[i] = 0.0;
-            }
-            set_state(info_.joints[i].name + "/velocity", vel_[i]);
-            set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + vel_[i] * period.seconds());
-            set_state(info_.joints[i].name + "/effort", tor_);
+            double tor = get_command(info_.joints[i].name + "/effort");
+            double vel = (tor - 0.8) * 1.1;
+            set_state(info_.joints[i].name + "/velocity", vel);
+            set_state(info_.joints[i].name + "/position", get_command(info_.joints[i].name + "/position") + vel * period.seconds());
+            set_state(info_.joints[i].name + "/effort", tor);
             set_state(info_.joints[i].name + "/temp", 22.0);
         }
     }
@@ -233,17 +225,14 @@ hardware_interface::return_type FlipperInterface::write(
             if (motor_error_type_[i] == 0 && motor_data_[i].correct) {
                 // set command values
                 motor_cmd_[i].tau = static_cast<float>(get_command(info_.joints[i].name + "/effort") * dir_[i]);
-                // if flipper shouldn't move, set position, positional stiffness and velocity stiffness
-                if (get_command(info_.joints[i].name + "/effort") == 0.0) {
-                    motor_cmd_[i].q  = motor_data_[i].q;
-                    motor_cmd_[i].kp = 0.7f;
-                    motor_cmd_[i].kd = 0.1f;
-                }
-                else {
-                    motor_cmd_[i].q  = 0.0;
-                    motor_cmd_[i].kp = 0.0;
-                    motor_cmd_[i].kd = 0.0;
-                }
+            }
+            else {
+                motor_cmd_[i].mode = 0;
+                motor_cmd_[i].kd   = 0.0;
+                motor_cmd_[i].kp   = 0.0;
+                motor_cmd_[i].q    = 0.0;
+                motor_cmd_[i].dq   = 0.0;
+                motor_cmd_[i].tau  = 0.0;
             }
         }
         // Send commands and receive data via serial port
