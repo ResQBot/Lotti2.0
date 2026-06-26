@@ -1,0 +1,368 @@
+(footprint "EEHZA1E101XP"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Hybrid_D_D8_1")
+	(tags "Capacitor Polarised")
+	(property "Reference" "REF**"
+		(at 0.25 4.25 0)
+		(layer "F.SilkS")
+		(uuid "3603f090-400f-4410-a9a0-12b6b914b2fd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "EEH-ZC1E560P"
+		(at -0.425 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "507aa049-2918-4045-8a34-9634b2d475d7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "http://industrial.panasonic.com/cdbs/www-data/pdf/RDD0000/ABA0000C1234.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "71a3b31d-7bf5-42ab-b568-1f4692a34982")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "43fa327a-3442-439e-a394-995fffc3a790")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "8.3"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0e34d9c8-5682-45cc-a60f-bd92bfb949de")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "667-EEH-ZC1E560P"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8637515a-cbb7-4a97-b914-0b7b740f07e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Panasonic/EEH-ZC1E560P?qs=7UCyOFMWVHYdN59awcl%252BRg%3D%3D"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2a59ffa5-f93a-464b-ab28-d7e9881e34c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Panasonic"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "67a946a9-8cb9-422c-80c2-78424950e1e2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "EEH-ZC1E560P"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "52ff4dae-5dd3-436c-a72f-d0edbfb68528")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 3.3 3.3)
+		(end -1.5 3.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1e4e6d3a-4859-4bdf-a4a2-ff166489090e")
+	)
+	(fp_line
+		(start 3.3 1.5)
+		(end 3.3 3.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6fbd6f98-626f-475a-b51b-7ce4468dd4c7")
+	)
+	(fp_line
+		(start 3.3 -3.3)
+		(end 3.3 -1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8e5667b9-ef5b-403f-87a1-d465fc3463dc")
+	)
+	(fp_line
+		(start -1.5 3.3)
+		(end -3.3 1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c088b5fa-19f8-4e72-b708-e683ad7df043")
+	)
+	(fp_line
+		(start -1.5 -3.3)
+		(end 3.3 -3.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "335d04ea-ae37-495b-9133-6ae7d3ff6fc5")
+	)
+	(fp_line
+		(start -3.3 -1.5)
+		(end -1.5 -3.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4f1491d0-60e2-4c2d-a5bd-a59ba8ddd73f")
+	)
+	(fp_line
+		(start -4.825 0)
+		(end -4.825 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "16eb755d-eada-4c17-8301-a9279ba86e5e")
+	)
+	(fp_line
+		(start -4.875 0)
+		(end -4.875 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "de519075-bec9-4dfe-bcf8-cd4b305492fe")
+	)
+	(fp_arc
+		(start -4.825 0)
+		(mid -4.85 0.025)
+		(end -4.875 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8d6570f9-c3ea-4f54-92b5-5f12aed28acf")
+	)
+	(fp_arc
+		(start -4.875 0)
+		(mid -4.85 -0.025)
+		(end -4.825 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "146b2a64-96f2-4f13-9ff3-24884ffad2b7")
+	)
+	(fp_line
+		(start 4.9 4.3)
+		(end -5.75 4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c1f238e4-2409-4162-bce0-8ebc81797f51")
+	)
+	(fp_line
+		(start 4.9 -4.3)
+		(end 4.9 4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "269ff315-d51f-4c47-8b14-7a6ead62079c")
+	)
+	(fp_line
+		(start -5.75 4.3)
+		(end -5.75 -4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "151a7983-23a1-4e20-a354-5736b279fdf2")
+	)
+	(fp_line
+		(start -5.75 -4.3)
+		(end 4.9 -4.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0d8084fc-ce5e-415c-82bb-2f2fabec5168")
+	)
+	(fp_line
+		(start 3.3 3.3)
+		(end -1.5 3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "11159699-279e-468a-a421-f3ffd6834b9e")
+	)
+	(fp_line
+		(start 3.3 -3.3)
+		(end 3.3 3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e7abf8bb-d379-44e2-9771-a49acfa0c569")
+	)
+	(fp_line
+		(start -1.5 3.3)
+		(end -3.3 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dc1ccf6d-1d1f-40af-85f7-1d938582a511")
+	)
+	(fp_line
+		(start -1.5 -3.3)
+		(end 3.3 -3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d795c55b-1dd7-4067-a1ec-d999d4c21c27")
+	)
+	(fp_line
+		(start -3.3 1.5)
+		(end -3.3 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1d3de8b3-6deb-4028-a882-3722704e6fa4")
+	)
+	(fp_line
+		(start -3.3 -1.5)
+		(end -1.5 -3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f458e896-81f4-41b5-9ea2-be09640eb825")
+	)
+	(fp_line
+		(start -3.3 -1.5)
+		(end -1.5 -3.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fc1553bc-f947-40fd-acc1-8ff415756e9f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.425 0 0)
+		(layer "F.Fab")
+		(uuid "e677e4c1-e0e4-491c-af98-016c21c5f9a7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.5 0 270)
+		(size 1.6 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1ae99aee-f8d2-49de-b993-5352bad30683")
+	)
+	(pad "2" smd rect
+		(at 2.5 0 270)
+		(size 1.6 3.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "83708e42-a51e-42fc-9b78-260a364c6d7f")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\EEH-ZC1E560P.stp"
+		(offset
+			(xyz -0.02999999888 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -180)
+		)
+	)
+)

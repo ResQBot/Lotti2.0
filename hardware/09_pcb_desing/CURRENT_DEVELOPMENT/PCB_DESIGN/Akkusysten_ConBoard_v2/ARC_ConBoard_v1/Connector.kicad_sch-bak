@@ -1,0 +1,5074 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "0dbfcba4-a0be-4451-b903-638bd8d7fa0e")
+	(paper "A4")
+	(lib_symbols
+		(symbol "ARC_CONBOARD_LIBRARY:1792863"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 16.51 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "1792863"
+				(at 16.51 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "1792863"
+				(at 16.51 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+				(at 16.51 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "10.65"
+				(at 16.51 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "651-1792863"
+				(at 16.51 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+				(at 16.51 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Phoenix Contact"
+				(at 16.51 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "1792863"
+				(at 16.51 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "1792863_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 15.24 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_CONBOARD_LIBRARY:640455-5"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 16.51 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "640455-5"
+				(at 16.51 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "HDRRA5W88P0X254_1X5_1270X775X610P"
+				(at 16.51 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=640455&DocType=Customer+Drawing&DocLang=English&DocFormat=pdf&PartCntxt=640455-5"
+				(at 16.51 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "TE Connectivity MTA-100, 5 Way, 1 Row, Right Angle PCB Header"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "6.1"
+				(at 16.51 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "571-6404555"
+				(at 16.51 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/640455-5?qs=X1mjqRbeMc5kyjdl11VSpA%3D%3D"
+				(at 16.51 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "TE Connectivity"
+				(at 16.51 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "640455-5"
+				(at 16.51 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "640455-5_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 15.24 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 0)
+					(length 5.08)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 0)
+					(length 5.08)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -10.16 0)
+					(length 5.08)
+					(name "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_CONBOARD_LIBRARY:EEH-ZC1E560P"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 8.89 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "EEH-ZC1E560P"
+				(at 8.89 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "EEHZA1E101XP"
+				(at 8.89 -96.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://industrial.panasonic.com/cdbs/www-data/pdf/RDD0000/ABA0000C1234.pdf"
+				(at 8.89 -196.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "8.3"
+				(at 8.89 -396.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "667-EEH-ZC1E560P"
+				(at 8.89 -496.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Panasonic/EEH-ZC1E560P?qs=7UCyOFMWVHYdN59awcl%252BRg%3D%3D"
+				(at 8.89 -596.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Panasonic"
+				(at 8.89 -696.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "EEH-ZC1E560P"
+				(at 8.89 -796.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "EEH-ZC1E560P_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.064 1.778) (xy 4.064 0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 1.27) (xy 3.556 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 2.54)
+					(end 5.842 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 2.54) (xy 7.62 -2.54) (xy 6.858 -2.54) (xy 6.858 2.54) (xy 7.62 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_CONBOARD_LIBRARY:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_CONBOARD_LIBRARY:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_CONBOARD_LIBRARY:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_CONBOARD_LIBRARY:USB_C_Receptacle_PowerOnly_6P"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Value" "USB_C_Receptacle_PowerOnly_6P"
+				(at 0 13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 3.81 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "USB Power-Only 6P Type-C Receptacle connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "usb universal serial bus type-C power-only charging-only 6P 6C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "USB*C*Receptacle*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "USB_C_Receptacle_PowerOnly_6P_0_0"
+				(rectangle
+					(start -0.254 -12.7)
+					(end 0.254 -11.684)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 7.874)
+					(end 9.144 7.366)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -4.826)
+					(end 9.144 -5.334)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 10.16 -7.366)
+					(end 9.144 -7.874)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USB_C_Receptacle_PowerOnly_6P_0_1"
+				(rectangle
+					(start -10.16 12.7)
+					(end 10.16 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.89 -1.27) (xy -8.89 6.35)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -7.62 -1.27)
+					(end -6.35 6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start -7.62 6.35)
+					(mid -6.985 6.9823)
+					(end -6.35 6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -7.62 6.35)
+					(mid -6.985 6.9823)
+					(end -6.35 6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start -8.89 6.35)
+					(mid -6.985 8.2467)
+					(end -5.08 6.35)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -5.08 -1.27)
+					(mid -6.985 -3.1667)
+					(end -8.89 -1.27)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -6.35 -1.27)
+					(mid -6.985 -1.9023)
+					(end -7.62 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -6.35 -1.27)
+					(mid -6.985 -1.9023)
+					(end -7.62 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 6.35) (xy -5.08 -1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.54 3.683)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 6.858) (xy 0 9.398) (xy 1.27 6.858) (xy -1.27 6.858)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.508) (xy 2.54 3.048) (xy 2.54 4.318)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy -2.54 1.778) (xy -2.54 3.048)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -3.302) (xy 0 6.858)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -3.302)
+					(radius 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.905 4.318)
+					(end 3.175 5.588)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "USB_C_Receptacle_PowerOnly_6P_1_1"
+				(pin passive line
+					(at -7.62 -17.78 90)
+					(length 5.08)
+					(name "SHIELD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -17.78 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -17.78 90)
+					(length 5.08)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 7.62 180)
+					(length 5.08)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 7.62 180)
+					(length 5.08)
+					(hide yes)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -5.08 180)
+					(length 5.08)
+					(name "CC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -7.62 180)
+					(length 5.08)
+					(name "CC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Raspberry PI"
+		(exclude_from_sim no)
+		(at 133.35 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "052a477c-2ad5-4cc2-ad3e-c75ff934aa8d")
+	)
+	(text "12V_MISC"
+		(exclude_from_sim no)
+		(at 89.662 88.646 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1318e730-c6ef-49c3-82c7-00b59c4065ce")
+	)
+	(text "Extra"
+		(exclude_from_sim no)
+		(at 198.12 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6dafd138-ad86-4bb7-98c2-281d3c7e2dd2")
+	)
+	(text "Stepper"
+		(exclude_from_sim no)
+		(at 91.44 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6f90df4a-7d58-4a1a-83d5-bee7386da0d0")
+	)
+	(text "Converter Board Connector\n"
+		(exclude_from_sim no)
+		(at 51.562 67.818 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "824f539f-6b17-4114-a53d-c45c0a1820f3")
+	)
+	(text "Mini PC"
+		(exclude_from_sim no)
+		(at 83.82 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a6076384-f7bf-4637-b2ab-3276ce763026")
+	)
+	(text "12V-Mini PC"
+		(exclude_from_sim no)
+		(at 87.63 52.832 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b2316744-9bd9-47d2-9e4a-80fe56bab39e")
+	)
+	(text "24V INPUT"
+		(exclude_from_sim no)
+		(at 42.672 134.112 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c7f26e02-1544-466d-b62f-780008c2d07a")
+	)
+	(text "5V CONNECTORS\n"
+		(exclude_from_sim no)
+		(at 197.866 36.322 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ea1af968-af41-46ff-9eb8-c32d3cd45ed1")
+	)
+	(text "Servos"
+		(exclude_from_sim no)
+		(at 80.01 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8ce2d86-a742-45bf-be43-e8af40cc8510")
+	)
+	(text "Extra"
+		(exclude_from_sim no)
+		(at 95.25 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fdc26aeb-8857-4295-9e62-bc2e02e975ea")
+	)
+	(text_box "Connections to the Top Board.\n\n5V/12V Supply from the Converter and Emergency Stop signal from the Bottom board (this Board)"
+		(exclude_from_sim no)
+		(at 26.67 46.99 0)
+		(size 48.26 15.24)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ab66afc5-4d8d-4856-a1ee-e6ded211ac67")
+	)
+	(junction
+		(at 96.52 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0cfecf31-6e91-455c-9f99-40030549c271")
+	)
+	(junction
+		(at 224.79 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "142e64cd-0492-4e3a-b2da-eb95f10601a2")
+	)
+	(junction
+		(at 53.34 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ee2a434-34a7-4916-870e-25e904fa43f3")
+	)
+	(junction
+		(at 219.71 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35390a57-a38f-4af9-953f-e36ec305f9e6")
+	)
+	(junction
+		(at 40.64 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "43047ec2-5795-46d1-8521-9bae175b4085")
+	)
+	(junction
+		(at 158.75 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "518848ac-bcb2-420a-b16e-372e04169d55")
+	)
+	(junction
+		(at 99.06 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "52e4f9b0-c5f8-4f2c-8cb4-7c45a3fa1977")
+	)
+	(junction
+		(at 214.63 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5bdec70c-398e-48b0-8f27-8411b73951b0")
+	)
+	(junction
+		(at 266.7 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "621062e4-3181-4ad0-93c0-3add78af8dba")
+	)
+	(junction
+		(at 165.1 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "73b6ce68-8f16-4b05-93d3-d26f79d7e4c6")
+	)
+	(junction
+		(at 154.94 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7bcba26e-689c-4a91-8487-3e8b1b6193e3")
+	)
+	(junction
+		(at 243.84 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85aa0981-516c-4c1a-a255-3607a83741bd")
+	)
+	(junction
+		(at 40.64 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ca2643c9-c828-476c-8fa1-06dc12686b57")
+	)
+	(junction
+		(at 255.27 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd6c6498-0b2a-4629-beb6-e89915b3f94b")
+	)
+	(junction
+		(at 199.39 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "def23a56-f6b1-4d04-aee6-000fcf425b68")
+	)
+	(junction
+		(at 86.36 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f410eab6-1a36-4792-b409-e55730f74dc9")
+	)
+	(junction
+		(at 139.7 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f5d9e385-4d01-4a58-bb22-0cc90a9ae820")
+	)
+	(junction
+		(at 199.39 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb1b478c-c7da-4bab-8978-d8095a1d0da3")
+	)
+	(junction
+		(at 82.55 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd0e68f4-7b33-4fcf-84a3-aa0e09deb9c0")
+	)
+	(wire
+		(pts
+			(xy 243.84 69.85) (xy 255.27 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05f989bb-b38a-4a83-b79f-6b744fd7a944")
+	)
+	(wire
+		(pts
+			(xy 99.06 54.61) (xy 102.87 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ca74e1a-c796-41ad-98e2-15c50715ad56")
+	)
+	(wire
+		(pts
+			(xy 96.52 58.42) (xy 96.52 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "118d6825-b59e-492a-b26a-bbfc94cf7a83")
+	)
+	(wire
+		(pts
+			(xy 165.1 102.87) (xy 165.1 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1beb015a-a523-426e-9874-5fc68e3c9618")
+	)
+	(wire
+		(pts
+			(xy 199.39 125.73) (xy 224.79 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d8c8e7d-ddb3-464b-8e9c-1f94356bcdba")
+	)
+	(wire
+		(pts
+			(xy 219.71 100.33) (xy 214.63 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e7a557b-284a-40f1-92a5-63f8ce984663")
+	)
+	(wire
+		(pts
+			(xy 255.27 69.85) (xy 264.16 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23dd3534-f79d-47cc-920f-9e762bad39b6")
+	)
+	(polyline
+		(pts
+			(xy 77.47 119.38) (xy 77.47 86.36)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "23fbc6ea-ed3e-481a-a8f8-239b189537df")
+	)
+	(wire
+		(pts
+			(xy 165.1 92.71) (xy 165.1 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cb6d9a0-05be-4f78-9abc-a85cb49ae09c")
+	)
+	(wire
+		(pts
+			(xy 39.37 157.48) (xy 40.64 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31682ce9-a9d7-481b-b791-914087c97e40")
+	)
+	(wire
+		(pts
+			(xy 93.98 90.17) (xy 82.55 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "327b76ac-b299-4fa0-b499-dcf90f9b0c59")
+	)
+	(wire
+		(pts
+			(xy 40.64 154.94) (xy 43.18 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37367d4e-f1ed-45ba-85b6-b54318c6070a")
+	)
+	(wire
+		(pts
+			(xy 45.72 88.9) (xy 45.72 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a43c6b4-8ced-46ca-bfa0-f66ac3fccbe2")
+	)
+	(wire
+		(pts
+			(xy 53.34 154.94) (xy 53.34 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dc74d7c-1d0e-4b5d-b4bd-d970abdbd4a6")
+	)
+	(wire
+		(pts
+			(xy 139.7 125.73) (xy 199.39 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "468ec8bf-1954-441e-bdb5-b181f3cb315f")
+	)
+	(wire
+		(pts
+			(xy 80.01 57.15) (xy 80.01 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ba0ad8a-6002-4865-acfa-6a71e070e8c7")
+	)
+	(wire
+		(pts
+			(xy 224.79 69.85) (xy 219.71 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4be154e3-e318-4943-96ef-05a1098b4259")
+	)
+	(wire
+		(pts
+			(xy 96.52 57.15) (xy 86.36 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50384b5c-c227-4725-b488-24a6b9b536ff")
+	)
+	(wire
+		(pts
+			(xy 199.39 113.03) (xy 199.39 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57641882-0809-42c4-af3e-d977b77ba112")
+	)
+	(wire
+		(pts
+			(xy 158.75 69.85) (xy 158.75 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e074802-2844-4cdd-9a38-448026825056")
+	)
+	(wire
+		(pts
+			(xy 96.52 93.98) (xy 96.52 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "611734d9-138b-4ce0-9682-501040464d0e")
+	)
+	(wire
+		(pts
+			(xy 257.81 73.66) (xy 266.7 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "625f3ee5-a028-440c-974a-0736398fb45e")
+	)
+	(wire
+		(pts
+			(xy 55.88 154.94) (xy 55.88 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6599ab29-429c-487c-b12d-210fdd9d1cc4")
+	)
+	(wire
+		(pts
+			(xy 40.64 154.94) (xy 40.64 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "659c0990-51ed-41ac-b68d-6754a17de266")
+	)
+	(polyline
+		(pts
+			(xy 111.76 119.38) (xy 77.47 119.38)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "65cff47c-a3eb-4dad-b5d7-0d55376d74d4")
+	)
+	(wire
+		(pts
+			(xy 99.06 58.42) (xy 99.06 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b12d420-d89b-411d-88ce-b3523abee872")
+	)
+	(wire
+		(pts
+			(xy 219.71 69.85) (xy 219.71 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d8499e4-f8ef-47ea-9783-0c79d94e6d87")
+	)
+	(wire
+		(pts
+			(xy 214.63 69.85) (xy 214.63 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dd37fd5-ad81-45bf-a950-e309a0f4a3d0")
+	)
+	(wire
+		(pts
+			(xy 214.63 102.87) (xy 224.79 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "732f0edc-ac77-429b-99fa-0dfe7ef29054")
+	)
+	(wire
+		(pts
+			(xy 224.79 69.85) (xy 243.84 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7510fbd4-169a-44bf-b62d-822d9267571e")
+	)
+	(wire
+		(pts
+			(xy 45.72 154.94) (xy 45.72 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "766deae8-f449-413a-bd9a-320f85705648")
+	)
+	(wire
+		(pts
+			(xy 243.84 69.85) (xy 243.84 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dba8d4f-be50-4f1d-a9d8-24f8819b0410")
+	)
+	(wire
+		(pts
+			(xy 85.09 91.44) (xy 85.09 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82afde3a-8111-498e-931f-1e82089f115c")
+	)
+	(wire
+		(pts
+			(xy 53.34 154.94) (xy 45.72 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82e385f9-3dce-4969-9be6-ac717616e723")
+	)
+	(wire
+		(pts
+			(xy 219.71 93.98) (xy 219.71 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "846f703a-346e-4696-a99a-9951a6918bb6")
+	)
+	(wire
+		(pts
+			(xy 55.88 88.9) (xy 55.88 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "885918cf-7117-4a94-9c2a-2ac35942fc2c")
+	)
+	(wire
+		(pts
+			(xy 158.75 100.33) (xy 158.75 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88804eaa-12f9-4327-881d-431218f41ce2")
+	)
+	(wire
+		(pts
+			(xy 154.94 100.33) (xy 158.75 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89793092-60c3-4c85-9d0d-232b150cfb72")
+	)
+	(wire
+		(pts
+			(xy 158.75 69.85) (xy 165.1 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a42dd49-75c4-49f4-bf45-c20ad2210bbc")
+	)
+	(wire
+		(pts
+			(xy 139.7 113.03) (xy 139.7 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a758907-0fa6-4ffd-9b30-5944bd5d3359")
+	)
+	(polyline
+		(pts
+			(xy 77.47 86.36) (xy 111.76 86.36)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "8acef69b-3f62-4ae5-ae03-75e213fea847")
+	)
+	(wire
+		(pts
+			(xy 224.79 125.73) (xy 224.79 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c940228-5113-48d1-8939-2b60a0fe9806")
+	)
+	(wire
+		(pts
+			(xy 132.08 113.03) (xy 139.7 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f5482c9-b38d-4233-9076-10c6e3f533c1")
+	)
+	(wire
+		(pts
+			(xy 82.55 90.17) (xy 82.55 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9106506b-f0a0-4f55-bb11-9ee7324018dd")
+	)
+	(wire
+		(pts
+			(xy 53.34 88.9) (xy 53.34 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97a710e8-ad4f-4798-8d34-639ca6c02d64")
+	)
+	(wire
+		(pts
+			(xy 80.01 57.15) (xy 86.36 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "992156a5-d84d-44fd-8723-fa4fc7434d81")
+	)
+	(wire
+		(pts
+			(xy 40.64 157.48) (xy 40.64 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a617943-1c37-4745-954b-4f049ddabcd7")
+	)
+	(wire
+		(pts
+			(xy 257.81 67.31) (xy 257.81 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c50989a-47dc-40d4-97d3-03e4adb09e0f")
+	)
+	(wire
+		(pts
+			(xy 154.94 69.85) (xy 158.75 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d9faf54-b3c5-478e-aabc-9ef3d52b6778")
+	)
+	(wire
+		(pts
+			(xy 243.84 86.36) (xy 243.84 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6a73949-1295-4549-b469-975ad123112d")
+	)
+	(wire
+		(pts
+			(xy 264.16 69.85) (xy 264.16 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa7ca6b8-fa82-42ac-aa16-44deab227d76")
+	)
+	(wire
+		(pts
+			(xy 154.94 69.85) (xy 154.94 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac60a969-69d4-4222-b98c-d539d4e9c5af")
+	)
+	(wire
+		(pts
+			(xy 82.55 90.17) (xy 80.01 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae5e5c96-080f-4908-932b-d85e876b1f24")
+	)
+	(wire
+		(pts
+			(xy 50.8 88.9) (xy 50.8 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b65b0a49-7eeb-4fe8-84ab-e69556c00538")
+	)
+	(polyline
+		(pts
+			(xy 77.47 85.09) (xy 77.47 50.8)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "b8411365-15ff-43dc-ae27-725f33a4ff73")
+	)
+	(wire
+		(pts
+			(xy 55.88 154.94) (xy 53.34 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba2c616b-9599-497b-813b-9aadd0fc0424")
+	)
+	(polyline
+		(pts
+			(xy 111.76 86.36) (xy 111.76 119.38)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "bb915f1f-9094-4239-8115-bcf6a654a0af")
+	)
+	(wire
+		(pts
+			(xy 255.27 69.85) (xy 255.27 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb3983e1-6d41-4e5c-9fc6-7f3849818f80")
+	)
+	(wire
+		(pts
+			(xy 154.94 102.87) (xy 165.1 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf7a0926-d0bb-4269-812f-257ef906f124")
+	)
+	(wire
+		(pts
+			(xy 224.79 95.25) (xy 224.79 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6db72f2-61ca-496c-a2ef-f979993dcb99")
+	)
+	(wire
+		(pts
+			(xy 39.37 154.94) (xy 40.64 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9c3eb55-e475-444d-946e-c5e2ea2cb3a3")
+	)
+	(wire
+		(pts
+			(xy 214.63 69.85) (xy 219.71 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da9f69c5-5acd-4e1e-b418-3b5f12a3b0d6")
+	)
+	(wire
+		(pts
+			(xy 266.7 73.66) (xy 271.78 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dce95683-0809-4835-8514-7e6ab677d173")
+	)
+	(wire
+		(pts
+			(xy 266.7 73.66) (xy 266.7 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd245233-95f1-4147-b267-de646f98069f")
+	)
+	(wire
+		(pts
+			(xy 48.26 88.9) (xy 48.26 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd4085a5-a4e0-42a0-a9e3-f12491018787")
+	)
+	(wire
+		(pts
+			(xy 123.19 69.85) (xy 154.94 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd6d9a4c-9b1c-4bc5-a44b-7fc69fc95bd4")
+	)
+	(wire
+		(pts
+			(xy 93.98 93.98) (xy 93.98 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de61b85c-88ed-4973-b09b-78becebb9fae")
+	)
+	(wire
+		(pts
+			(xy 88.9 54.61) (xy 88.9 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3448fde-142b-49f7-9642-f595f8e7ee63")
+	)
+	(wire
+		(pts
+			(xy 96.52 91.44) (xy 100.33 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3a0ef74-6fdd-4af5-b591-f6ad6a82c0ae")
+	)
+	(wire
+		(pts
+			(xy 31.75 25.4) (xy 43.18 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6c53eff-cbf3-4243-ab3c-bca0ade7dd76")
+	)
+	(polyline
+		(pts
+			(xy 111.76 50.8) (xy 111.76 85.09)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "e707563e-78ed-4329-938e-fcd22dcd1a5a")
+	)
+	(wire
+		(pts
+			(xy 191.77 113.03) (xy 199.39 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7d7404a-f043-406e-af90-802becc484a4")
+	)
+	(wire
+		(pts
+			(xy 43.18 152.4) (xy 43.18 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecb7257e-6f31-439e-8f72-90c320a256f9")
+	)
+	(wire
+		(pts
+			(xy 96.52 91.44) (xy 85.09 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ece4fca9-3052-46f7-83b7-a27fdd846307")
+	)
+	(polyline
+		(pts
+			(xy 111.76 85.09) (xy 77.47 85.09)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "f25410e3-b3ca-491c-8394-af64f3fbdba4")
+	)
+	(wire
+		(pts
+			(xy 165.1 69.85) (xy 214.63 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f64458ac-0b95-4f6a-a125-c8b21c4167a3")
+	)
+	(polyline
+		(pts
+			(xy 77.47 50.8) (xy 111.76 50.8)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "f6c565b8-a9a8-47af-b1b4-bc25d5b6ff78")
+	)
+	(wire
+		(pts
+			(xy 99.06 54.61) (xy 88.9 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6e5730d-62c3-4c7d-ac3d-74dbe6f9e9ad")
+	)
+	(wire
+		(pts
+			(xy 86.36 57.15) (xy 86.36 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcb14ff8-7ea7-44c2-a82f-71a50ab92bc4")
+	)
+	(wire
+		(pts
+			(xy 31.75 27.94) (xy 43.18 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fef44b95-d422-45ef-bea9-c26dc234c984")
+	)
+	(label "5V"
+		(at 43.18 25.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "343b5093-6c17-45ce-9911-1b372f9bdec6")
+	)
+	(label "12V"
+		(at 43.18 27.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "378b2e44-d597-43e7-acb4-b4eee7ce642b")
+	)
+	(label "5V"
+		(at 45.72 97.79 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "61f83700-8e75-4039-8704-43ed0f5e7d1d")
+	)
+	(label "12V"
+		(at 100.33 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a5710e40-f9da-4957-a094-ae6d9f80c7bf")
+	)
+	(label "5V"
+		(at 123.19 69.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bb4721b5-aae4-4dbc-8524-d10e02a742c9")
+	)
+	(label "12V"
+		(at 55.88 97.79 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c81dbe88-0b5d-4d1c-8414-7b0dc592b373")
+	)
+	(hierarchical_label "12V_SEC"
+		(shape input)
+		(at 31.75 27.94 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3e8da3df-4a36-417c-b293-720c66a5f82c")
+	)
+	(hierarchical_label "12V_PC"
+		(shape input)
+		(at 102.87 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "461333d5-d4c5-407c-b08d-58a9b0412efd")
+	)
+	(hierarchical_label "5V_IN"
+		(shape input)
+		(at 31.75 25.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4627f7df-2719-40df-8f06-ce584bcee611")
+	)
+	(hierarchical_label "EMERSTOP_SIGNAL"
+		(shape output)
+		(at 50.8 91.44 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4b60bcd3-dfef-42af-9eb2-c1819d273360")
+	)
+	(hierarchical_label "24V_IN"
+		(shape output)
+		(at 39.37 157.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8e0639ba-ef4b-4a25-8935-ce8973eedda6")
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 24.13 132.08) (xy 62.23 132.08) (xy 62.23 172.72) (xy 24.13 172.72)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 0de2cc80-8d30-4bc6-8729-ce391aaa7d6a)
+		)
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 26.67 64.77) (xy 74.93 64.77) (xy 74.93 123.19) (xy 26.67 123.19)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 74244b47-f4a2-4ba2-bad5-3f111bef1a2a)
+		)
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 66.04 132.08) (xy 104.14 132.08) (xy 104.14 172.72) (xy 66.04 172.72)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid f7348808-91f2-4a01-8a36-3a801b34a15c)
+		)
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 274.32 31.75) (xy 274.32 142.24) (xy 114.3 142.24) (xy 114.3 31.75)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid fbb46f67-ea2f-4c54-b293-d9f13c812eed)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:640455-5")
+		(at 45.72 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "01ccc03f-dc5c-4b38-9828-ac9167f3c80b")
+		(property "Reference" "J3"
+			(at 59.69 77.4699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "640455-5"
+			(at 59.69 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:HDRRA5W88P0X254_1X5_1270X775X610P"
+			(at 140.64 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=640455&DocType=Customer+Drawing&DocLang=English&DocFormat=pdf&PartCntxt=640455-5"
+			(at 240.64 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "TE Connectivity MTA-100, 5 Way, 1 Row, Right Angle PCB Header"
+			(at 45.72 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "6.1"
+			(at 440.64 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "571-6404555"
+			(at 540.64 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/640455-5?qs=X1mjqRbeMc5kyjdl11VSpA%3D%3D"
+			(at 640.64 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "TE Connectivity"
+			(at 740.64 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "640455-5"
+			(at 840.64 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a9f6c2e4-a8fd-4213-bceb-0b3582e381a2")
+		)
+		(pin "2"
+			(uuid "7f7ab860-3410-4570-9b22-ff7270b5facb")
+		)
+		(pin "5"
+			(uuid "41c132e0-1f72-497b-8470-49e108b336ab")
+		)
+		(pin "3"
+			(uuid "ae9711f3-0847-405d-be0f-f2cd1a3a079d")
+		)
+		(pin "4"
+			(uuid "e168a2b8-fa8e-4398-9563-fc217f6c5d9e")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 271.78 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0584108d-ea5c-45fa-ae54-34ee66542f5a")
+		(property "Reference" "#PWR071"
+			(at 271.78 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 269.24 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 271.78 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 271.78 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b500862-f7b1-44e1-bef8-606469b65cc5")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:1792863")
+		(at 43.18 152.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0f7a3d68-2ea4-4049-a704-18f5039764fc")
+		(property "Reference" "J4"
+			(at 49.53 140.9699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1792863"
+			(at 49.53 143.5099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:1792863"
+			(at 138.1 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+			(at 238.1 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+			(at 43.18 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "10.65"
+			(at 438.1 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "651-1792863"
+			(at 538.1 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+			(at 638.1 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Phoenix Contact"
+			(at 738.1 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1792863"
+			(at 838.1 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a67027e6-3fd6-4795-8a72-07e801b0b88c")
+		)
+		(pin "1"
+			(uuid "534fd9ec-a55f-4195-b4f5-484c94269bae")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:PWR_FLAG")
+		(at 39.37 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "105e221d-aa3f-447e-8e4f-3a066cfcadc0")
+		(property "Reference" "#FLG01"
+			(at 37.465 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 35.56 154.9399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 39.37 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b04439f-9e80-4e9a-bbc9-6ac9c9984a08")
+		)
+		(instances
+			(project ""
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:1792863")
+		(at 264.16 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2d3cc600-740d-4b1e-9b38-4adf8f0bc67e")
+		(property "Reference" "J23"
+			(at 264.414 50.546 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1792863"
+			(at 271.526 49.276 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:1792863"
+			(at 359.08 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+			(at 459.08 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "JST Sales"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "7 mm"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "None"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/B2B-XH-A%20(LF)(SN)/JST/view-part/?ref=eda"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "N/A"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/B2B-XH-A%20(LF)(SN)/JST/view-part/?ref=snap"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "B2B-XH-A (LF)(SN)"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "JST Sales America Inc."
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "B2B-XH-A (LF)(SN)"
+			(at 264.16 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Height" "10.65"
+			(at 659.08 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "651-1792863"
+			(at 759.08 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+			(at 859.08 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Phoenix Contact"
+			(at 959.08 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1792863"
+			(at 1059.08 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "756f875f-e2eb-4039-ab6a-036ebeb8baae")
+		)
+		(pin "2"
+			(uuid "70317e16-d322-47da-8e1a-ffd6161d7f70")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:USB_C_Receptacle_PowerOnly_6P")
+		(at 139.7 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2d42bf39-6270-46e9-9d4b-6e0edd5e0573")
+		(property "Reference" "J8"
+			(at 139.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_C_Receptacle_PowerOnly_6P"
+			(at 139.7 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:UJCHGSMT2P6TR"
+			(at 143.51 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+			(at 139.7 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "USB Power-Only 6P Type-C Receptacle connector"
+			(at 139.7 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A12"
+			(uuid "c8b00f20-b7c5-4050-a1a5-aa325ae9c098")
+		)
+		(pin "A5"
+			(uuid "e18ab0d0-1a52-42c5-bb36-e893b6821c4a")
+		)
+		(pin "A9"
+			(uuid "43468890-0a63-4e60-977b-3b2df9fe3442")
+		)
+		(pin "B12"
+			(uuid "14097aa4-e065-4c68-be31-4038366a6e5c")
+		)
+		(pin "B5"
+			(uuid "da1f7a09-bb01-451c-81da-1edc4fc22d84")
+		)
+		(pin "B9"
+			(uuid "f1cd6313-bab9-4d07-abea-fc8c70960b93")
+		)
+		(pin "S1"
+			(uuid "7e83e289-1b7b-4f0a-854b-1d2bd4e88153")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 243.84 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3ca0b860-b066-455b-8ef9-83e914149a47")
+		(property "Reference" "#PWR06"
+			(at 243.84 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 241.3 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 243.84 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 243.84 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "213e5c8c-e23b-414e-9d48-68ab3568f21d")
+		)
+		(instances
+			(project "ARC_ConBoard_v1"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 55.88 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ceefe89-4078-4845-8b56-7a8c1ca92681")
+		(property "Reference" "#PWR01"
+			(at 55.88 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 55.88 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 55.88 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75bc52da-20af-4255-a73e-a723bb2b926c")
+		)
+		(instances
+			(project ""
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:EEH-ZC1E560P")
+		(at 243.84 73.66 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4b9d561d-9179-4476-ad60-035f3c1b528d")
+		(property "Reference" "C2"
+			(at 247.904 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EEH-ZC1E560P"
+			(at 240.03 79.756 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:EEHZA1E101XP"
+			(at 147.65 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://industrial.panasonic.com/cdbs/www-data/pdf/RDD0000/ABA0000C1234.pdf"
+			(at 47.65 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 243.84 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.3"
+			(at -152.35 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "667-EEH-ZC1E560P"
+			(at -252.35 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Panasonic/EEH-ZC1E560P?qs=7UCyOFMWVHYdN59awcl%252BRg%3D%3D"
+			(at -352.35 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Panasonic"
+			(at -452.35 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "EEH-ZC1E560P"
+			(at -552.35 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5e92388c-f7d9-4e6d-979e-681138dcf52e")
+		)
+		(pin "2"
+			(uuid "7c0d2b6d-6160-4196-ab86-59faa1dd69dd")
+		)
+		(instances
+			(project "ARC_ConBoard_v1"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:1792863")
+		(at 96.52 93.98 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c47e196-8add-4eee-8f9d-30ef8a94007f")
+		(property "Reference" "J26"
+			(at 93.726 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1792863"
+			(at 91.44 112.522 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:1792863"
+			(at 1.6 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+			(at -98.4 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+			(at 96.52 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "10.65"
+			(at -298.4 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "651-1792863"
+			(at -398.4 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+			(at -498.4 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Phoenix Contact"
+			(at -598.4 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1792863"
+			(at -698.4 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "765cfb13-5722-42b9-8cbb-397c60a5b51a")
+		)
+		(pin "2"
+			(uuid "5f01dd62-cf07-4b37-8a09-9bfb2b9f4e0c")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 48.26 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d690cfb-a6c1-49d7-ae08-cfc2b3412433")
+		(property "Reference" "#PWR021"
+			(at 48.26 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b503cb7-7f3a-48c5-8f78-65a29e85e55f")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:EEH-ZC1E560P")
+		(at 40.64 167.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "518cb89b-c07a-461a-933a-c6897fb901d5")
+		(property "Reference" "C1"
+			(at 46.99 163.576 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EEH-ZC1E560P"
+			(at 46.736 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:EEHZA1E101XP"
+			(at 49.53 263.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://industrial.panasonic.com/cdbs/www-data/pdf/RDD0000/ABA0000C1234.pdf"
+			(at 49.53 363.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 40.64 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.3"
+			(at 49.53 563.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "667-EEH-ZC1E560P"
+			(at 49.53 663.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Panasonic/EEH-ZC1E560P?qs=7UCyOFMWVHYdN59awcl%252BRg%3D%3D"
+			(at 49.53 763.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Panasonic"
+			(at 49.53 863.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "EEH-ZC1E560P"
+			(at 49.53 963.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d1c4ca46-528b-4e97-a970-e45a56e94708")
+		)
+		(pin "2"
+			(uuid "6eebb91c-ba9f-42e8-a268-90be1c54c2c7")
+		)
+		(instances
+			(project "ARC_ConBoard_v1"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:R")
+		(at 224.79 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e2bd1ce-a743-455a-ae17-b067c0ce767d")
+		(property "Reference" "R30"
+			(at 220.98 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 220.98 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 223.012 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 224.79 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "20a12e69-a6be-482b-9e04-3aa6dc5c63d8")
+		)
+		(pin "2"
+			(uuid "a4957d55-62e6-4953-9949-c4a448115d5f")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "R30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:1792863")
+		(at 88.9 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6b2f771a-face-4e82-8f2f-752c4266a4a7")
+		(property "Reference" "J15"
+			(at 86.36 75.438 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1792863"
+			(at 83.566 77.978 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:1792863"
+			(at -6.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+			(at -106.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+			(at 88.9 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "10.65"
+			(at -306.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "651-1792863"
+			(at -406.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+			(at -506.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Phoenix Contact"
+			(at -606.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1792863"
+			(at -706.02 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "740ac739-fcc7-4410-8442-9abde275a281")
+		)
+		(pin "2"
+			(uuid "cf026e0f-baee-45a9-ae81-b150d7ef7898")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:R")
+		(at 158.75 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "841a1f4b-f388-41b6-b156-8fc3e4a72c29")
+		(property "Reference" "R27"
+			(at 161.29 81.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 161.29 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 156.972 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "445f4b18-7e7f-42f9-8299-9bb16573d40a")
+		)
+		(pin "2"
+			(uuid "d44c2d46-df8b-4651-b561-f67ca6ec918f")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 53.34 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "90001cb1-3a40-4de9-b14a-17a8ed4b37f1")
+		(property "Reference" "#PWR022"
+			(at 53.34 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 53.34 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 53.34 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22582b9d-bc6f-4da1-afd5-44f0566beb11")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:1792863")
+		(at 99.06 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91047372-07fa-4fde-a60c-9a20ac2346c8")
+		(property "Reference" "J16"
+			(at 95.758 75.438 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1792863"
+			(at 93.472 77.724 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:1792863"
+			(at 4.14 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+			(at -95.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+			(at 99.06 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "10.65"
+			(at -295.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "651-1792863"
+			(at -395.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+			(at -495.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Phoenix Contact"
+			(at -595.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1792863"
+			(at -695.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad55cc5b-ec43-4c01-a34c-ed17649d54ce")
+		)
+		(pin "2"
+			(uuid "1de6ce97-26e9-4a37-b4c2-4c941be55ea0")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 224.79 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a1a594e6-33de-4cdc-bb1c-df6ae1f78ee7")
+		(property "Reference" "#PWR072"
+			(at 224.79 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 222.25 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 224.79 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5671ed49-066e-4007-8b80-9b540ffcba2a")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:1792863")
+		(at 85.09 93.98 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "abd63ba3-23cf-4da3-9c39-9e55e91628a1")
+		(property "Reference" "J27"
+			(at 82.296 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1792863"
+			(at 80.518 112.776 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:1792863"
+			(at -9.83 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+			(at -109.83 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+			(at 85.09 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "10.65"
+			(at -309.83 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "651-1792863"
+			(at -409.83 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+			(at -509.83 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Phoenix Contact"
+			(at -609.83 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1792863"
+			(at -709.83 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c7d84ff2-d054-4e09-a12c-1fc99d506b93")
+		)
+		(pin "2"
+			(uuid "c17800cf-39bd-413b-915c-98d0f7d4aa5f")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:R")
+		(at 165.1 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b4764271-2114-45a1-bc80-de7606bfbce4")
+		(property "Reference" "R28"
+			(at 161.29 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 161.29 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 163.322 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5bd9b1cf-8c73-40e1-8021-32ef5f568be0")
+		)
+		(pin "2"
+			(uuid "3a6980b8-951a-47c5-b5db-82e1dbb98e38")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:1792863")
+		(at 255.27 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "be46fcc0-2b84-43d2-8df1-e40856562aff")
+		(property "Reference" "J21"
+			(at 255.016 50.292 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1792863"
+			(at 250.19 47.244 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:1792863"
+			(at 350.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+			(at 450.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "JST Sales"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "7 mm"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "None"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/B2B-XH-A%20(LF)(SN)/JST/view-part/?ref=eda"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "N/A"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/B2B-XH-A%20(LF)(SN)/JST/view-part/?ref=snap"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "B2B-XH-A (LF)(SN)"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "JST Sales America Inc."
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "B2B-XH-A (LF)(SN)"
+			(at 255.27 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Height" "10.65"
+			(at 650.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "651-1792863"
+			(at 750.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+			(at 850.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Phoenix Contact"
+			(at 950.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "1792863"
+			(at 1050.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2de2bc88-79fc-4fa9-a838-8c3356460cf8")
+		)
+		(pin "2"
+			(uuid "437c2e49-3846-468f-97d0-66457302a7bb")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:USB_C_Receptacle_PowerOnly_6P")
+		(at 199.39 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d4039568-ce0d-4905-9882-b98d19e8f4a8")
+		(property "Reference" "J10"
+			(at 199.39 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_C_Receptacle_PowerOnly_6P"
+			(at 199.39 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:UJCHGSMT2P6TR"
+			(at 203.2 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+			(at 199.39 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "USB Power-Only 6P Type-C Receptacle connector"
+			(at 199.39 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A12"
+			(uuid "665413b9-5107-4de7-afe3-f8d02ae680f9")
+		)
+		(pin "A5"
+			(uuid "6f28b03f-c59a-4693-893e-4f097325c7e2")
+		)
+		(pin "A9"
+			(uuid "5efeaa51-ed1c-41ff-ae38-7e50e59219d3")
+		)
+		(pin "B12"
+			(uuid "0193f63c-b58a-4d10-9d63-28f77f22b363")
+		)
+		(pin "B5"
+			(uuid "582f2cd9-1247-4af1-a047-450609de5c4a")
+		)
+		(pin "B9"
+			(uuid "22495bb2-fda1-4792-ae3c-ef5361e16af1")
+		)
+		(pin "S1"
+			(uuid "6f821ae3-b892-45c3-afa6-d0e77a01042b")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:R")
+		(at 219.71 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d968c624-5492-4304-b458-3fdf3c24baba")
+		(property "Reference" "R29"
+			(at 222.25 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 222.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 217.932 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 219.71 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 219.71 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2c02cc6b-bc6e-41bc-aa75-d201b7df6169")
+		)
+		(pin "2"
+			(uuid "33ec5bda-7640-4f07-815b-67d0d36eccd8")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "R29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 80.01 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e81e190b-c4fc-48fd-a0d2-31800fc32561")
+		(property "Reference" "#PWR063"
+			(at 80.01 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 77.47 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 80.01 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "908e61f5-728f-4a42-82ed-ac723a185d45")
+		)
+		(instances
+			(project "ConBoard_v0"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR063")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_CONBOARD_LIBRARY:GND")
+		(at 80.01 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef18ce20-55a4-4b50-bd52-33cfc212f507")
+		(property "Reference" "#PWR02"
+			(at 80.01 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 80.01 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 80.01 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2374f722-3c90-4761-a198-126b2e9450a7")
+		)
+		(instances
+			(project ""
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/2d251074-5d39-40fe-a6a2-e045fa6154fa"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

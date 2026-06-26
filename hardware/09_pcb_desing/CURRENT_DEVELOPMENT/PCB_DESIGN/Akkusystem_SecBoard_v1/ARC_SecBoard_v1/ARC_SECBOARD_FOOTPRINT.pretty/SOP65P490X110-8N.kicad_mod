@@ -1,0 +1,332 @@
+(footprint "SOP65P490X110-8N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "MSOP-8 (U)")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at -0.275 2.975 0)
+		(layer "F.SilkS")
+		(uuid "10dde181-8add-49d9-b6b3-38b5d3228222")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "PI4ULS5V202UEX"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a3e1add7-2526-4ddf-9e33-34c80663945f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.diodes.com//assets/Datasheets/PI4ULS5V202.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b9dd0c3b-ad3e-4622-a851-632e173672f4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Translation - Voltage Levels 2-Bit Bi-directional Level Shifter"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "73c62228-c900-4092-bba3-e3b8089c0f5c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "1.1"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "16cddc50-fa06-4fd0-be53-7e584042a518")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "729-PI4ULS5V202UEX"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d2ab3cb5-1047-4e52-ae73-c33bbecd0914")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/PI4ULS5V202UEX?qs=iC14BvcgY%2F0LieFnOYBbzw%3D%3D"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db0bdc93-5f8c-4661-8d68-6438f185125e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Diodes Incorporated"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d3f04dbb-55d2-4b9b-af68-c44d866c7166")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "PI4ULS5V202UEX"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2df8b2a-36f5-4395-bc6b-5910be7cc1d4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 1.15 1.5)
+		(end -1.15 1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9a6e7b9e-e2c7-4dbd-9396-54b8121e5a7b")
+	)
+	(fp_line
+		(start 1.15 -1.5)
+		(end 1.15 1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ec342e59-857c-4221-8c5a-e71ea347816a")
+	)
+	(fp_line
+		(start -1.15 1.5)
+		(end -1.15 -1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fbf82aeb-bc0c-437b-86b9-71e471021646")
+	)
+	(fp_line
+		(start -1.15 -1.5)
+		(end 1.15 -1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "34df0fcf-f54e-4027-847b-5a7d562370ad")
+	)
+	(fp_line
+		(start -2.95 -1.55)
+		(end -1.5 -1.55)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c368e7ea-fe38-4204-9fdd-e1309495a741")
+	)
+	(fp_line
+		(start 3.2 1.85)
+		(end -3.2 1.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "506b37ee-7b8c-4cae-966e-6134234f4043")
+	)
+	(fp_line
+		(start 3.2 -1.85)
+		(end 3.2 1.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "29881a13-b5b6-483a-9a82-b7a4d77ec2ec")
+	)
+	(fp_line
+		(start -3.2 1.85)
+		(end -3.2 -1.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b81c7518-302c-4f8d-a160-4916d88cf6fb")
+	)
+	(fp_line
+		(start -3.2 -1.85)
+		(end 3.2 -1.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4b5d06e8-4446-406b-9c95-357a41ea5d4d")
+	)
+	(fp_line
+		(start 1.5 1.5)
+		(end -1.5 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2ff95c60-eb57-41a1-83e7-7565bfde1cb2")
+	)
+	(fp_line
+		(start 1.5 -1.5)
+		(end 1.5 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e2333923-f3b7-47a1-bb4b-ab99ed6648dd")
+	)
+	(fp_line
+		(start -1.5 1.5)
+		(end -1.5 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "75714374-ceb8-456c-9f5c-eff4c2a53a9b")
+	)
+	(fp_line
+		(start -1.5 -0.85)
+		(end -0.85 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8a8af571-8e78-49b0-9b36-c28dc25a5061")
+	)
+	(fp_line
+		(start -1.5 -1.5)
+		(end 1.5 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "805852a6-b7d1-495e-8a64-27971aab3db4")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "3119fe60-33ce-4bff-b75d-afd42b1f35dd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.225 -0.975 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0d29ab85-7f59-4244-b352-b610794d8d59")
+	)
+	(pad "2" smd rect
+		(at -2.225 -0.325 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6799dcb0-97f6-4296-84db-9aa17fec2aba")
+	)
+	(pad "3" smd rect
+		(at -2.225 0.325 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1dffda91-075a-454a-a4fb-be208e09e2b7")
+	)
+	(pad "4" smd rect
+		(at -2.225 0.975 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f9a2025e-e6b0-4f03-abba-991cfa7ee1c2")
+	)
+	(pad "5" smd rect
+		(at 2.225 0.975 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2dc25fe7-4b83-4e87-99ec-73d15dca6839")
+	)
+	(pad "6" smd rect
+		(at 2.225 0.325 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "08bb795c-6462-43fe-b160-6b3f3883d6ff")
+	)
+	(pad "7" smd rect
+		(at 2.225 -0.325 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4a38f348-e10b-4034-9beb-e1f8b1372a8d")
+	)
+	(pad "8" smd rect
+		(at 2.225 -0.975 270)
+		(size 0.45 1.45)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f63b9569-c7fa-49f0-928c-0c446b37cfc3")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\PI4ULS5V202UEX.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

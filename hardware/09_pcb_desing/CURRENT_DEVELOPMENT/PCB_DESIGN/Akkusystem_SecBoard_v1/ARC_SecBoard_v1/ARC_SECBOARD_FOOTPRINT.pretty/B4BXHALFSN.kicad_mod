@@ -1,0 +1,296 @@
+(footprint "B4BXHALFSN"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "B4B-XH-A(LF)(SN)-3")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 3.75 -2.025 0)
+		(layer "F.SilkS")
+		(uuid "7aeffaa6-99a8-4049-9e7a-3c24dc6bf04d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "B4B-XH-A_LF__SN_"
+		(at 3.75 -0.525 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "35d80575-0ea3-4d06-b3d2-fadb79325e44")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A-LF-SN_C144395.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8e0b8527-8c2e-43d1-98fe-ffc641042489")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "CONN HEADER VERT 4POS 2.5MM"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "20147777-a92d-421a-ae67-a033116c26f2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "7"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "53673ced-2e03-4cb7-bf5b-a4d3ca4fd008")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "306-B4BXHALFSN"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae60d27d-5bad-4401-a0a9-64672fab0fcc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/JST-Commercial/B4B-XH-ALFSN?qs=cdbOS8ANM9CfC08d%252BywhFw%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d42f769d-40cf-4fe0-bebc-dbcca1de5fbe")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "JST (JAPAN SOLDERLESS TERMINALS)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dd56f3c0-38d6-43de-83d3-8ef5fbb5406f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "B4B-XH-A(LF)(SN)"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ffc387c3-71fb-44fb-8572-6af4e2153655")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.45 -3.4)
+		(end 9.95 -3.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "794220bc-2a18-4571-be9f-1bc6a4c4c461")
+	)
+	(fp_line
+		(start -2.45 2.35)
+		(end -2.45 -3.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9356f920-1e5e-466e-a11b-27f59dee208e")
+	)
+	(fp_line
+		(start 9.95 -3.4)
+		(end 9.95 2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8bb86c4a-18a5-4202-bedc-7ea8897f7aba")
+	)
+	(fp_line
+		(start 9.95 2.35)
+		(end -2.45 2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6d367d9c-b672-4626-bd94-82b65f73c5d2")
+	)
+	(fp_line
+		(start -3.45 -4.4)
+		(end 10.95 -4.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9bc41aac-d974-4d87-bb66-8d75a427adfa")
+	)
+	(fp_line
+		(start -3.45 3.35)
+		(end -3.45 -4.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a6583f29-92e3-4c5a-a6b4-7ac4b18a4d78")
+	)
+	(fp_line
+		(start 10.95 -4.4)
+		(end 10.95 3.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "77e3965d-049d-475b-83de-32f29963bf98")
+	)
+	(fp_line
+		(start 10.95 3.35)
+		(end -3.45 3.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bda55021-fcbb-4f47-8b7d-49fe3291a05c")
+	)
+	(fp_line
+		(start -2.45 -3.4)
+		(end 9.95 -3.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "20b817a8-1b94-42ef-bc4a-4245742cca56")
+	)
+	(fp_line
+		(start -2.45 2.35)
+		(end -2.45 -3.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "116f06d0-1b5f-4363-a058-97d0eb37621e")
+	)
+	(fp_line
+		(start 9.95 -3.4)
+		(end 9.95 2.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "04c97a51-216d-4dfd-9a61-edbf023d9a3b")
+	)
+	(fp_line
+		(start 9.95 2.35)
+		(end -2.45 2.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "17b11c75-3682-4382-a9cf-eb7eb84f8ab8")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.75 -2.025 0)
+		(layer "F.Fab")
+		(uuid "0399f664-d057-44a5-a2b5-bb72014ccbf4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1bce474b-db38-42e3-865e-10fa3230f68f")
+	)
+	(pad "2" thru_hole circle
+		(at 2.5 0)
+		(size 1.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5959af4f-d291-4975-9334-a198d44e2e42")
+	)
+	(pad "3" thru_hole circle
+		(at 5 0)
+		(size 1.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d290c9f5-7b25-4b23-9b95-36cd4997b369")
+	)
+	(pad "4" thru_hole circle
+		(at 7.5 0)
+		(size 1.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b717aa2f-87d1-4fd9-9135-a89f6a45e489")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\B4B-XH-A_LF__SN_.stp"
+		(offset
+			(xyz -43.4099992 -21.62999884 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -180)
+		)
+	)
+)

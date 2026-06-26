@@ -1,0 +1,3735 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "bfc328a7-3547-46ac-96c8-92b89bd3cc33")
+	(paper "A4")
+	(lib_symbols
+		(symbol "ARC_SECBOARD_LIBRARY:25SH-B-02-TR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 16.51 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "25SH-B-02-TR"
+				(at 16.51 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "25SHB02TR"
+				(at 16.51 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://app.adam-tech.com/products/download/data_sheet/196905/25sh-b-xx-tr-data-sheet.pdf"
+				(at 16.51 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Conn Shrouded Header (4 Sides) HDR 2 POS 2.5mm Solder RA Side Entry Thru-Hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "6.308"
+				(at 16.51 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" ""
+				(at 16.51 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" ""
+				(at 16.51 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Adam Tech"
+				(at 16.51 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "25SH-B-02-TR"
+				(at 16.51 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "25SH-B-02-TR_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 15.24 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_SECBOARD_LIBRARY:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ARC_SECBOARD_LIBRARY:VP026584000AG"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 16.51 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "VP026584000AG"
+				(at 16.51 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "SHDR4W100P1016_2X2_2032X1830X2850P"
+				(at 16.51 -94.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+				(at 16.51 -194.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "28.5"
+				(at 16.51 -394.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "Amphenol"
+				(at 16.51 -494.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "VP026584000AG"
+				(at 16.51 -594.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "523-VP026584000AG"
+				(at 16.51 -694.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+				(at 16.51 -794.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Part Number" ""
+				(at 16.51 -894.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Price/Stock" ""
+				(at 16.51 -994.92 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "VP026584000AG_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 15.24 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 0)
+					(length 5.08)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 0 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 -2.54 180)
+					(length 5.08)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Bickel_STD_lib:ESY106M035AB2AA"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 8.89 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "ESY106M035AB2AA"
+				(at 8.89 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "CAPPRD150W45D400H850"
+				(at 8.89 -96.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://content.kemet.com/datasheets/KEM_A4007_ESY.pdf"
+				(at 8.89 -196.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "ESY, Aluminum, Aluminum Electrolytic, 10 uF, 20%, 35 VDC, -40/+105C, 105C, -40C, 105C, 1,000 Hrs, 12 % , 960 mOhms, 3.5 uA, 2, 3, 4mm, 7mm, Lead Spacing = 1.5mm, 20mm, 10000"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Height" "8.5"
+				(at 8.89 -396.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "80-ESY106M035AB2AA"
+				(at 8.89 -496.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/ESY106M035AB2AA?qs=gt1LBUVyoHm0J6G%2FZrVPtQ%3D%3D"
+				(at 8.89 -596.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Name" "KEMET"
+				(at 8.89 -696.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "ESY106M035AB2AA"
+				(at 8.89 -796.19 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "ESY106M035AB2AA_1_1"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.064 1.778) (xy 4.064 0.762)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.572 1.27) (xy 3.556 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 2.54)
+					(end 5.842 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 2.54) (xy 7.62 -2.54) (xy 6.858 -2.54) (xy 6.858 2.54) (xy 7.62 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "INPUTS\n"
+		(exclude_from_sim no)
+		(at 25.4 24.892 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "738183c6-0057-4501-b864-bd8a30cbc55f")
+	)
+	(text "LIDAR\n"
+		(exclude_from_sim no)
+		(at 87.63 192.786 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7bfeb3bb-dc08-4c69-b089-376dc44cc75d")
+	)
+	(text "Motor Connectors\nLeft Side Unitree"
+		(exclude_from_sim no)
+		(at 86.868 96.012 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c59d8755-3957-49ea-af13-a066242fbab6")
+	)
+	(text "Motor Connectors\nRight Side Unitree"
+		(exclude_from_sim no)
+		(at 85.852 18.034 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "cf3b80f8-25be-4ce4-9eb8-63f3636a25ef")
+	)
+	(junction
+		(at 99.06 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0686d4ce-7184-4a67-b863-2e262a74ccd9")
+	)
+	(junction
+		(at 99.06 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0b0c39d0-5586-4617-b086-44530b37d00a")
+	)
+	(junction
+		(at 74.93 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1211dd60-bfe7-4812-b478-84d03f83b020")
+	)
+	(junction
+		(at 74.93 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1e9e0b1b-171d-4c3f-a047-abb38e3f964e")
+	)
+	(junction
+		(at 74.93 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "213fa896-80fc-4281-9751-c86734fdb0c3")
+	)
+	(junction
+		(at 62.23 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2150159b-8027-47e8-8b75-1d5fa29e9e70")
+	)
+	(junction
+		(at 74.93 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "30f2ece3-10ee-4e53-ada5-6ad648e3fa8e")
+	)
+	(junction
+		(at 74.93 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "320bdd6b-0e7d-43ba-b151-53c0d608bb49")
+	)
+	(junction
+		(at 50.8 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33518459-ca24-4360-b5f4-6ec7f5d28d05")
+	)
+	(junction
+		(at 99.06 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3581784d-dc96-4d78-a384-347d147d0e48")
+	)
+	(junction
+		(at 99.06 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b6fb401-459f-4fd5-b390-8a50bccd6ee3")
+	)
+	(junction
+		(at 99.06 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42a5c76d-d077-43e7-8610-5694fd966c30")
+	)
+	(junction
+		(at 74.93 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4dd7c579-a782-40b1-bfa5-bd0cc319fa2b")
+	)
+	(junction
+		(at 74.93 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5a0db049-6a9a-4523-b163-14c47bb33c96")
+	)
+	(junction
+		(at 74.93 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6348e479-36e4-4b4d-8658-b15c789e8e27")
+	)
+	(junction
+		(at 50.8 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c14c3d8-2ea9-4891-b485-20171011b98f")
+	)
+	(junction
+		(at 99.06 167.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83d1e350-9c77-459f-be6f-b39f91900876")
+	)
+	(junction
+		(at 99.06 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8fbb10a8-0c6e-4ced-a965-f099d0ea2782")
+	)
+	(junction
+		(at 74.93 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9568f467-1894-4518-8d70-08acaff24594")
+	)
+	(junction
+		(at 74.93 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e6764c7-193f-4341-bc4d-988fb9f19a6b")
+	)
+	(junction
+		(at 62.23 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a16663c9-720c-405f-b969-b4c2a5f7dbff")
+	)
+	(junction
+		(at 50.8 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad3d1423-366e-474e-8ab6-be39b62b31c3")
+	)
+	(junction
+		(at 74.93 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b09409a8-b4bb-4279-9828-ba1f4d3ecbc9")
+	)
+	(junction
+		(at 99.06 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bb665adb-567b-4863-9614-ab3042595402")
+	)
+	(junction
+		(at 99.06 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bbf95daf-147a-4505-837a-3314cbd7c1b3")
+	)
+	(junction
+		(at 99.06 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c81b6bd6-8db0-48fa-8dc9-6853c0bdd731")
+	)
+	(junction
+		(at 99.06 176.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eab41732-04f9-4210-8e04-f5d10c9879f9")
+	)
+	(junction
+		(at 50.8 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed2433aa-b294-4eff-958a-37469ccbfe4c")
+	)
+	(junction
+		(at 74.93 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef7a51c3-3813-41ab-885e-f5914e456e04")
+	)
+	(junction
+		(at 99.06 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1a23444-8021-4198-ae15-4aa3e23cabbe")
+	)
+	(junction
+		(at 74.93 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fff33409-ccdb-40b1-9231-6159ada25fa5")
+	)
+	(wire
+		(pts
+			(xy 74.93 167.64) (xy 85.09 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01652e86-fe5b-4f26-a880-d66428becc54")
+	)
+	(wire
+		(pts
+			(xy 74.93 24.13) (xy 85.09 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "036f7886-67a8-4bd8-93bd-5b19c8f50ec0")
+	)
+	(wire
+		(pts
+			(xy 85.09 90.17) (xy 74.93 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "060359d8-17e8-469b-8e9a-f9b7956e562b")
+	)
+	(wire
+		(pts
+			(xy 74.93 46.99) (xy 85.09 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a2471ec-ff66-44ab-be6d-f8ef4ec741cc")
+	)
+	(wire
+		(pts
+			(xy 99.06 90.17) (xy 99.06 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d690bc5-fcca-4413-a730-24632b061de3")
+	)
+	(wire
+		(pts
+			(xy 74.93 44.45) (xy 85.09 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1312d46e-0ea2-47dd-8b08-8306eaf30088")
+	)
+	(wire
+		(pts
+			(xy 50.8 139.7) (xy 50.8 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13326226-6aae-4255-9bc6-982cc6b4a1e9")
+	)
+	(wire
+		(pts
+			(xy 36.83 129.54) (xy 36.83 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13e28b39-96b1-4793-9a6b-5f4d886ff030")
+	)
+	(wire
+		(pts
+			(xy 87.63 121.92) (xy 99.06 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16702160-d953-41ba-a689-c170316886cc")
+	)
+	(wire
+		(pts
+			(xy 99.06 179.07) (xy 99.06 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17d251d2-492a-4523-a722-30f95e04f591")
+	)
+	(wire
+		(pts
+			(xy 74.93 67.31) (xy 74.93 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17e892e8-906b-44ca-8eaa-bca1956a7a77")
+	)
+	(wire
+		(pts
+			(xy 99.06 124.46) (xy 99.06 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "180b6e1a-b313-4737-ba7a-bfca405c522c")
+	)
+	(wire
+		(pts
+			(xy 74.93 101.6) (xy 74.93 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b8ba664-d55b-4017-a01b-7c3a935b219e")
+	)
+	(wire
+		(pts
+			(xy 36.83 116.84) (xy 36.83 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bd1d7ed-19d5-4585-b036-54aa1b2e9e81")
+	)
+	(wire
+		(pts
+			(xy 62.23 69.85) (xy 62.23 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e728b18-d621-47fa-a03e-c34281c4b618")
+	)
+	(wire
+		(pts
+			(xy 74.93 121.92) (xy 85.09 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e9cadf3-d01d-4b5e-be33-6f6031d470ab")
+	)
+	(wire
+		(pts
+			(xy 87.63 101.6) (xy 99.06 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f7e2a2f-489a-401b-8ba5-9df0fee4f486")
+	)
+	(wire
+		(pts
+			(xy 36.83 57.15) (xy 36.83 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "201bb181-9942-48a0-be5b-e2d4e591c571")
+	)
+	(wire
+		(pts
+			(xy 74.93 50.8) (xy 74.93 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21eaec49-a31e-425d-85ba-48e3c3fc975c")
+	)
+	(wire
+		(pts
+			(xy 99.06 101.6) (xy 99.06 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23b1ee6c-d818-47b2-828c-bb0522228b56")
+	)
+	(wire
+		(pts
+			(xy 62.23 110.49) (xy 62.23 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "258d0b63-691d-4030-9d6e-5976b2910973")
+	)
+	(wire
+		(pts
+			(xy 50.8 135.89) (xy 36.83 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b41a030-9512-416e-bddc-a651d0102fd3")
+	)
+	(wire
+		(pts
+			(xy 50.8 80.01) (xy 50.8 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c557565-8467-4a2b-bf39-23f07473244a")
+	)
+	(wire
+		(pts
+			(xy 50.8 76.2) (xy 36.83 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c5e4c22-5019-4210-a643-343ebced988c")
+	)
+	(wire
+		(pts
+			(xy 85.09 69.85) (xy 74.93 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cd14eda-de95-4656-8b79-3be2f8878098")
+	)
+	(wire
+		(pts
+			(xy 74.93 121.92) (xy 74.93 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "317c777c-9976-4556-bc55-098c79538e51")
+	)
+	(wire
+		(pts
+			(xy 36.83 50.8) (xy 50.8 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "378d6d04-1d2a-4047-bb71-55d7fb112f63")
+	)
+	(wire
+		(pts
+			(xy 74.93 46.99) (xy 74.93 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "384fdeef-e79d-48f8-ab6d-019a7b7e6da5")
+	)
+	(wire
+		(pts
+			(xy 26.67 34.29) (xy 26.67 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bf6aa5a-f796-40e4-8209-28171d77be79")
+	)
+	(wire
+		(pts
+			(xy 36.83 69.85) (xy 36.83 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e464459-c861-452f-9a6c-53583f0a53ef")
+	)
+	(wire
+		(pts
+			(xy 74.93 69.85) (xy 74.93 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44a9e6a1-1e73-4f36-a63c-ec7f1b954682")
+	)
+	(wire
+		(pts
+			(xy 74.93 167.64) (xy 74.93 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46a6774a-4a04-44a1-a614-58ccf08bccbd")
+	)
+	(wire
+		(pts
+			(xy 74.93 110.49) (xy 74.93 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46f30296-690a-430c-b987-eca102843c75")
+	)
+	(wire
+		(pts
+			(xy 99.06 46.99) (xy 99.06 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a809a32-c4ab-472e-bb12-c7dd2a927d82")
+	)
+	(wire
+		(pts
+			(xy 87.63 46.99) (xy 99.06 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ef22e15-07c3-43f8-a5fb-88b7d83b4539")
+	)
+	(wire
+		(pts
+			(xy 74.93 144.78) (xy 85.09 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f2cbf96-c496-4427-8d5c-50e82c8eaa60")
+	)
+	(wire
+		(pts
+			(xy 87.63 69.85) (xy 99.06 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51dbfa99-d615-401a-a22c-ae491e3a092d")
+	)
+	(wire
+		(pts
+			(xy 99.06 67.31) (xy 99.06 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "539c8bc4-5d3b-4249-b913-05f2b9d26a23")
+	)
+	(wire
+		(pts
+			(xy 99.06 24.13) (xy 87.63 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "555007ce-e5ae-4055-819c-eb3e814a02ed")
+	)
+	(wire
+		(pts
+			(xy 99.06 121.92) (xy 99.06 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5de3cc8d-fe0c-46c2-a7a3-d78efe3209d8")
+	)
+	(wire
+		(pts
+			(xy 87.63 144.78) (xy 99.06 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63549fae-5145-4540-bf27-a89692812e17")
+	)
+	(wire
+		(pts
+			(xy 99.06 144.78) (xy 99.06 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6493f038-a986-47fe-a486-edf37482b52c")
+	)
+	(wire
+		(pts
+			(xy 62.23 50.8) (xy 62.23 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64aa27c4-6477-4853-be29-cbae376486e8")
+	)
+	(wire
+		(pts
+			(xy 74.93 97.79) (xy 74.93 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f9aa07f-7c8a-4eae-a64b-cae98d315916")
+	)
+	(wire
+		(pts
+			(xy 88.9 176.53) (xy 88.9 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7038cb8b-e6c5-42eb-9e49-4d798e226e40")
+	)
+	(wire
+		(pts
+			(xy 24.13 34.29) (xy 24.13 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78f5d305-4e90-4005-b896-48706ddc8281")
+	)
+	(wire
+		(pts
+			(xy 36.83 110.49) (xy 50.8 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79ae9735-0570-4398-b52c-247982518adb")
+	)
+	(wire
+		(pts
+			(xy 99.06 44.45) (xy 99.06 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c460f7b-87d4-4a60-9a86-bd676c64c517")
+	)
+	(wire
+		(pts
+			(xy 74.93 19.05) (xy 74.93 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cb46cb2-9cbe-4023-8664-0e6c5f76e0d5")
+	)
+	(wire
+		(pts
+			(xy 87.63 167.64) (xy 99.06 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80d9d625-3dfb-4c1c-8738-1e9f4ad4fdcf")
+	)
+	(wire
+		(pts
+			(xy 74.93 124.46) (xy 74.93 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82930b9f-3886-43a6-ba41-8b8cbf17cec0")
+	)
+	(wire
+		(pts
+			(xy 74.93 147.32) (xy 85.09 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8636b19e-552c-4cae-afaf-51771d1b0adb")
+	)
+	(wire
+		(pts
+			(xy 87.63 124.46) (xy 99.06 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "872b01d5-c8e5-4901-88a7-dc6b99b8f784")
+	)
+	(wire
+		(pts
+			(xy 74.93 24.13) (xy 74.93 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8986231d-f9bc-4647-bc63-8e23e271d470")
+	)
+	(wire
+		(pts
+			(xy 74.93 176.53) (xy 86.36 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b3673e4-c8ef-447b-885d-9da0c3ddb9c7")
+	)
+	(wire
+		(pts
+			(xy 74.93 124.46) (xy 85.09 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d065f5a-7e97-44ab-ae4c-bb7001c2f91d")
+	)
+	(wire
+		(pts
+			(xy 50.8 69.85) (xy 50.8 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "937c7681-8905-4dc1-8adb-bc14fc042195")
+	)
+	(wire
+		(pts
+			(xy 62.23 129.54) (xy 62.23 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99dfaf20-b821-4b75-ad13-72bb20101edf")
+	)
+	(wire
+		(pts
+			(xy 74.93 147.32) (xy 74.93 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b709a88-eb3d-4b66-9a56-d048d6882473")
+	)
+	(wire
+		(pts
+			(xy 86.36 176.53) (xy 86.36 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a97b9261-c6fd-4af9-bc92-a149e7ac1f24")
+	)
+	(wire
+		(pts
+			(xy 74.93 67.31) (xy 85.09 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9930f73-adbf-4236-9386-91e56925a9e0")
+	)
+	(wire
+		(pts
+			(xy 99.06 24.13) (xy 99.06 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b21ffefe-aed5-4a15-8e0d-788673bc9d0d")
+	)
+	(wire
+		(pts
+			(xy 87.63 67.31) (xy 99.06 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b301d3ba-3e9b-43e3-8a7f-ba22a117531b")
+	)
+	(wire
+		(pts
+			(xy 99.06 147.32) (xy 99.06 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5db52c4-8321-4665-99bd-06090c207042")
+	)
+	(wire
+		(pts
+			(xy 50.8 135.89) (xy 62.23 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba558949-2cd0-4dd0-8310-6e32e5477773")
+	)
+	(wire
+		(pts
+			(xy 62.23 50.8) (xy 74.93 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf3257d4-1f36-45c5-912c-17f3a723f072")
+	)
+	(wire
+		(pts
+			(xy 99.06 69.85) (xy 99.06 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfe57d8c-2826-4eb3-8bec-3a821a246eae")
+	)
+	(wire
+		(pts
+			(xy 50.8 76.2) (xy 62.23 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3d9afb2-7a8f-45ae-bb05-501a9d64cb78")
+	)
+	(wire
+		(pts
+			(xy 74.93 44.45) (xy 74.93 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c95412da-06e5-439c-ba13-23df99b530cd")
+	)
+	(wire
+		(pts
+			(xy 50.8 116.84) (xy 50.8 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0962b95-3a23-45ee-8809-11c8a54aaba0")
+	)
+	(wire
+		(pts
+			(xy 99.06 167.64) (xy 99.06 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1ebd56f-9cd8-4d3e-b258-219b671d8d93")
+	)
+	(wire
+		(pts
+			(xy 88.9 176.53) (xy 99.06 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2b3e2e5-3b17-42ef-84f9-03242a29f08d")
+	)
+	(wire
+		(pts
+			(xy 74.93 144.78) (xy 74.93 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5cba4a0-1e79-465a-80ae-8d34de654d68")
+	)
+	(wire
+		(pts
+			(xy 87.63 44.45) (xy 99.06 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d748c925-c5ca-43d2-870f-dc387b3edf41")
+	)
+	(wire
+		(pts
+			(xy 50.8 50.8) (xy 62.23 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d919aec4-d43d-485a-b8b4-80bbe45b6114")
+	)
+	(wire
+		(pts
+			(xy 50.8 129.54) (xy 50.8 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db927ca9-03b8-4f53-9e10-0436d206c2e9")
+	)
+	(wire
+		(pts
+			(xy 87.63 90.17) (xy 99.06 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e08aaed0-da20-4854-8f67-95517873c116")
+	)
+	(wire
+		(pts
+			(xy 62.23 110.49) (xy 74.93 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e46880a3-9d00-4cd8-8125-815bc7f23359")
+	)
+	(wire
+		(pts
+			(xy 87.63 147.32) (xy 99.06 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e845addf-ce25-49bc-85d9-f4cbf85d20f3")
+	)
+	(wire
+		(pts
+			(xy 50.8 110.49) (xy 62.23 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee08c5e9-c757-4213-a96f-5276365839cc")
+	)
+	(wire
+		(pts
+			(xy 50.8 50.8) (xy 50.8 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd0ef335-6728-4e3f-9005-877f5076a8ff")
+	)
+	(wire
+		(pts
+			(xy 74.93 101.6) (xy 85.09 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffda4c60-36d9-4b94-9daa-336441d29ab6")
+	)
+	(label "24V1"
+		(at 74.93 19.05 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "10dc9a66-4d2c-4ff6-b088-030454099a53")
+	)
+	(label "24V1"
+		(at 24.13 36.83 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "285606cc-330b-4bee-b2b5-0829104b75a4")
+	)
+	(label "24V2"
+		(at 26.67 36.83 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9c17ebb9-fee3-4c04-bd18-e4e3737b96ce")
+	)
+	(label "24V2"
+		(at 74.93 97.79 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b69ac027-907f-4f55-91de-eb74a8e34e86")
+	)
+	(hierarchical_label "24V1"
+		(shape input)
+		(at 24.13 34.29 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3a7e2668-5173-493e-a926-d6e1eb9f1861")
+	)
+	(hierarchical_label "24V2"
+		(shape input)
+		(at 26.67 34.29 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b9dee5c6-8dd0-4fff-9f37-e9f8cbc3bb71")
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 20.32 21.59) (xy 30.48 21.59) (xy 30.48 43.18) (xy 20.32 43.18)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 41540a22-f317-4952-9a45-cece7dfa6791)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:VP026584000AG")
+		(at 85.09 44.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "17399cff-dc62-4a46-8cfc-978fb7aeac50")
+		(property "Reference" "J6"
+			(at 91.44 33.0199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VP026584000AG"
+			(at 80.518 25.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:SHDR4W100P1016_2X2_2032X1830X2850P"
+			(at 180.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+			(at 280.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+			(at 85.09 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "28.5"
+			(at 480.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Amphenol"
+			(at 580.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "VP026584000AG"
+			(at 680.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "523-VP026584000AG"
+			(at 780.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+			(at 880.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 980.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 1080.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5ea3e96a-15b7-498a-bb2c-b9bcce9419ce")
+		)
+		(pin "3"
+			(uuid "3578c4cb-6ea0-43c0-b506-ea2ef7e27b64")
+		)
+		(pin "2"
+			(uuid "a4a6a9ef-7263-4e65-b76e-6dadf28fe405")
+		)
+		(pin "4"
+			(uuid "742fb1f2-8364-4613-b93a-f030bd72e04e")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:VP026584000AG")
+		(at 85.09 167.64 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1c67c1b9-380b-4bfd-9b19-79d49e98a45d")
+		(property "Reference" "J11"
+			(at 91.44 156.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VP026584000AG"
+			(at 80.264 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:SHDR4W100P1016_2X2_2032X1830X2850P"
+			(at 180.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+			(at 280.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+			(at 85.09 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "28.5"
+			(at 480.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Amphenol"
+			(at 580.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "VP026584000AG"
+			(at 680.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "523-VP026584000AG"
+			(at 780.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+			(at 880.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 980.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 1080.01 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "211e3404-277d-43e4-92d2-3b577eca0ab3")
+		)
+		(pin "2"
+			(uuid "0cf205ce-49f4-4df0-8aa6-071d2f96a6db")
+		)
+		(pin "4"
+			(uuid "b36fbeec-d42b-4728-ae43-9ac082b07a5b")
+		)
+		(pin "1"
+			(uuid "e2ded067-59f4-4430-a3ec-c99e8ec71e18")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Bickel_STD_lib:ESY106M035AB2AA")
+		(at 62.23 116.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "63b46de2-d46f-4fcd-a7a1-960af8e154f8")
+		(property "Reference" "C25"
+			(at 66.294 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESY106M035AB2AA"
+			(at 58.42 114.808 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:CAPPRD150W45D400H850"
+			(at -33.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_A4007_ESY.pdf"
+			(at -133.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESY, Aluminum, Aluminum Electrolytic, 10 uF, 20%, 35 VDC, -40/+105C, 105C, -40C, 105C, 1,000 Hrs, 12 % , 960 mOhms, 3.5 uA, 2, 3, 4mm, 7mm, Lead Spacing = 1.5mm, 20mm, 10000"
+			(at 62.23 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.5"
+			(at -333.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-ESY106M035AB2AA"
+			(at -433.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/ESY106M035AB2AA?qs=gt1LBUVyoHm0J6G%2FZrVPtQ%3D%3D"
+			(at -533.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at -633.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ESY106M035AB2AA"
+			(at -733.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "957e80de-e350-44bf-8ec2-11238df15ae2")
+		)
+		(pin "2"
+			(uuid "c393e6fd-b00b-4a30-9c66-c80375a59108")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:GND")
+		(at 50.8 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7eaff9ad-7fc7-4825-877b-9cc7f0e3947c")
+		(property "Reference" "#PWR042"
+			(at 50.8 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.8 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 50.8 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a1b0946f-2a14-48ab-ab02-8d8ddbdc9b67")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Bickel_STD_lib:ESY106M035AB2AA")
+		(at 62.23 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7ee91a3a-dcd2-42ce-b161-2c0fc054d4f3")
+		(property "Reference" "C22"
+			(at 66.294 61.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESY106M035AB2AA"
+			(at 58.42 55.118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:CAPPRD150W45D400H850"
+			(at -33.96 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_A4007_ESY.pdf"
+			(at -133.96 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESY, Aluminum, Aluminum Electrolytic, 10 uF, 20%, 35 VDC, -40/+105C, 105C, -40C, 105C, 1,000 Hrs, 12 % , 960 mOhms, 3.5 uA, 2, 3, 4mm, 7mm, Lead Spacing = 1.5mm, 20mm, 10000"
+			(at 62.23 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.5"
+			(at -333.96 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-ESY106M035AB2AA"
+			(at -433.96 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/ESY106M035AB2AA?qs=gt1LBUVyoHm0J6G%2FZrVPtQ%3D%3D"
+			(at -533.96 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at -633.96 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ESY106M035AB2AA"
+			(at -733.96 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9ddb863-1682-4ef5-bbea-77ea84fcfd8b")
+		)
+		(pin "2"
+			(uuid "a0c82cdb-f223-40e5-acd9-c14fefef5f85")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "C22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:VP026584000AG")
+		(at 85.09 90.17 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8781f462-ea92-425d-8f53-1cc42a9b430b")
+		(property "Reference" "J8"
+			(at 91.44 78.7399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VP026584000AG"
+			(at 81.026 72.644 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:SHDR4W100P1016_2X2_2032X1830X2850P"
+			(at 180.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+			(at 280.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+			(at 85.09 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "28.5"
+			(at 480.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Amphenol"
+			(at 580.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "VP026584000AG"
+			(at 680.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "523-VP026584000AG"
+			(at 780.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+			(at 880.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 980.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 1080.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "dadb4fc5-9be1-4e7b-95d3-8326e8e26bf2")
+		)
+		(pin "4"
+			(uuid "29269c7c-5fff-455b-83e7-4d890e3611fc")
+		)
+		(pin "2"
+			(uuid "56391b94-2a48-4262-ade1-6a85141c3331")
+		)
+		(pin "1"
+			(uuid "972e3f3b-d13c-4387-b4e8-0a966a4fd8a2")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:GND")
+		(at 50.8 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8b3954f3-a21b-47a9-90cc-95eac3c15f54")
+		(property "Reference" "#PWR041"
+			(at 50.8 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 50.8 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 50.8 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "991e9f17-3114-4067-9827-d26c61c24cc9")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Bickel_STD_lib:ESY106M035AB2AA")
+		(at 50.8 116.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "93427595-c824-4370-816b-57c9ef3b013e")
+		(property "Reference" "C23"
+			(at 55.626 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESY106M035AB2AA"
+			(at 46.482 114.808 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:CAPPRD150W45D400H850"
+			(at -45.39 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_A4007_ESY.pdf"
+			(at -145.39 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESY, Aluminum, Aluminum Electrolytic, 10 uF, 20%, 35 VDC, -40/+105C, 105C, -40C, 105C, 1,000 Hrs, 12 % , 960 mOhms, 3.5 uA, 2, 3, 4mm, 7mm, Lead Spacing = 1.5mm, 20mm, 10000"
+			(at 50.8 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.5"
+			(at -345.39 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-ESY106M035AB2AA"
+			(at -445.39 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/ESY106M035AB2AA?qs=gt1LBUVyoHm0J6G%2FZrVPtQ%3D%3D"
+			(at -545.39 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at -645.39 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ESY106M035AB2AA"
+			(at -745.39 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "baf42240-546e-41d2-99f8-05e26119daf0")
+		)
+		(pin "2"
+			(uuid "34aed22a-afb5-4506-baa7-63ff2c1ef4d6")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Bickel_STD_lib:ESY106M035AB2AA")
+		(at 36.83 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9f6c0ebf-9d9d-4254-a403-fde8f4f6cca1")
+		(property "Reference" "C13"
+			(at 41.148 61.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESY106M035AB2AA"
+			(at 32.004 54.864 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:CAPPRD150W45D400H850"
+			(at -59.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_A4007_ESY.pdf"
+			(at -159.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESY, Aluminum, Aluminum Electrolytic, 10 uF, 20%, 35 VDC, -40/+105C, 105C, -40C, 105C, 1,000 Hrs, 12 % , 960 mOhms, 3.5 uA, 2, 3, 4mm, 7mm, Lead Spacing = 1.5mm, 20mm, 10000"
+			(at 36.83 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.5"
+			(at -359.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-ESY106M035AB2AA"
+			(at -459.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/ESY106M035AB2AA?qs=gt1LBUVyoHm0J6G%2FZrVPtQ%3D%3D"
+			(at -559.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at -659.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ESY106M035AB2AA"
+			(at -759.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f90ed219-4720-4d3e-a7d2-dc08ef0bd0ab")
+		)
+		(pin "2"
+			(uuid "35e5036d-d086-4427-ac66-e9ef1828adf8")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:VP026584000AG")
+		(at 85.09 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9fc233d8-4194-4c96-a4ee-2888171fa4e6")
+		(property "Reference" "J10"
+			(at 91.44 133.3499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VP026584000AG"
+			(at 80.01 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:SHDR4W100P1016_2X2_2032X1830X2850P"
+			(at 180.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+			(at 280.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+			(at 85.09 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "28.5"
+			(at 480.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Amphenol"
+			(at 580.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "VP026584000AG"
+			(at 680.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "523-VP026584000AG"
+			(at 780.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+			(at 880.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 980.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 1080.01 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "dc5af379-e178-4697-8725-29ab941e003f")
+		)
+		(pin "4"
+			(uuid "f46411fa-bbdb-4b8b-92c6-c1c2b255bc76")
+		)
+		(pin "1"
+			(uuid "07d00fa0-48ba-420c-8a9d-d1eeaa36f955")
+		)
+		(pin "2"
+			(uuid "ac6a51c9-e288-4924-b629-66b4b2519ea5")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:VP026584000AG")
+		(at 85.09 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a6d8faf7-6be6-4066-816a-80f0f4a529b4")
+		(property "Reference" "J7"
+			(at 91.44 55.8799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VP026584000AG"
+			(at 80.264 49.784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:SHDR4W100P1016_2X2_2032X1830X2850P"
+			(at 180.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+			(at 280.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+			(at 85.09 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "28.5"
+			(at 480.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Amphenol"
+			(at 580.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "VP026584000AG"
+			(at 680.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "523-VP026584000AG"
+			(at 780.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+			(at 880.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 980.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 1080.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "a925cf58-9cfa-40bc-810a-582507cb5fa5")
+		)
+		(pin "2"
+			(uuid "9df9da0a-e9c0-4801-af6d-73f952853f54")
+		)
+		(pin "1"
+			(uuid "298a8502-1556-4ec9-a9dd-ef16c31587e4")
+		)
+		(pin "4"
+			(uuid "c0ea46b4-4937-4337-8f27-37dfd3b1d570")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Bickel_STD_lib:ESY106M035AB2AA")
+		(at 36.83 116.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "af93714d-e76a-47f4-99b5-8dd692a04c20")
+		(property "Reference" "C24"
+			(at 41.148 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESY106M035AB2AA"
+			(at 32.004 114.554 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:CAPPRD150W45D400H850"
+			(at -59.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_A4007_ESY.pdf"
+			(at -159.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESY, Aluminum, Aluminum Electrolytic, 10 uF, 20%, 35 VDC, -40/+105C, 105C, -40C, 105C, 1,000 Hrs, 12 % , 960 mOhms, 3.5 uA, 2, 3, 4mm, 7mm, Lead Spacing = 1.5mm, 20mm, 10000"
+			(at 36.83 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.5"
+			(at -359.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-ESY106M035AB2AA"
+			(at -459.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/ESY106M035AB2AA?qs=gt1LBUVyoHm0J6G%2FZrVPtQ%3D%3D"
+			(at -559.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at -659.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ESY106M035AB2AA"
+			(at -759.36 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c8a406d7-69ac-48f9-b79f-d13c44439db5")
+		)
+		(pin "2"
+			(uuid "59b54b41-1356-4480-907d-be0858743476")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:VP026584000AG")
+		(at 85.09 121.92 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b8e43e60-edb1-4872-8d66-0806f1faa48e")
+		(property "Reference" "J9"
+			(at 91.44 110.4899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "VP026584000AG"
+			(at 80.264 104.648 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:SHDR4W100P1016_2X2_2032X1830X2850P"
+			(at 180.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+			(at 280.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+			(at 85.09 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "28.5"
+			(at 480.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Amphenol"
+			(at 580.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "VP026584000AG"
+			(at 680.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "523-VP026584000AG"
+			(at 780.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+			(at 880.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 980.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 1080.01 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e37bba73-92fa-43aa-9150-f43db1ed5aaf")
+		)
+		(pin "2"
+			(uuid "b6cf177c-86eb-4940-9ef6-781cc55e6f0d")
+		)
+		(pin "4"
+			(uuid "1b7eaa03-bd9f-49c9-94b2-cd2518b2185b")
+		)
+		(pin "3"
+			(uuid "43a25725-4ed9-4809-a54a-5e267efa0a04")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:GND")
+		(at 99.06 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdc0ad80-8c91-42a6-a00e-de3cc79c40f4")
+		(property "Reference" "#PWR029"
+			(at 99.06 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 99.06 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 99.06 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6578b4f-80c8-4242-b108-91ee0321e7a2")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ARC_SECBOARD_LIBRARY:25SH-B-02-TR")
+		(at 88.9 179.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ea458f1f-3459-4050-8313-798407dd7efb")
+		(property "Reference" "J12"
+			(at 92.71 187.9599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "25SH-B-02-TR"
+			(at 82.296 180.594 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:25SHB02TR"
+			(at -6.02 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://app.adam-tech.com/products/download/data_sheet/196905/25sh-b-xx-tr-data-sheet.pdf"
+			(at -106.02 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Conn Shrouded Header (4 Sides) HDR 2 POS 2.5mm Solder RA Side Entry Thru-Hole"
+			(at 88.9 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "6.308"
+			(at -306.02 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at -406.02 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at -506.02 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Adam Tech"
+			(at -606.02 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "25SH-B-02-TR"
+			(at -706.02 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a95def5c-deff-4e30-9e75-8b1e6242fd71")
+		)
+		(pin "2"
+			(uuid "7f68d223-153b-4a49-856e-6c229ff6e98f")
+		)
+		(instances
+			(project ""
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Bickel_STD_lib:ESY106M035AB2AA")
+		(at 50.8 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eed2655d-8504-4157-9564-22e3844a64ca")
+		(property "Reference" "C21"
+			(at 55.626 61.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESY106M035AB2AA"
+			(at 46.482 55.118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Bickel_STD_LIB:CAPPRD150W45D400H850"
+			(at -45.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_A4007_ESY.pdf"
+			(at -145.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESY, Aluminum, Aluminum Electrolytic, 10 uF, 20%, 35 VDC, -40/+105C, 105C, -40C, 105C, 1,000 Hrs, 12 % , 960 mOhms, 3.5 uA, 2, 3, 4mm, 7mm, Lead Spacing = 1.5mm, 20mm, 10000"
+			(at 50.8 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "8.5"
+			(at -345.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-ESY106M035AB2AA"
+			(at -445.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/ESY106M035AB2AA?qs=gt1LBUVyoHm0J6G%2FZrVPtQ%3D%3D"
+			(at -545.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at -645.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ESY106M035AB2AA"
+			(at -745.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "340735bd-9f84-4194-a506-130d9ea6e92d")
+		)
+		(pin "2"
+			(uuid "5f1fc649-59fe-4cd9-9033-2cfa7e5fef8a")
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/1abc4e02-ccb2-47f8-8369-eaa1b69e8d2c"
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

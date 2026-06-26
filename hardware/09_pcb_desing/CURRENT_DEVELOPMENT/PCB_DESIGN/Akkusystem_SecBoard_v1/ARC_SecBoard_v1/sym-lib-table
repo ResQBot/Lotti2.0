@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NUCLEO")(type "KiCad")(uri "C:/Users/piusb/OneDrive/Projects/ResQBots/Development/Electronics/NewPowerSystem/KiCad_Data/Akkusystem_revanced_v0/AkkusystemRevanced_v1/SecurityBoard/NUCLEO/NUCLEO-L432KC.kicad_sym")(options "")(descr ""))
+)
