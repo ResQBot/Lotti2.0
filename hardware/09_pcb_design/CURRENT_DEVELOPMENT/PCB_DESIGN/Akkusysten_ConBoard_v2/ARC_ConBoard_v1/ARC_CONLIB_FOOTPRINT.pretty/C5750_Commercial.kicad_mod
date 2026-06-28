@@ -1,0 +1,247 @@
+(footprint "C5750_Commercial"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "C5750_Commercial")
+	(tags "Capacitor")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "8d1760ce-647d-44d2-b71e-a4a237f2a489")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "C5750X7S2A156M250KB"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "4cc8bff5-607e-4b71-9d81-9d892a760053")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d9797256-ce0b-4c5a-b533-3580875e44c7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "MULTILAYER CERAMIC CHIP CAPACITORS, 5750, Commercial grade, general (Up to 75V)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "76b7de5c-027a-4f50-9acd-41b80abc357e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "2.5"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "33e28635-8cc5-4047-ac01-809e3eed6021")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "810-C5750X7S2A156M"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d9b57007-dc5f-4dcf-abe2-329595699c42")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TDK/C5750X7S2A156M250KB?qs=NRhsANhppD%2F9BqQqutmwLg%3D%3D"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3b50bdee-6345-4cce-b550-e9df442b29e8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "TDK"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3d6292f1-a622-4609-b231-ea4e3acb8220")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "C5750X7S2A156M250KB"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "acea98f1-5b18-4122-a8d1-2dd2d82ff54e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_circle
+		(center -4.225 0)
+		(end -4.225 0.05)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "51588051-a2d8-4cc2-a5b0-19c1d57efb87")
+	)
+	(fp_line
+		(start 4.525 3.7)
+		(end -5.325 3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f70308f1-b452-47e0-b37d-8538562c75fc")
+	)
+	(fp_line
+		(start 4.525 -3.7)
+		(end 4.525 3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "236794b3-4ed8-4f18-86e6-f869e694d12f")
+	)
+	(fp_line
+		(start -5.325 3.7)
+		(end -5.325 -3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d02ce3e3-9c28-440d-b7ad-da194ad6dba0")
+	)
+	(fp_line
+		(start -5.325 -3.7)
+		(end 4.525 -3.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "55b045b1-846c-4ad0-92e6-13cff625cf08")
+	)
+	(fp_line
+		(start 2.85 2.5)
+		(end -2.85 2.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "51ec6637-6817-43b1-8e2a-136f09009d02")
+	)
+	(fp_line
+		(start 2.85 -2.5)
+		(end 2.85 2.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2834552a-e90b-4e94-9bf0-dca597375c22")
+	)
+	(fp_line
+		(start -2.85 2.5)
+		(end -2.85 -2.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ab77fc49-5c55-4b9c-a616-f40390d467a2")
+	)
+	(fp_line
+		(start -2.85 -2.5)
+		(end 2.85 -2.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "546dc80f-0595-43e6-80de-afd47224dbed")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "a2c813b4-33ec-49ef-a2e5-563aa4382447")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.875 0 180)
+		(size 1.3 4.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9207c5e9-8b31-44c7-8277-02ce8eea2f47")
+	)
+	(pad "2" smd rect
+		(at 2.875 0 180)
+		(size 1.3 4.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e32defed-1629-4e9f-9eb8-8c4f8cf83961")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\C5750X7S2A156M250KB.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

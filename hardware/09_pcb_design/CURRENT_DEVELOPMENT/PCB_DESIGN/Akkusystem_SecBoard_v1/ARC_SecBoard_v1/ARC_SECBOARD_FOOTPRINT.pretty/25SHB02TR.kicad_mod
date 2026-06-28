@@ -1,0 +1,322 @@
+(footprint "25SHB02TR"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "25SH-B-02-TR-1")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 0.75 4.65 0)
+		(layer "F.SilkS")
+		(uuid "e261e72a-8ffc-4499-9ffa-fd72d1d20d24")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "25SH-B-02-TR"
+		(at 1.25 -3.35 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c6df9f05-d7c3-414a-a9a1-ba6a1778efb8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://app.adam-tech.com/products/download/data_sheet/196905/25sh-b-xx-tr-data-sheet.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "be96e85c-cc02-4b3c-9c98-e3e240318b12")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Conn Shrouded Header (4 Sides) HDR 2 POS 2.5mm Solder RA Side Entry Thru-Hole"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "19e86da4-c8a7-493f-b3c3-fc12e693b0c5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "6.308"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fb2421e9-88c0-4f62-9f46-530f0f14bb9a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8add8521-4acf-40c2-ba97-351acefd463a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9e2a9e33-31be-428e-84e0-853ff6dd6c25")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Adam Tech"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ebedec8d-1040-4042-a6de-d5c86c9fa403")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "25SH-B-02-TR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9f3ec188-063d-460f-9ff3-fefc738097d9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -3.1 0)
+		(end -3.1 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4027e056-ec4c-49d7-8816-07a4f54737bb")
+	)
+	(fp_line
+		(start -3 0)
+		(end -3 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3ee9521f-16cf-4610-9a95-9a226432978d")
+	)
+	(fp_line
+		(start -2.5 -9.2)
+		(end 5 -9.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "de9e42a3-9cd0-47ec-a03a-540e6b0e03bd")
+	)
+	(fp_line
+		(start -2.5 2.5)
+		(end -2.5 -9.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e27bda0d-3216-4236-929a-59021475d752")
+	)
+	(fp_line
+		(start 5 -9.2)
+		(end 5 2.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5b9558ed-a561-494d-b9bb-d6ff4ab0b0c7")
+	)
+	(fp_line
+		(start 5 2.5)
+		(end -2.5 2.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dea5320e-5c31-43c6-aa69-b82bcd744590")
+	)
+	(fp_arc
+		(start -3.1 0)
+		(mid -3.05 -0.05)
+		(end -3 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "523a59b2-3aca-493e-9122-50ba175b31a3")
+	)
+	(fp_arc
+		(start -3 0)
+		(mid -3.05 0.05)
+		(end -3.1 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aa3c32d5-f79c-42a9-97fa-925e42bacc13")
+	)
+	(fp_line
+		(start -3.5 -10.2)
+		(end 6 -10.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1a3ed88f-b20e-4a47-ae77-be7225928de1")
+	)
+	(fp_line
+		(start -3.5 3.5)
+		(end -3.5 -10.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7cdd571d-4761-45f8-b438-22980543ac02")
+	)
+	(fp_line
+		(start 6 -10.2)
+		(end 6 3.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "68ef88e5-c2d6-4b0a-8aca-bd817d8d604e")
+	)
+	(fp_line
+		(start 6 3.5)
+		(end -3.5 3.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bb8f2d05-9d36-4f20-b8b5-5eb7091be0c1")
+	)
+	(fp_line
+		(start -2.5 -9.2)
+		(end 5 -9.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "714837a3-db77-4f9e-93c0-e38621a9372d")
+	)
+	(fp_line
+		(start -2.5 2.5)
+		(end -2.5 -9.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "67dc8616-5417-499e-88b1-27c52aed0cc5")
+	)
+	(fp_line
+		(start 5 -9.2)
+		(end 5 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f23f9c13-b141-47e1-a82f-16f04e5d061f")
+	)
+	(fp_line
+		(start 5 2.5)
+		(end -2.5 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a19c3cab-6306-4e6a-b438-aac20d70a954")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.75 4.65 0)
+		(layer "F.Fab")
+		(uuid "524e4969-e711-4a10-b221-ab3b33e55394")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.4 1.4)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "95f8661b-e142-42e8-9aa2-0f36786a83c7")
+	)
+	(pad "2" thru_hole circle
+		(at 2.5 0)
+		(size 1.4 1.4)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a87808c5-73f4-4225-9dd4-cff687947d05")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\25SH-B-02-TR.stp"
+		(offset
+			(xyz 1.249999981 9.100000245 -0.03999999851)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -180)
+		)
+	)
+)

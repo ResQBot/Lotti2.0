@@ -1,0 +1,322 @@
+(footprint "1792863"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "1792863-7")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 2.25 -0.3 0)
+		(layer "F.SilkS")
+		(uuid "a84cb53a-79bd-4336-bfc2-9177918cecaf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "1792863"
+		(at 2.25 -0.3 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "ac3d1626-d923-47f7-9926-6f554be9c694")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/z1/5VddT_IwFP4rvBfcWdp9j0ucREDRGUDZbpa260h1X24V1F9vCzNEo_PCePFmy0nWduec9nl6DuGBIVzDMMdbvsGCFzlO5TwI7cjVL7zJuanNkTlx0c2Vfzm6ufENfaTDWxjCsGYpo4LFHhZsU1QvMBhdXqoPAhMY6GpUUvoAAx9oGk"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e3403d12-6bab-40af-b5a7-37b61855925c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "PCB terminal block, nominal current: 16 A, rated voltage (III/2): 400 V, nominal cross section: 1.5 mm?, Number of potentials: 2, Number of rows: 1, Number of positions per row: 2, product range: PTS 1,5/..-H, pitch: 5 mm, connection method: Push-in spring connection, mounting: Wave soldering, conductor/PCB connection direction: 0 ?, color: green, Pin layout: Linear pinning, Solder pin [P]: 2.5 mm, type of packaging: packed in cardboard"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6ae8af71-2b94-43ce-88e8-89b49a5b227a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "10.65"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e05d7273-dfa1-4d54-8822-a27bdc9b5833")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "651-1792863"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a5595750-27b3-4588-a2cc-3a37942cd537")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1792863?qs=YjJcVSlHJPU69DDcZ8WVCg%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "39980e20-e61c-440a-88e7-784277386ab6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Phoenix Contact"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9ddb830a-8f7c-435b-98e7-2032fbea8057")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "1792863"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "87be1d2d-d568-4df3-94e7-c6d2c14622b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -3 0)
+		(end -3 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "49e7b1b7-037b-497a-ac68-805487dcfe7a")
+	)
+	(fp_line
+		(start -2.9 0)
+		(end -2.9 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d7d863ab-39ea-41b4-99ec-851c5c7df99d")
+	)
+	(fp_line
+		(start -2.5 -5.55)
+		(end 7.5 -5.55)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8058e813-4cc9-4bb9-910b-209baeed408b")
+	)
+	(fp_line
+		(start -2.5 4.95)
+		(end -2.5 -5.55)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "58e54f73-a48e-4257-b3e8-c510a04b4d03")
+	)
+	(fp_line
+		(start 7.5 -5.55)
+		(end 7.5 4.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a79ba4e9-f432-4239-a433-83b075ffae74")
+	)
+	(fp_line
+		(start 7.5 4.95)
+		(end -2.5 4.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "951cc2d7-02c4-4e4d-b026-af82d2ffdb64")
+	)
+	(fp_arc
+		(start -3 0)
+		(mid -2.95 -0.05)
+		(end -2.9 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "52aa3f1c-9b06-41af-b37b-8272a8c20e18")
+	)
+	(fp_arc
+		(start -2.9 0)
+		(mid -2.95 0.05)
+		(end -3 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b310f33e-8518-4e0c-ac1a-d8220cd20d7d")
+	)
+	(fp_line
+		(start -4 -6.55)
+		(end 8.5 -6.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e04e89e1-73e4-483a-9ccf-b60a27f95e05")
+	)
+	(fp_line
+		(start -4 5.95)
+		(end -4 -6.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b08b6392-3dcd-42f4-8e64-40c387c07b5e")
+	)
+	(fp_line
+		(start 8.5 -6.55)
+		(end 8.5 5.95)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "254b16c5-f049-47c0-8ff4-22340dd8fb63")
+	)
+	(fp_line
+		(start 8.5 5.95)
+		(end -4 5.95)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c550fdbb-6dc0-4620-887c-6137e1490ea8")
+	)
+	(fp_line
+		(start -2.5 -5.55)
+		(end 7.5 -5.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0cd28e02-786e-485e-b01d-d6cd14440239")
+	)
+	(fp_line
+		(start -2.5 4.95)
+		(end -2.5 -5.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e53487ca-0634-4f41-a45e-38238a25d1dd")
+	)
+	(fp_line
+		(start 7.5 -5.55)
+		(end 7.5 4.95)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3085801d-2614-497a-849a-387dc7a61eba")
+	)
+	(fp_line
+		(start 7.5 4.95)
+		(end -2.5 4.95)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bcab0d86-5407-41b5-b1b6-224509f8482b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 2.25 -0.3 0)
+		(layer "F.Fab")
+		(uuid "458a40ad-234e-4258-a007-8735ccf13246")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "7e365ce4-aa74-4ab4-a79e-16fcfa0e5824")
+	)
+	(pad "2" thru_hole circle
+		(at 5 0)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f5978721-eeed-454e-a090-6f633991ee97")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\1792863.stp"
+		(offset
+			(xyz -75.84999733 -29.62999872 -50.42999955)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -90)
+		)
+	)
+)

@@ -1,0 +1,314 @@
+(footprint "IPD70P04P4L08ATMA2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "IPD70P04P4L08ATMA2-2")
+	(tags "MOSFET (P-Channel)")
+	(property "Reference" "REF**"
+		(at -0.22 -6.28 0)
+		(layer "F.SilkS")
+		(uuid "c1d6aaa9-b918-42c3-a185-9112a5cef9ce")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "IPD70P04P4L08ATMA2"
+		(at 0 1.02 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d9715d00-18c0-494a-b6d5-fcf0d8799a60")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IPD70P04P4L-08-DataSheet-v01_02-EN.pdf?fileId=db3a30432f69f146012f78225bd32dbf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "777afe2f-faaa-4652-99d5-39469913207b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "P-Channel 40 V 70A (Tc) 75W (Tc) Surface Mount PG-TO252-3-313"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bff120b1-0088-49a4-84e5-925d57743bbf")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "2.5"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "46da09a3-9dcc-4218-9181-f99c0f4df257")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "726-IPD70P04P4L08ATM"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "18445b95-ec45-4923-8576-f5f9adc551c0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/IPD70P04P4L08ATMA2?qs=GBLSl2AkirsG%2F%252BiweZHiEQ%3D%3D"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fcc88463-8509-4203-b129-44fd6e86db59")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Infineon"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3bf9251a-a5a0-4eb7-886f-d4ddb81eaf36")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "IPD70P04P4L08ATMA2"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f4dcfe10-ad4b-4841-bc1e-9427aff330c0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 3.25 3.11)
+		(end 3.25 -3.11)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "42ac3ad8-c0ca-4342-81f3-c985a6a9b8d8")
+	)
+	(fp_line
+		(start -2.28 6.8)
+		(end -2.28 6.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4482b9f7-29a7-4128-9a44-88a567037a9f")
+	)
+	(fp_line
+		(start -2.28 6.7)
+		(end -2.28 6.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5945542a-1d09-41ae-9bdb-bd428dc50785")
+	)
+	(fp_line
+		(start -3.25 3.11)
+		(end 3.25 3.11)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cb2f4a23-d9c3-4a31-b232-cab95b55bf27")
+	)
+	(fp_line
+		(start -3.25 -3.11)
+		(end -3.25 3.11)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0a2dbe4e-ed0b-4207-8e89-08c0f37fecb3")
+	)
+	(fp_arc
+		(start -2.28 6.8)
+		(mid -2.33 6.75)
+		(end -2.28 6.7)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "21c096ca-9931-40d3-9a91-9c049d9bf088")
+	)
+	(fp_arc
+		(start -2.28 6.7)
+		(mid -2.23 6.75)
+		(end -2.28 6.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "964575b3-cd13-4e12-b8b9-5850b7580b30")
+	)
+	(fp_line
+		(start 4.25 7.32)
+		(end -4.25 7.32)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5b6826a6-cd38-42c3-9b3f-213aca463bdd")
+	)
+	(fp_line
+		(start 4.25 -5.28)
+		(end 4.25 7.32)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7a7ad27e-d71d-450b-8f64-76c562895b02")
+	)
+	(fp_line
+		(start -4.25 7.32)
+		(end -4.25 -5.28)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3b0d82c6-af72-4b5c-b5d0-69c8cf13d90a")
+	)
+	(fp_line
+		(start -4.25 -5.28)
+		(end 4.25 -5.28)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b39a010a-f487-4d2f-9991-966181ce6557")
+	)
+	(fp_line
+		(start 3.25 3.11)
+		(end -3.25 3.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f3fefd55-647d-4111-af7a-2fa810268d08")
+	)
+	(fp_line
+		(start 3.25 -3.11)
+		(end 3.25 3.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "90c427cc-711e-4645-aa4b-f3f527d4f4cb")
+	)
+	(fp_line
+		(start -3.25 3.11)
+		(end -3.25 -3.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "521476fd-501e-4e25-8eee-cba75d58556e")
+	)
+	(fp_line
+		(start -3.25 -3.11)
+		(end 3.25 -3.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "685cf07c-06c6-4b2c-8b1a-b907126110aa")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1 1.02 0)
+		(layer "F.Fab")
+		(uuid "a8c6b575-801f-4da0-a0b7-7dd9e65604e1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.28 5.22 180)
+		(size 1.2 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4f5b903a-87af-460b-b092-17fb62918a85")
+	)
+	(pad "2" smd rect
+		(at 0 -1.08 180)
+		(size 5.8 6.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e284fae8-5d83-45d3-8ce1-efcdaefed478")
+	)
+	(pad "3" smd rect
+		(at 2.28 5.22 180)
+		(size 1.2 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "66282f0f-8803-4685-a4d6-f32846269070")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\IPD70P04P4L08ATMA2.stp"
+		(offset
+			(xyz 3.249999951 -0.1299999933 0.4)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -180)
+		)
+	)
+)

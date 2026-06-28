@@ -1,0 +1,436 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "adba0cfd-7afa-40f2-bcf2-5c655c4193f1")
+	(paper "A4")
+	(lib_symbols)
+	(junction
+		(at 175.26 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "98104f07-71e9-4145-9aa7-1579be49732e")
+	)
+	(wire
+		(pts
+			(xy 97.79 76.2) (xy 109.22 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23c7032c-0cfd-49fa-8cf2-97ceeb3874e9")
+	)
+	(wire
+		(pts
+			(xy 97.79 80.01) (xy 109.22 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69b6ed1f-1736-4e4c-bb59-b86b838f9978")
+	)
+	(wire
+		(pts
+			(xy 245.11 82.55) (xy 255.27 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dcbefc5-f049-4702-9d7a-09b706da98fd")
+	)
+	(wire
+		(pts
+			(xy 175.26 82.55) (xy 186.69 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70a68773-0c09-409c-ad39-24215fa0111f")
+	)
+	(wire
+		(pts
+			(xy 77.47 97.79) (xy 77.47 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f326ad2-bcbf-4ebe-b93c-0e6fe22a5347")
+	)
+	(wire
+		(pts
+			(xy 62.23 57.15) (xy 62.23 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99d66238-f3c2-4872-80c3-f73c54199910")
+	)
+	(wire
+		(pts
+			(xy 162.56 82.55) (xy 175.26 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae6930ee-475d-47f1-b155-54e1760dce71")
+	)
+	(wire
+		(pts
+			(xy 152.4 97.79) (xy 152.4 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0da542d-46b5-471a-8d7e-f83ae8cd4ac9")
+	)
+	(wire
+		(pts
+			(xy 58.42 57.15) (xy 58.42 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6706cad-b898-4740-ab0b-674c2ec4e76f")
+	)
+	(wire
+		(pts
+			(xy 175.26 69.85) (xy 175.26 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd6888a3-6591-4797-8a14-e694732aef04")
+	)
+	(label "24V"
+		(at 101.6 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "09d1f6d9-74c8-432d-b233-b927cb6f0713")
+	)
+	(label "12V"
+		(at 62.23 57.15 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1947ed49-9b78-47c8-b7cf-803b395607cd")
+	)
+	(label "12V_PC"
+		(at 77.47 107.95 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d58e4fd-fc32-4266-b116-aeb008211e6f")
+	)
+	(label "5V"
+		(at 58.42 57.15 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "519b0cab-4881-4a3a-9d4e-8e9ac0c82a6a")
+	)
+	(label "5V"
+		(at 255.27 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e155173-23da-4dc0-9291-ba7fc388bbdc")
+	)
+	(label "12V"
+		(at 175.26 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6736bb9a-af49-4f68-8a88-fdc958c7cbea")
+	)
+	(label "EMER"
+		(at 101.6 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "811828f2-9616-4634-8902-c22bb5ce0e8d")
+	)
+	(label "12V_PC"
+		(at 152.4 107.95 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8bf98c80-c042-4640-92d5-45df04cb8124")
+	)
+	(sheet
+		(at 41.91 64.77)
+		(size 55.88 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2d251074-5d39-40fe-a6a2-e045fa6154fa")
+		(property "Sheetname" "Conector"
+			(at 41.91 64.0584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Connector.kicad_sch"
+			(at 41.91 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "5V_IN" input
+			(at 58.42 64.77 90)
+			(uuid "e7cb302d-044c-4964-9f46-66f2aa016be2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "12V_PC" input
+			(at 77.47 97.79 270)
+			(uuid "ab7e23f5-ca83-4225-ab3e-e618084e70a7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "12V_SEC" input
+			(at 62.23 64.77 90)
+			(uuid "a39b7cca-1b2b-47bb-ae30-16b167fe4aed")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "EMERSTOP_SIGNAL" output
+			(at 97.79 76.2 0)
+			(uuid "f6fb704d-ef41-4d58-b5cb-ab4f5be6589c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "24V_IN" output
+			(at 97.79 80.01 0)
+			(uuid "af0fc726-7a12-4b5e-b006-fc01998fdf78")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ARC_ConBoard_v2"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.22 64.77)
+		(size 53.34 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5b92195d-a3eb-4211-a75b-e9d213f1a98d")
+		(property "Sheetname" "HiVolConversion"
+			(at 109.22 64.0584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "HiVolConversion.kicad_sch"
+			(at 109.22 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "12V_PC" output
+			(at 152.4 97.79 270)
+			(uuid "064609e3-f92a-4ed9-b951-03deaecc7f5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "12V_Sec" output
+			(at 162.56 82.55 0)
+			(uuid "5aac9cc2-976f-498c-ab28-da92b77c1486")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "24_IN" input
+			(at 109.22 80.01 180)
+			(uuid "c53f136b-3de0-42d1-825f-910725699764")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "EmergencyStopSignal" input
+			(at 109.22 76.2 180)
+			(uuid "fe8ea5b0-40e3-4bba-a51e-8c77fe5fc249")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ARC_ConBoard_v2"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 186.69 64.77)
+		(size 58.42 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c54f1040-eee7-42ac-ab81-4b61f7578136")
+		(property "Sheetname" "LoVolConversion"
+			(at 186.69 64.0584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LoVolConversion.kicad_sch"
+			(at 186.69 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "5V" output
+			(at 245.11 82.55 0)
+			(uuid "b8cd75b8-c7a9-4845-86f7-1f465e9f9bd3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "12V" input
+			(at 186.69 82.55 180)
+			(uuid "9f95e563-ced1-4dbe-89e2-93815e34da68")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ARC_ConBoard_v2"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "OldBatteryManagement")(type "KiCad")(uri "C:/Users/piusb/OneDrive/Projects/ResQBots/Development/Electronics/OldBatteryManagement.pretty")(options "")(descr ""))
+)

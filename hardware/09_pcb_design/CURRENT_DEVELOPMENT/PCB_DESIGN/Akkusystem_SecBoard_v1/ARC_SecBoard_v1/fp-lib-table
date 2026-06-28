@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Bickel_STD_LIB")(type "KiCad")(uri "C:/Users/piusb/OneDrive/Projects/KiCad_Data/KiCad_Libs/Bickel_STD_LIB.pretty")(options "")(descr ""))
+  (lib (name "NUCLEO")(type "KiCad")(uri "C:/Users/piusb/OneDrive/Projects/ResQBots/Development/Electronics/NewPowerSystem/KiCad_Data/Akkusystem_revanced_v0/AkkusystemRevanced_v1/SecurityBoard/NUCLEO.pretty")(options "")(descr ""))
+)

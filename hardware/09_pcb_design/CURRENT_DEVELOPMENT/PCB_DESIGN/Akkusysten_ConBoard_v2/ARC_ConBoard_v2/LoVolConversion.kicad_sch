@@ -1,0 +1,254 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "5b4354b3-a769-448d-b2a3-9665835c57dd")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 30.48 44.45) (xy 30.48 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61f854be-1c29-4ea6-92e3-ab9d4616cc2b")
+	)
+	(wire
+		(pts
+			(xy 151.13 82.55) (xy 165.1 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "704d8bd3-0f23-4be1-ac1f-b6d3cedcefe8")
+	)
+	(wire
+		(pts
+			(xy 106.68 82.55) (xy 127 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1980d15-87d4-40bc-b9c1-3f32539923bd")
+	)
+	(wire
+		(pts
+			(xy 63.5 82.55) (xy 76.2 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b76eece0-a68b-4bf1-9276-6f2d51483e2d")
+	)
+	(wire
+		(pts
+			(xy 26.67 44.45) (xy 26.67 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9621391-dd27-4293-bcf1-bcebad3a1f55")
+	)
+	(label "5V"
+		(at 30.48 53.34 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0deb3013-37be-4fbe-9456-71c5762cecbd")
+	)
+	(label "12V"
+		(at 63.5 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7de37838-3bd8-464f-b6d9-ebcbd6f4d4d8")
+	)
+	(label "5V_UNSEC"
+		(at 111.76 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a315883d-5283-45c8-bd89-8cb64e871700")
+	)
+	(label "12V"
+		(at 26.67 53.34 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8735056-17b5-4b8a-8d3c-32550d4baa71")
+	)
+	(label "5V"
+		(at 165.1 82.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d7b6ce6f-aeac-49a1-a9ff-8672befeeeeb")
+	)
+	(hierarchical_label "5V"
+		(shape output)
+		(at 30.48 44.45 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "34f5a65b-1b40-42ea-8ad8-4a5cedba7160")
+	)
+	(hierarchical_label "12V"
+		(shape input)
+		(at 26.67 44.45 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b0d8a9da-87ef-4716-a26a-0737cb1893c3")
+	)
+	(sheet
+		(at 127 76.2)
+		(size 24.13 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "29909fcd-8a4f-4c70-a2d1-8bdc068d60b7")
+		(property "Sheetname" "reflowSec"
+			(at 127 75.4884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "reflowSec.kicad_sch"
+			(at 127 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "In" input
+			(at 127 82.55 180)
+			(uuid "90cdc0d2-8510-4dde-8c25-386fe7d206f3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OUT" output
+			(at 151.13 82.55 0)
+			(uuid "c22e745d-7d41-4d7e-93d8-8e2d1f90e332")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ARC_ConBoard_v2"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/c54f1040-eee7-42ac-ab81-4b61f7578136"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 76.2 76.2)
+		(size 30.48 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d64f7e51-2be2-4a65-accf-3b08997d8ec1")
+		(property "Sheetname" "1205Converter"
+			(at 76.2 75.4884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "1205Converter.kicad_sch"
+			(at 76.2 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "5V" output
+			(at 106.68 82.55 0)
+			(uuid "b47c6ae6-2650-4d45-bce7-667e27741e95")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "12V" input
+			(at 76.2 82.55 180)
+			(uuid "a2a91a48-4945-4ef4-8534-8d7026100028")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ARC_ConBoard_v2"
+				(path "/adba0cfd-7afa-40f2-bcf2-5c655c4193f1/c54f1040-eee7-42ac-ab81-4b61f7578136"
+					(page "8")
+				)
+			)
+		)
+	)
+)

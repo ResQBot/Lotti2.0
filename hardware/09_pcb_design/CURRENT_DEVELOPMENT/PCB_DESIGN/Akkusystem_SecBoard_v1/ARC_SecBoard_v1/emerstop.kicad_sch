@@ -1,0 +1,447 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "165581a8-3a2a-478d-873f-459eeb20106c")
+	(paper "A4")
+	(lib_symbols)
+	(text "OnOff Curcuit\n"
+		(exclude_from_sim no)
+		(at 146.304 53.086 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4d2e35a6-1f73-4073-b3dd-56dbbe9bf663")
+	)
+	(wire
+		(pts
+			(xy 160.02 78.74) (xy 166.37 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13e4e652-e7b9-4c01-8d2e-1117adf0e58c")
+	)
+	(wire
+		(pts
+			(xy 130.81 83.82) (xy 134.62 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e566cd0-d15e-4587-bcd3-2e0396ffeb15")
+	)
+	(wire
+		(pts
+			(xy 147.32 66.04) (xy 147.32 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2928a8d2-be06-4805-ab91-43e8549bfac1")
+	)
+	(wire
+		(pts
+			(xy 147.32 105.41) (xy 147.32 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3db01c5d-b4ca-497a-9300-b6ebb510c795")
+	)
+	(wire
+		(pts
+			(xy 130.81 81.28) (xy 134.62 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bcafa76-9126-408c-9252-46b055365328")
+	)
+	(wire
+		(pts
+			(xy 158.75 120.65) (xy 166.37 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "720bd117-93da-486e-8a55-55bb7a7a0476")
+	)
+	(wire
+		(pts
+			(xy 130.81 115.57) (xy 134.62 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f317050-71b4-449a-aff8-4ab7b37c2ea2")
+	)
+	(wire
+		(pts
+			(xy 132.08 66.04) (xy 147.32 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8758a340-07d8-438f-a42b-895b3a937197")
+	)
+	(wire
+		(pts
+			(xy 132.08 100.33) (xy 147.32 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8987b86d-9ec6-4039-804f-2b34c8564ca3")
+	)
+	(wire
+		(pts
+			(xy 158.75 113.03) (xy 166.37 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa5afe2d-5434-45b4-b89d-3550eb5996c9")
+	)
+	(wire
+		(pts
+			(xy 160.02 87.63) (xy 166.37 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b22ac76d-3abc-4b59-a799-3eefd046959d")
+	)
+	(wire
+		(pts
+			(xy 130.81 118.11) (xy 134.62 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6181fd4-0afc-4ea6-96b7-b83380cf64dd")
+	)
+	(hierarchical_label "IO2"
+		(shape input)
+		(at 166.37 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1ccb80cb-4ff0-4890-a8e3-c28493c03562")
+	)
+	(hierarchical_label "EmerStop2_OUTPUT"
+		(shape output)
+		(at 130.81 118.11 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "34b5a7fe-b16d-433f-a2cf-04eb3b939b58")
+	)
+	(hierarchical_label "MEAS_BATT1"
+		(shape input)
+		(at 132.08 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "66336398-f00a-4c59-9f74-9eb0d0b167aa")
+	)
+	(hierarchical_label "IO1"
+		(shape input)
+		(at 166.37 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7cdd35b7-314f-4a34-bca8-d3978de80cf2")
+	)
+	(hierarchical_label "MEAS_BATT2"
+		(shape input)
+		(at 132.08 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "85da7525-78cc-4c77-9809-570585dd2b2e")
+	)
+	(hierarchical_label "EmerStop2_INPUT"
+		(shape input)
+		(at 130.81 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "93c054c8-8294-4551-b49f-9800354b2773")
+	)
+	(hierarchical_label "SW_BATT1_24V"
+		(shape output)
+		(at 166.37 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9830236e-0d5e-41d5-abc2-f7cc1e2ffe25")
+	)
+	(hierarchical_label "EmerStop1_OUTPUT"
+		(shape output)
+		(at 130.81 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "be11bc42-fb49-43ad-9007-380190ac6039")
+	)
+	(hierarchical_label "EmerStop1_INPUT"
+		(shape input)
+		(at 130.81 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d825bb5d-a3fd-4371-86b6-959af2ad7a67")
+	)
+	(hierarchical_label "SW_BATT2_24V"
+		(shape output)
+		(at 166.37 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e1758334-3994-4c13-9553-8c17d2bee515")
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 101.6 50.8) (xy 190.5 50.8) (xy 190.5 139.7) (xy 101.6 139.7)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 3b209029-6017-42ab-9226-f00a24a79bb4)
+		)
+	)
+	(sheet
+		(at 134.62 71.12)
+		(size 25.4 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3d80d22e-88cb-4f29-ba37-ad7969c56ac1")
+		(property "Sheetname" "onoff_1"
+			(at 134.62 70.4084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "onoff_1.kicad_sch"
+			(at 134.62 94.5646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 147.32 71.12 90)
+			(uuid "2ab8a5fa-886d-463f-9e80-750a5de03b18")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IO_STM" input
+			(at 160.02 78.74 0)
+			(uuid "2e93aec6-ecf2-4059-bf8a-e5e00eba2cd1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT" output
+			(at 160.02 87.63 0)
+			(uuid "c06eb42c-a1b9-48ed-b531-401242381326")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Trenner_IN" input
+			(at 134.62 81.28 180)
+			(uuid "d120be93-5af7-4ea8-bd66-d9294485fc25")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Trenner_OUT" output
+			(at 134.62 83.82 180)
+			(uuid "a41b3798-e80f-4d9e-adf3-54a7c60c18c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/bec228d1-5f36-4b0f-8109-6783bd2e8951/a4fe456e-4228-46dc-bae8-8a70c1ce8eb4"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 134.62 105.41)
+		(size 24.13 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b5f89cce-b178-4c78-80d2-77075ad1acce")
+		(property "Sheetname" "onoff_2"
+			(at 134.62 104.6984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "onoff_1.kicad_sch"
+			(at 134.62 126.3146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN" input
+			(at 147.32 105.41 90)
+			(uuid "713d85a0-1906-49eb-94fe-0403c003891f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IO_STM" input
+			(at 158.75 113.03 0)
+			(uuid "bcfc1b8e-3564-4540-bb27-90d18fc7a9c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OUT" output
+			(at 158.75 120.65 0)
+			(uuid "bb898e69-9797-40d5-a19c-d59af3d75815")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Trenner_IN" input
+			(at 134.62 115.57 180)
+			(uuid "e2b9de9a-3513-44e4-a771-2a1c843b3337")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Trenner_OUT" output
+			(at 134.62 118.11 180)
+			(uuid "5b9b7e70-7097-4044-9a1a-337a3fb58476")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/bec228d1-5f36-4b0f-8109-6783bd2e8951/a4fe456e-4228-46dc-bae8-8a70c1ce8eb4"
+					(page "13")
+				)
+			)
+		)
+	)
+)
