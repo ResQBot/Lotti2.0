@@ -173,7 +173,7 @@ hardware_interface::return_type ArmInterface::write(
         for (uint8_t i = 0; i < 6; i++) {
             // send commands to arm comms
             arm_comms_.setArmValues(i, arm_direction_[i], arm_vel_cmd_[i], motor_acceleration_);
-            usleep(900);
+            usleep(800);
         }
     }
 
