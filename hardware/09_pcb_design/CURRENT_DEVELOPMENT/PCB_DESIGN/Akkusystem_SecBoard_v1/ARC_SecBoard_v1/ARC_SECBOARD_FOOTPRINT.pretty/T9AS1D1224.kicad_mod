@@ -1,0 +1,338 @@
+(footprint "T9AS1D1224"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "T9AS1D12-24-3")
+	(tags "Relay or Contactor")
+	(property "Reference" "REF**"
+		(at 4.525 9.145 0)
+		(layer "F.SilkS")
+		(uuid "b1ae3b98-8fa7-4f31-a009-81ce7450400f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "T9AS1D12-24"
+		(at 4.525 9.145 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "da81d728-aae9-400b-bdbd-f6504e57af70")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=T9A&DocType=DS&DocLang=English"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f837c6fd-2f78-44fb-8680-17eea20bb485")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Power Relays, Standard, Monostable, DC, 1000 mW Coil Power Rating DC, 576  Coil Resistance, UL Coil Insulation Class F, Potter & Brumfield T9A"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "35dd21e8-3f48-4a81-82ec-2c2a54a523a1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "3.71"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "951411a1-67bf-4b6f-9b9b-29ffef43fdfd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "655-T9AS1D12-24"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5910ab57-8dda-4594-8cb5-67b0fa4dc9b6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-PB/T9AS1D12-24?qs=qnq50YkAChPOZByjZoZczA%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "82601c00-4386-4269-b2c0-acbe26f50101")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "TE Connectivity"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6d2eaee6-ab11-4d3b-a9aa-11ea2b749777")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "T9AS1D12-24"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9e316396-3908-43b6-afd8-5c5d1cda92e4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -9.19 -7.11)
+		(end 18.24 -7.11)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3de78622-052b-430d-a2c9-0d2cc7187d99")
+	)
+	(fp_line
+		(start -9.19 25.4)
+		(end -9.19 -7.11)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a4d4580-8eeb-49d2-9305-6e22e3bd6fae")
+	)
+	(fp_line
+		(start 0 -7.6)
+		(end 0 -7.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "224ee8e4-4b54-49fa-92f1-750989fa3011")
+	)
+	(fp_line
+		(start 0 -7.5)
+		(end 0 -7.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5446d850-7cb4-4259-88d8-f250b3bc637e")
+	)
+	(fp_line
+		(start 18.24 -7.11)
+		(end 18.24 25.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "742577cb-fba5-4f24-8c21-ceaab14e545c")
+	)
+	(fp_line
+		(start 18.24 25.4)
+		(end -9.19 25.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "316aec24-68aa-441d-ab74-36eb495b24ab")
+	)
+	(fp_arc
+		(start 0 -7.6)
+		(mid 0.05 -7.55)
+		(end 0 -7.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ee56e9df-07f0-427a-b094-d8d16aab3d5d")
+	)
+	(fp_arc
+		(start 0 -7.5)
+		(mid -0.05 -7.55)
+		(end 0 -7.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3799c56a-a63f-4a0e-ad18-3e449095ef7d")
+	)
+	(fp_line
+		(start -10.19 -8.11)
+		(end -10.19 26.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f90d2af6-a645-4b9c-8742-e0f5dffa06ce")
+	)
+	(fp_line
+		(start -10.19 26.4)
+		(end 19.24 26.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8ff2f6e5-fca4-4886-bd19-5f015f6bdf14")
+	)
+	(fp_line
+		(start 19.24 -8.11)
+		(end -10.19 -8.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "af11234a-6359-4d53-8854-ca9d2261ea7f")
+	)
+	(fp_line
+		(start 19.24 26.4)
+		(end 19.24 -8.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1cde8f33-ba8e-4e63-9ab2-e11a2bb86915")
+	)
+	(fp_line
+		(start -9.19 -7.11)
+		(end -9.19 25.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "931dbf10-f18f-4306-9539-ea6074658730")
+	)
+	(fp_line
+		(start -9.19 25.4)
+		(end 18.24 25.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fc2c5345-00a2-46d2-904f-1c69c0d3f891")
+	)
+	(fp_line
+		(start 18.24 -7.11)
+		(end -9.19 -7.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b74dfd18-f7e3-489f-b9b1-e16ade0bdee9")
+	)
+	(fp_line
+		(start 18.24 25.4)
+		(end 18.24 -7.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e1ea7687-0fb6-4483-ad9c-3b42a81c2f60")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 4.525 9.145 0)
+		(layer "F.Fab")
+		(uuid "cbff4f93-fa32-4842-b117-f79c6246f532")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.635 1.635)
+		(drill 1.09)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "23963515-9c4d-4b56-9eb8-0b4c313a0cad")
+	)
+	(pad "2" thru_hole circle
+		(at 10.16 0)
+		(size 1.635 1.635)
+		(drill 1.09)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c4444bf1-4639-4608-b5be-8770d799c505")
+	)
+	(pad "3" thru_hole circle
+		(at 13.97 12.7)
+		(size 2.97 2.97)
+		(drill 1.98)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "be372b85-4ae1-4605-9cf7-19e1745a9b31")
+	)
+	(pad "4" thru_hole circle
+		(at -3.81 15.24)
+		(size 3.09 3.09)
+		(drill 2.06)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5d1dd4dd-013a-4841-8277-362c4d60ae43")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\T9AS1D12-24.stp"
+		(offset
+			(xyz 5.229999941 -9.140000206 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -180 0 0)
+		)
+	)
+)

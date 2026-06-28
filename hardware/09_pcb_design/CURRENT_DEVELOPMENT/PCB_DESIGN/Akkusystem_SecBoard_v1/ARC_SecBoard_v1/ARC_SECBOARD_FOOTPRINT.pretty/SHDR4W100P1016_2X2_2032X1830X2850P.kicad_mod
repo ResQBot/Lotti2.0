@@ -1,0 +1,322 @@
+(footprint "SHDR4W100P1016_2X2_2032X1830X2850P"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "VP026584000AG")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 0 -2.61 0)
+		(layer "F.SilkS")
+		(uuid "77318ead-d070-4741-8b0a-391e70f92ad5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "VP026584000AG"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "77d1519e-c7e8-498f-9c09-d6e96847df16")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "http://www.anytek.com.tw/UserUpFiles/20181025/d41_CP3hmn_a.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cd535155-a672-476a-b4b1-cd112dddd68b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Fixed Terminal Blocks VP-10.16-2P Grey(RAL7035/D)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a8705389-f7ed-4bb0-8ae7-462eb186e530")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "28.5"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f67475b2-2f2d-4f97-9758-f20825c0cd88")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Amphenol"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "221faae0-2d39-4d77-ad34-19bc8f656077")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "VP026584000AG"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5d6870ab-c847-44e0-a4b3-5ddd02ae2df0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "523-VP026584000AG"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2fea399d-378d-432c-9611-da1ea092fbb0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/VP026584000AG?qs=T3oQrply3y8ZXElTBVt2Rg%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4fcede45-9605-4dc1-82d2-44f8671db2e7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f91dd969-9548-4e88-bb07-c959d27fb78e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6ceadb03-2008-4667-8ecf-daccc4f2d948")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -5.08 -11.76)
+		(end -5.08 0)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5ef6b7ca-931c-40fd-b3d2-f861480e4ef4")
+	)
+	(fp_line
+		(start 0 6.54)
+		(end 15.39 6.54)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "85a4a72e-a713-4626-9d81-7afa0c7a5366")
+	)
+	(fp_line
+		(start 15.39 -11.76)
+		(end -5.08 -11.76)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6e4252c6-8a51-4714-805f-a500ea1f514c")
+	)
+	(fp_line
+		(start 15.39 6.54)
+		(end 15.39 -11.76)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ead3ed79-2832-40ad-a17c-ffe3ef544f85")
+	)
+	(fp_line
+		(start -5.33 -12.01)
+		(end 15.64 -12.01)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "35c7396b-fa0e-4557-9c6d-4ad7b9d7b50a")
+	)
+	(fp_line
+		(start -5.33 6.79)
+		(end -5.33 -12.01)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bb31a7c4-f084-456d-bcd4-0453a952f5de")
+	)
+	(fp_line
+		(start 15.64 -12.01)
+		(end 15.64 6.79)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "db606846-93f0-49b2-98de-53bcddba5e20")
+	)
+	(fp_line
+		(start 15.64 6.79)
+		(end -5.33 6.79)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "779fd250-bf42-42f4-9e2b-45366e3751a9")
+	)
+	(fp_line
+		(start -5.08 -11.76)
+		(end 15.39 -11.76)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fc46d73e-86e5-4613-93da-c468ea35cc59")
+	)
+	(fp_line
+		(start -5.08 6.54)
+		(end -5.08 -11.76)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e541e73f-c08f-4bfd-8358-991825b3f9e8")
+	)
+	(fp_line
+		(start 15.39 -11.76)
+		(end 15.39 6.54)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "094ea6f1-bb13-4bbe-adba-bed609135750")
+	)
+	(fp_line
+		(start 15.39 6.54)
+		(end -5.08 6.54)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "eb25feca-e77a-4209-912a-fe32a82afa3e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "e9e14dd5-7caf-4f17-83a2-54a1447bf426")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e9cba8eb-7053-4a9a-a9c7-16db83ecfdcb")
+	)
+	(pad "2" thru_hole circle
+		(at 0 -10.16)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1841a371-5a2b-450b-9874-26e8e12db88c")
+	)
+	(pad "3" thru_hole circle
+		(at 10.16 0)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4cf992b5-4724-4757-949a-e613ffa252bb")
+	)
+	(pad "4" thru_hole circle
+		(at 10.16 -10.16)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2cd39960-5d60-4be5-849f-57e8b4766646")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\VP026584000AG.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

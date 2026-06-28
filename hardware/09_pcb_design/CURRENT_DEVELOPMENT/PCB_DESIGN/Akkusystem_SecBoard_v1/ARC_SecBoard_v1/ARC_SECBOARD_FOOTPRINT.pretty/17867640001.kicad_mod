@@ -1,0 +1,313 @@
+(footprint "17867640001"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "178.6764.0001")
+	(tags "Undefined or Miscellaneous")
+	(property "Reference" "REF**"
+		(at 0 -2.8 0)
+		(layer "F.SilkS")
+		(uuid "f391c31a-def5-4a24-8801-308243f319a9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "30A"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "125ace16-a246-4993-876e-ad147c50805c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "http://www.littelfuse.com/~/media/commercial-vehicle/datasheets/automotive-fuse-holders/mini/littelfuse-fuseholder-mini-fl1-pcb-mount.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aea217d3-4ca6-46e3-a233-7e52606b75b1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "LITTELFUSE - 178.6764.0001 - FUSE HOLDER, PCB, FK1 BLADE"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce5ddf2e-f8f0-4eec-964a-e63425569ff5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "15"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c37a7c6b-534f-419c-a132-3c6ed5083a13")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "LITTELFUSE"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8c44ee28-06ee-4f69-84f3-f3e662431d35")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "178.6764.0001"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03f5babe-9a71-4795-b92a-e6f64ceb6613")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "576-178.6764.0001"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83a2f878-edce-4033-92c0-eb3922085c6d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Littelfuse/178.6764.0001?qs=gu7KAQ731UTQ5alyjBY5mw%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "67a2835d-fe13-46f1-8b7f-e339dbf50c4d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" "178.6764.0001"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2b5045d5-c105-4b36-9ab7-3801115f9548")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" "https://www.arrow.com/en/products/178.6764.0001/littelfuse?utm_currency=USD&region=europe"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a2b2357c-2cba-4f27-9610-0639ea341585")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -7.1 -3.725)
+		(end 7.1 -3.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "883439bd-7707-4ba5-a6fb-520b872c97d7")
+	)
+	(fp_line
+		(start -7.1 3.725)
+		(end -7.1 -3.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "88cf9a5e-4f2a-417e-9355-3358df342912")
+	)
+	(fp_line
+		(start 7.1 -3.725)
+		(end 7.1 3.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6f4d10d9-c9ff-4044-bf80-a5cf2d5ebcd9")
+	)
+	(fp_line
+		(start 7.1 3.725)
+		(end -7.1 3.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "877acb7a-00e2-43e6-9334-e55ed7ecac96")
+	)
+	(fp_line
+		(start -8.1 -4.725)
+		(end 8.1 -4.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4ed1edf8-7e6d-4da7-a328-b16797ec61c1")
+	)
+	(fp_line
+		(start -8.1 4.725)
+		(end -8.1 -4.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "092d8f21-ddb5-43d2-b4bf-7ef849c43533")
+	)
+	(fp_line
+		(start 8.1 -4.725)
+		(end 8.1 4.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3137b504-f76b-4b66-93a8-04d21ffafc4c")
+	)
+	(fp_line
+		(start 8.1 4.725)
+		(end -8.1 4.725)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0c49d58c-faac-4c1a-a0d2-6f88cf0a1c41")
+	)
+	(fp_line
+		(start -7.1 -3.725)
+		(end 7.1 -3.725)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b33efcee-1c5e-4e42-837a-5bd6af86356a")
+	)
+	(fp_line
+		(start -7.1 3.725)
+		(end -7.1 -3.725)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f387cad3-a4d9-496f-ae77-6459be6b3c17")
+	)
+	(fp_line
+		(start 7.1 -3.725)
+		(end 7.1 3.725)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e050c3fa-9428-4a82-af93-d5639c2acecc")
+	)
+	(fp_line
+		(start 7.1 3.725)
+		(end -7.1 3.725)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ec9c6009-0413-41ad-bccd-2d1c00b19e18")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -2.8 0)
+		(layer "F.Fab")
+		(uuid "1d04efe4-6359-41d8-83ac-8c282ec362f5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 2.8 2.8)
+		(drill 2.8)
+		(layers "*.Cu" "*.Mask")
+		(uuid "7dd4aff9-a0bd-49d5-b0fc-46bd850c7eb5")
+	)
+	(pad "1" thru_hole circle
+		(at -4 -0.8)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "803e558f-4948-404e-bfff-f1e65d3143fb")
+	)
+	(pad "2" thru_hole circle
+		(at 4 -0.8)
+		(size 2.4 2.4)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2f1f51ce-7237-4505-ac48-a04333cef1e5")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\178.6764.0001.stp"
+		(offset
+			(xyz 0 0.01999999925 7.919999957)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

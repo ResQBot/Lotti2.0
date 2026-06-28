@@ -1,0 +1,293 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "1354f3a1-6707-493e-9cd3-5d7a51d4c692")
+	(paper "A4")
+	(lib_symbols)
+	(text "OUTPUTS\n"
+		(exclude_from_sim no)
+		(at 241.3 20.574 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "322814f2-4eeb-467c-8c1a-b841280ceb94")
+	)
+	(text "INPUTS\n"
+		(exclude_from_sim no)
+		(at 36.322 25.654 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4c61dda3-5b1c-42dd-88d7-c83602063065")
+	)
+	(text "Battery Sync with ideal Diode"
+		(exclude_from_sim no)
+		(at 138.43 66.548 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b43da713-caa2-421e-bed7-951a3370db7b")
+	)
+	(wire
+		(pts
+			(xy 241.3 30.48) (xy 241.3 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d59cca1-c5aa-4535-8e5d-e7af8ba21a5e")
+	)
+	(wire
+		(pts
+			(xy 102.87 85.09) (xy 121.92 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d8b19cb-77d3-46f0-ace9-506f62b738b4")
+	)
+	(wire
+		(pts
+			(xy 102.87 92.71) (xy 121.92 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50c97199-282e-4aa5-9b21-00f21c3db444")
+	)
+	(wire
+		(pts
+			(xy 157.48 88.9) (xy 168.91 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "612f2c49-d17d-4545-959e-96f048010c4e")
+	)
+	(wire
+		(pts
+			(xy 38.1 35.56) (xy 38.1 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76d9a172-13a1-4951-a58a-1da655441ef3")
+	)
+	(wire
+		(pts
+			(xy 34.29 35.56) (xy 34.29 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea233726-4a7f-44db-b955-5f280593cf2d")
+	)
+	(label "MEAS_BATT1_24V"
+		(at 34.29 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4d022700-48f6-4d9e-8398-121f4710fe8e")
+	)
+	(label "24V_sync"
+		(at 168.91 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "82259be0-8676-43b0-9bee-dd49414c1b18")
+	)
+	(label "MEAS_BATT1_24V"
+		(at 102.87 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9c6686a2-6466-4691-9355-7a0f071b4d06")
+	)
+	(label "24V_sync"
+		(at 241.3 34.29 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9c7cf745-2ee6-43c6-9537-71cf415b9cd4")
+	)
+	(label "MEAS_BATT2_24V"
+		(at 38.1 38.1 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dd5c00e3-0237-4e9a-93b5-a1e7a0fdf610")
+	)
+	(label "MEAS_BATT2_24V"
+		(at 102.87 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fe38750a-a62a-4bbb-85c8-37e220ad6c1f")
+	)
+	(hierarchical_label "Batt2"
+		(shape input)
+		(at 38.1 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50f8a8a9-7f09-40ab-9899-13fa50fac816")
+	)
+	(hierarchical_label "Batt1"
+		(shape input)
+		(at 34.29 35.56 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7cfa5f5a-a70c-4e4d-b2b0-d8daf1ade9b6")
+	)
+	(hierarchical_label "24V"
+		(shape output)
+		(at 241.3 30.48 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8046c805-5f3b-4414-a136-6d414a83dd48")
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 233.68 50.8) (xy 248.92 50.8) (xy 248.92 16.51) (xy 233.68 16.51)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 2587bd0d-c291-455d-a6d7-ac5d2be51b64)
+		)
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 44.45 21.59) (xy 44.45 57.15) (xy 30.48 57.15) (xy 30.48 21.59)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid 5dec3bc1-cab1-4db6-86b0-0a5e19ea1ab1)
+		)
+	)
+	(sheet
+		(at 121.92 81.28)
+		(size 35.56 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a83c47bf-d865-41e7-9c2f-e0a80ed82b0f")
+		(property "Sheetname" "IdealDiode"
+			(at 121.92 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "idealDiode.kicad_sch"
+			(at 121.92 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "24V_sync" output
+			(at 157.48 88.9 0)
+			(uuid "8dfabf64-7d06-467f-8b26-de16dbbb41e0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BATT1_INPUT" input
+			(at 121.92 85.09 180)
+			(uuid "0e65a16c-338f-4843-ada7-4865504efda0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BATT2_INPUT" input
+			(at 121.92 92.71 180)
+			(uuid "8a917ea0-c193-4b08-9e9d-88737d135f13")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ARC_SecBoard_v1"
+				(path "/69f87933-3c49-4005-b0bb-d8e286592ba6/ff2fce2f-b531-4875-8aaa-32786279f2b0"
+					(page "8")
+				)
+			)
+		)
+	)
+)

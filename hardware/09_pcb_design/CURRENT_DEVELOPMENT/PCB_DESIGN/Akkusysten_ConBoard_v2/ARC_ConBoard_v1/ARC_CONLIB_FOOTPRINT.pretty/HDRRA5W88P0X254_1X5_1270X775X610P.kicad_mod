@@ -1,0 +1,344 @@
+(footprint "HDRRA5W88P0X254_1X5_1270X775X610P"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "640455")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 12.83 -4.726 0)
+		(layer "F.SilkS")
+		(uuid "25d3ace6-dcf4-400d-8c4f-65ea3231f212")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "640455-5"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a664c759-7216-41d9-b6f6-ebbaff14be44")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=640455&DocType=Customer+Drawing&DocLang=English&DocFormat=pdf&PartCntxt=640455-5"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5e7cc093-8e4f-4e64-83e6-7f42a695ce5f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "TE Connectivity MTA-100, 5 Way, 1 Row, Right Angle PCB Header"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5699f749-73e5-413a-8e06-551595195b70")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "6.1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "063b945e-2c6f-4188-836e-75659dc1adf0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "571-6404555"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d9fd4cf8-1b06-4183-9fb5-6a000eb91bf8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/640455-5?qs=X1mjqRbeMc5kyjdl11VSpA%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "01746ef9-954a-4ed0-8003-98adc8b42d96")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "TE Connectivity"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "952a6657-8697-4dfd-afd0-631bc2c707ad")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "640455-5"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "258960c5-b79f-402d-b159-9a790c974328")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.27 -11.3)
+		(end 11.43 -11.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "90f92d1f-86a0-41a2-ac97-f57048e961d9")
+	)
+	(fp_line
+		(start -1.27 0)
+		(end -1.27 -11.3)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "304df952-5cd8-4ca4-9770-398ff5b66361")
+	)
+	(fp_line
+		(start 0 -11.3)
+		(end 0 -18.79)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f2fe619f-79ed-4e22-83c3-c5d0732c058e")
+	)
+	(fp_line
+		(start 2.54 -11.3)
+		(end 2.54 -18.79)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "03ae2e44-c075-4169-ae2a-b7be8fc6ff91")
+	)
+	(fp_line
+		(start 5.08 -11.3)
+		(end 5.08 -18.79)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2213058b-764a-485f-b15f-a5c75bb91e78")
+	)
+	(fp_line
+		(start 7.62 -11.3)
+		(end 7.62 -18.79)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f444797d-6ec9-435c-aa69-e17fdb56c9ef")
+	)
+	(fp_line
+		(start 10.16 -11.3)
+		(end 10.16 -18.79)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a3e119ce-cc20-48ee-b063-cd5d4de5e460")
+	)
+	(fp_line
+		(start 11.43 -11.3)
+		(end 11.43 -3.17)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1c06bac6-9308-48f6-a2e7-b3d100e61542")
+	)
+	(fp_line
+		(start -1.52 -19.04)
+		(end -1.52 1.588)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6c54cd00-668a-4022-8181-fddca647c365")
+	)
+	(fp_line
+		(start -1.52 1.588)
+		(end 11.68 1.588)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f1284110-c090-4e0f-a6ff-fd01e2d14204")
+	)
+	(fp_line
+		(start 11.68 -19.04)
+		(end -1.52 -19.04)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "166685c2-ca21-45f8-8af6-2991c3cf57fa")
+	)
+	(fp_line
+		(start 11.68 1.588)
+		(end 11.68 -19.04)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "679b54e1-ba66-429a-be96-24d1cba19940")
+	)
+	(fp_line
+		(start -1.27 -11.3)
+		(end 11.43 -11.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a75f6de5-6da6-4708-a80d-44726755b86e")
+	)
+	(fp_line
+		(start -1.27 -3.17)
+		(end -1.27 -11.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a0bbfd64-ffdb-4a7e-9094-69435e21b539")
+	)
+	(fp_line
+		(start 11.43 -11.3)
+		(end 11.43 -3.17)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "96f8ceb5-76ff-466b-abef-1b645046ba5f")
+	)
+	(fp_line
+		(start 11.43 -3.17)
+		(end -1.27 -3.17)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "19feb90d-c8ee-4c0b-98a7-94dd01702a67")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "efe9412b-b88c-42d6-ab7c-f73e400e5853")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "51dee3dc-1d79-4a6c-9cd9-d1ff7bcfb69e")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 0)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "15bca47f-a419-47b4-920b-aec47908722b")
+	)
+	(pad "3" thru_hole circle
+		(at 5.08 0)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ea4b29f0-5e11-4b5b-beae-4d26e739a03b")
+	)
+	(pad "4" thru_hole circle
+		(at 7.62 0)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b9472396-6afa-4042-a45d-7cefb4147fae")
+	)
+	(pad "5" thru_hole circle
+		(at 10.16 0)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8ee1b5de-5f27-4103-9bc4-8d234dd8bc5b")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\piusb\\OneDrive\\Projects\\KiCad_Data\\KiCad_Libs\\Bickel_STD_LIB\\SamacSys_Parts.3dshapes\\640455-5.stp"
+		(offset
+			(xyz 5.079999847 3.059999897 2.869999842)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -180)
+		)
+	)
+)

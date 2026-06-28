@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "OldBatteryManagement")(type "KiCad")(uri "C:/Users/piusb/OneDrive/Projects/ResQBots/Development/Electronics/OldBatteryManagement.pretty")(options "")(descr ""))
+  (lib (name "ARC_CONLIB_FOOTPRINT")(type "KiCad")(uri "${KIPRJMOD}/ARC_CONLIB_FOOTPRINT.pretty")(options "")(descr ""))
+)
