@@ -1,3 +1,7 @@
 #! /bin/bash
-source ~/.bashrc && 
-ros2 launch lotti2_control operator.launch.py
+gnome-terminal --tab --title="robot_control" --command \
+"bash -c 'source /opt/ros/jazzy/setup.bash; \
+export ROS_DOMAIN_ID=17; \
+cd Lotti2.0; \
+ros2 launch lotti2_control operator.launch.py \
+'"
