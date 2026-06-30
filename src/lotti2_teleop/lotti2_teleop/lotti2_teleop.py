@@ -315,6 +315,13 @@ class TeleOp(Node):
             self.__fl_flipper_cmd.data = self.__button_x * self.__flipper_speed
             self.__rr_flipper_cmd.data = self.__button_b * self.__flipper_speed         
             self.__rl_flipper_cmd.data = self.__button_a * self.__flipper_speed
+            if (self.__button_rb == 1) :
+                self.__fr_flipper_cmd.data = self.__flipper_speed
+                self.__fl_flipper_cmd.data = self.__flipper_speed
+            if (self.__button_lb == 1) :
+                self.__rr_flipper_cmd.data = self.__flipper_speed
+                self.__rl_flipper_cmd.data = self.__flipper_speed
+
         else:
             self.__fr_flipper_cmd.data = 0.0
             self.__fl_flipper_cmd.data = 0.0

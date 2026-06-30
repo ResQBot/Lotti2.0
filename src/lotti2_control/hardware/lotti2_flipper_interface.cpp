@@ -49,7 +49,7 @@ hardware_interface::CallbackReturn FlipperInterface::on_init(
     // get the parameters from the ros2_control file
     device_ = info_.hardware_parameters["device"];
     // max_torque_   = stof(info_.hardware_parameters["max_torque"]);
-    gear_ratio_   = stof(info_.hardware_parameters["gear_ratio"]) * unitree_ratio_;
+    gear_ratio_   = stof(info_.hardware_parameters["gear_ratio"]);
     use_hardware_ = stoi(info_.hardware_parameters["use_hardware"]);
     if (!(use_hardware_ == 0 || use_hardware_ == 1)) {
         RCLCPP_ERROR(get_logger(), "FlipperInterface: Invalid value for \"use_hardware\" in ros2_control file");
@@ -69,40 +69,54 @@ hardware_interface::CallbackReturn FlipperInterface::on_configure(
         motor_data_[i].tau       = 0.0;
         motor_data_[i].dq        = 0.0;
         motor_data_[i].q         = 0.0;
+        motor_data_[i].correct   = true;
         motor_error_type_[i]     = 0;
         motor_cmd_[i].motorType  = MotorType::GO_M8010_6;
-        motor_cmd_[i].mode       = 1;     // static_cast<unsigned short>(queryMotorMode(MotorType::GO_M8010_6, MotorMode::FOC))
-        motor_cmd_[i].kp         = 0.0f;  // positional stiffness
-        motor_cmd_[i].kd         = 0.1f;  // velocity stiffness
-        motor_cmd_[i].q          = 0.0;   // position [rad]
-        motor_cmd_[i].dq         = 0.0;   // speed    [Rads/s]
-        motor_cmd_[i].tau        = 0.0;   // torque  [Nm]
+        motor_cmd_[i].mode       = 1;    // static_cast<unsigned short>(queryMotorMode(MotorType::GO_M8010_6, MotorMode::FOC))
+        motor_cmd_[i].kp         = 0.0;  // positional stiffness
+        motor_cmd_[i].kd         = 0.0;  // velocity stiffness
+        motor_cmd_[i].q          = 0.0;  // position [rad]
+        motor_cmd_[i].dq         = 0.0;  // speed    [Rads/s]
+        motor_cmd_[i].tau        = 0.0;  // torque  [Nm]
 
-        // setting motor IDs.
+        // setting motor IDs and direction correction depending on motor position
         switch (i) {
             case 0:  // front_right_flipper
                 motor_cmd_[i].id        = 2;
+                first_cmd_[i].id        = 2;
                 motor_data_[i].motor_id = 2;
                 dir_[i]                 = -1;
 
                 break;
             case 1:  // front_left_flipper
                 motor_cmd_[i].id        = 3;
+                first_cmd_[i].id        = 3;
                 motor_data_[i].motor_id = 3;
                 dir_[i]                 = 1;
                 break;
             case 2:  // rear_right_flipper
                 motor_cmd_[i].id        = 1;
+                first_cmd_[i].id        = 1;
                 motor_data_[i].motor_id = 1;
                 dir_[i]                 = 1;
                 break;
             case 3:  // rear_left_flipper
                 motor_cmd_[i].id        = 4;
+                first_cmd_[i].id        = 4;
                 motor_data_[i].motor_id = 4;
                 dir_[i]                 = -1;
                 break;
         }
+
+        first_cmd_[i].motorType = MotorType::GO_M8010_6;
+        first_cmd_[i].mode      = 0;
+        first_cmd_[i].kd        = 0.0;
+        first_cmd_[i].kp        = 0.0;
+        first_cmd_[i].q         = 0.0;
+        first_cmd_[i].dq        = 0.0;
+        first_cmd_[i].tau       = 0.0;
     }
+    first = true;
 
     // prepare serial connection only if use_hardware is set to "true"
     if (use_hardware_ == 1) {
@@ -132,21 +146,7 @@ hardware_interface::CallbackReturn FlipperInterface::on_activate(
     for (const auto& [name, descr] : joint_command_interfaces_) {
         set_command(name, get_state(name));
     }
-    if (use_hardware_ == 1) {
-        MotorCmd first_cmd_[4];
-        for (size_t i = 0; i < 4; i++) {
-            first_cmd_[i].id        = static_cast<unsigned short>(i + 1);
-            first_cmd_[i].motorType = MotorType::GO_M8010_6;
-            first_cmd_[i].mode      = 0;
-            first_cmd_[i].kd        = 0.0;
-            first_cmd_[i].kp        = 0.0;
-            first_cmd_[i].q         = 0.0;
-            first_cmd_[i].dq        = 0.0;
-            first_cmd_[i].tau       = 0.0;
 
-            serial_->sendRecv(&first_cmd_[i], &motor_data_[i]);
-        }
-    }
     return hardware_interface::CallbackReturn::SUCCESS;
 }
 
@@ -156,7 +156,7 @@ hardware_interface::CallbackReturn FlipperInterface::on_deactivate(
 }
 
 hardware_interface::return_type FlipperInterface::read(
-  const rclcpp::Time& /*time*/, const rclcpp::Duration& period) {
+  const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) {
     // if use_hardware is set to 1 -> read real data
     if (use_hardware_ == 1) {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
@@ -178,8 +178,8 @@ hardware_interface::return_type FlipperInterface::read(
                 }
                 motor_error_type_[i] = motor_data_[i].merror;
 
-                set_state(info_.joints[i].name + "/position", static_cast<double>(motor_data_[i].q) * dir_[i] / gear_ratio_);
-                set_state(info_.joints[i].name + "/velocity", static_cast<double>(motor_data_[i].dq) * dir_[i]);
+                set_state(info_.joints[i].name + "/position", static_cast<double>(motor_data_[i].q) / (gear_ratio_ * unitree_ratio_) * dir_[i]);
+                set_state(info_.joints[i].name + "/velocity", static_cast<double>(motor_data_[i].dq) / gear_ratio_ * dir_[i]);
                 set_state(info_.joints[i].name + "/effort", static_cast<double>(motor_data_[i].tau));
                 set_state(info_.joints[i].name + "/temp", static_cast<double>(motor_data_[i].temp));
             }
@@ -204,14 +204,9 @@ hardware_interface::return_type FlipperInterface::read(
     // if use_hardware is set to 0 -> pretend all commands are executed instantly
     else {
         for (std::size_t i = 0; i < info_.joints.size(); i++) {
-            double tor = get_command(info_.joints[i].name + "/effort");
-            double vel = (tor - 0.8) * 1.1;
-            if (tor == 0.0) {
-                vel = 0.0;
-            }
-            set_state(info_.joints[i].name + "/velocity", vel);
-            set_state(info_.joints[i].name + "/position", get_state(info_.joints[i].name + "/position") + vel * period.seconds());
-            set_state(info_.joints[i].name + "/effort", tor);
+            set_state(info_.joints[i].name + "/velocity", motor_cmd_[i].dq / gear_ratio_);
+            set_state(info_.joints[i].name + "/position", motor_cmd_[i].q / (gear_ratio_ * unitree_ratio_));
+            set_state(info_.joints[i].name + "/effort", 0.0);
             set_state(info_.joints[i].name + "/temp", 22.0);
         }
     }
@@ -221,28 +216,43 @@ hardware_interface::return_type FlipperInterface::read(
 
 hardware_interface::return_type FlipperInterface::write(
   const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) {
-    // only perform write if use_hardware is set to 1
-    if (use_hardware_ == 1) {
-        for (std::size_t i = 0; i < info_.joints.size(); i++) {
-            // check if motors are fine
-            if (motor_error_type_[i] == 0 && motor_data_[i].correct) {
-                // set command values
-                motor_cmd_[i].tau = static_cast<float>(get_command(info_.joints[i].name + "/effort") * dir_[i]);
+    for (std::size_t i = 0; i < info_.joints.size(); i++) {
+        // check if motors are fine
+        if (motor_error_type_[i] == 0 && motor_data_[i].correct) {
+            // set command values
+            motor_cmd_[i].dq  = static_cast<float>(get_command((info_.joints[i].name + "/velocity")) * gear_ratio_ * dir_[i]);
+            motor_cmd_[i].q   = static_cast<float>(get_command(info_.joints[i].name + "/position") * gear_ratio_ * unitree_ratio_ * dir_[i]);
+            motor_cmd_[i].kp  = 0.9f;
+            motor_cmd_[i].kd  = 0.13f;
+            motor_cmd_[i].tau = static_cast<float>(3 * motor_cmd_[i].dq / abs(motor_cmd_[i].dq));
+            if (motor_cmd_[i].q == 0.0) {
+                motor_cmd_[i].tau = 0.0;
             }
-            else {
-                motor_cmd_[i].mode = 0;
-                motor_cmd_[i].kd   = 0.0;
-                motor_cmd_[i].kp   = 0.0;
-                motor_cmd_[i].q    = 0.0;
-                motor_cmd_[i].dq   = 0.0;
-                motor_cmd_[i].tau  = 0.0;
+            if (first && motor_cmd_[i].dq != 0.0) {
+                first = false;
             }
         }
+        else {
+            motor_cmd_[i].mode = 0;
+            motor_cmd_[i].kd   = 0.0;
+            motor_cmd_[i].kp   = 0.0;
+            motor_cmd_[i].q    = 0.0;
+            motor_cmd_[i].dq   = 0.0;
+            motor_cmd_[i].tau  = 0.0;
+        }
+    }
+    // only perform write if use_hardware is set to 1
+    if (use_hardware_ == 1) {
         // Send commands and receive data via serial port
         // careful which motors are connected to which USB adaptor!
         if (serial_) {
             for (std::size_t i = 0; i < info_.joints.size(); i++) {
-                serial_->sendRecv(&motor_cmd_[i], &motor_data_[i]);
+                if (first) {
+                    serial_->sendRecv(&first_cmd_[i], &motor_data_[i]);
+                }
+                else {
+                    serial_->sendRecv(&motor_cmd_[i], &motor_data_[i]);
+                }
             }
         }
     }

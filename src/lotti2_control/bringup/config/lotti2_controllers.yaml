@@ -29,7 +29,8 @@ lotti2_flipper_controller:
     - flipper_rr_joint
     - flipper_rl_joint
     command_interfaces:
-    - effort
+    - position
+    - velocity
     state_interfaces:
     - position
     - effort
