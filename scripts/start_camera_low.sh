@@ -11,5 +11,6 @@ else
     ros2 run webcam_publisher ffmpeg_camera_node --ros-args \
     -p device:="/dev/v4l/by-id/usb-Aukey-PC-LM1E_Camera_Aukey-PC-LM1E_Camera-video-index0" \
     -p camera_name:="camera_3"; \
+    -p fps:=20; \
     "
 fi

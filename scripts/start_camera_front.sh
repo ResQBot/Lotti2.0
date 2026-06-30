@@ -11,5 +11,6 @@ else
     ros2 run webcam_publisher ffmpeg_camera_node --ros-args \
     -p device:="/dev/v4l/by-id/usb-PC-LM1E_PC-LM1E_PC-LM1E-video-index0" \
     -p camera_name:="camera_1"; \
+    -p fps:=20; \
     "
 fi

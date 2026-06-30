@@ -1,5 +1,5 @@
 #! /bin/bash
-gnome-terminal --tab --title="robot_control" \
+gnome-terminal --tab --title="robot" \
 -- ssh -t resqbots@lotti2-pc.local \
 "source /opt/ros/jazzy/setup.bash; \
 export ROS_DOMAIN_ID=17; \
