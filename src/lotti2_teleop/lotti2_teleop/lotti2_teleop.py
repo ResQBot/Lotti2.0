@@ -309,8 +309,8 @@ class TeleOp(Node):
     def __calcAndSendFlippers(self):
         # check if arm mode is active        
         if (self.__arm_enabled == False):
-            # right trigger lowers flippers, left trigger lifts flippers
-            self.__flipper_speed = ((self.__right_trigger + 1) / 2) - ((self.__left_trigger + 1) / 2)
+            # left trigger lowers flippers, right trigger lifts flippers
+            self.__flipper_speed = ((self.__left_trigger + 1) / 2) - ((self.__right_trigger + 1) / 2)
             self.__fr_flipper_cmd.data = self.__button_y * self.__flipper_speed
             self.__fl_flipper_cmd.data = self.__button_x * self.__flipper_speed
             self.__rr_flipper_cmd.data = self.__button_b * self.__flipper_speed         
@@ -342,16 +342,21 @@ class TeleOp(Node):
         if (self.__arm_enabled == False):
             # corrections for driving backwards
             if (self.__left_stick_y < 0):
-                # weird formular to accelerate turning on the spot
-                self.__chains_angle = - self.__left_stick_x * abs(self.__left_stick_x) * 5
+                self.__chains_angle = - self.__left_stick_x
             else:
-                self.__chains_angle = self.__left_stick_x * abs(self.__left_stick_x) * 5
+                self.__chains_angle = self.__left_stick_x
             # check "backward driving" button for convenience
             if (self.__direction == True):
-                self.__chain_msg.twist.linear.x = -self.__left_stick_y
+                if (abs(self.__left_stick_y)<0.2):
+                    self.__chain_msg.twist.linear.x = 0.0
+                else:
+                    self.__chain_msg.twist.linear.x = -self.__left_stick_y
                 self.__chain_msg.twist.angular.z = -self.__chains_angle
             else:
-                self.__chain_msg.twist.linear.x = self.__left_stick_y
+                if (abs(self.__left_stick_y)<0.2):
+                    self.__chain_msg.twist.linear.x = 0.0
+                else:
+                    self.__chain_msg.twist.linear.x = self.__left_stick_y
                 self.__chain_msg.twist.angular.z = self.__chains_angle
         else:       
             self.__chain_msg.twist.linear.x = 0.0
