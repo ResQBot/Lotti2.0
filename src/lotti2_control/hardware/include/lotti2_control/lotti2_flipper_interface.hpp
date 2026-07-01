@@ -69,17 +69,20 @@ class FlipperInterface : public hardware_interface::SystemInterface {
       const rclcpp::Time& /*time*/, const rclcpp::Duration& /*period*/) override;
 
   private:
-    std::string device_;
-    double gear_ratio_;
-    double unitree_ratio_ = 6.33;
-    int use_hardware_;
-    int motor_error_type_[4];
-    int dir_[4];
+    std::string device_;           // usb connector
+    double gear_ratio_;            // belt drive ratio + unitree ratio
+    double unitree_ratio_ = 6.33;  // unitree integrated gear ratio
+    int use_hardware_;             // use hardware or emulate
+    int motor_error_type_[4];      // errors sent by the motors
+    int dir_[4];                   // directional correction for motors according to positioning inside the robot
+    bool first;
 
     // --- Add Unitree SDK members here ---
     std::unique_ptr<SerialPort> serial_;
     MotorCmd motor_cmd_[4];    // Array of motor commands
     MotorData motor_data_[4];  // Array of motor feedback data
+    // to avoid movement before operator is ready
+    MotorCmd first_cmd_[4];
 };
 }  // namespace lotti2_flipper_interface
 #endif  // LOTTI2_CONTROL_LOTTI2_FLIPPER_INTERFACE_HPP_

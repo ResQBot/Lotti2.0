@@ -28,7 +28,7 @@ class CameraDashboard(Node):
             {'name': 'front_left',  'topic': '/camera_1/image_raw/compressed'},
             {'name': 'front_right', 'topic': '/camera_2/image_raw/compressed'},
             {'name': 'back_left',   'topic': '/camera_3/image_raw/compressed'},
-            {'name': 'back_right',  'topic': '/camera_4/image_raw/compressed'},
+            #{'name': 'back_right',  'topic': '/camera_4/image_raw/compressed'},
             {'name': 'arm_camera',  'topic': '/camera_5/image_raw/compressed'}
         ]
 

@@ -22,7 +22,7 @@ def generate_launch_description():
                 'camera_name': 'camera_1',
                 'width': 640,
                 'height': 480,
-                'fps': 30
+                'fps': 20
             }]
         ),
 
@@ -37,7 +37,7 @@ def generate_launch_description():
                 'camera_name': 'camera_2',
                 'width': 640,
                 'height': 480,
-                'fps': 30
+                'fps': 20
             }]
         ),
 
@@ -52,7 +52,7 @@ def generate_launch_description():
                 'camera_name': 'camera_3',
                 'width': 640,
                 'height': 480,
-                'fps': 30
+                'fps': 20
             }]
         ),
 
@@ -67,7 +67,7 @@ def generate_launch_description():
                 'camera_name': 'camera_4',
                 'width': 640,
                 'height': 480,
-                'fps': 30
+                'fps': 20
             }]
         ),
 
@@ -82,7 +82,7 @@ def generate_launch_description():
                 'camera_name': 'camera_5',
                 'width': 640,
                 'height': 480,
-                'fps': 30
+                'fps': 20
             }]
         ),
     ])

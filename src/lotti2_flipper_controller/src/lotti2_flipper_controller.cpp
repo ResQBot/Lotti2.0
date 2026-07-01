@@ -84,19 +84,19 @@ controller_interface::InterfaceConfiguration FlipperController::state_interface_
 controller_interface::CallbackReturn FlipperController::on_configure(const rclcpp_lifecycle::State &) {
     // define callbacks for subscribers
     auto fr_callback = [this](std_msgs::msg::Float32 fr_flipper_msg_) -> void {
-        flipper_cmd_[0] = fr_flipper_msg_.data;
+        flipperCMD[0] = fr_flipper_msg_.data;
     };
 
     auto fl_callback = [this](std_msgs::msg::Float32 fl_flipper_msg_) -> void {
-        flipper_cmd_[1] = fl_flipper_msg_.data;
+        flipperCMD[1] = fl_flipper_msg_.data;
     };
 
     auto rr_callback = [this](std_msgs::msg::Float32 rr_flipper_msg_) -> void {
-        flipper_cmd_[2] = rr_flipper_msg_.data;
+        flipperCMD[2] = rr_flipper_msg_.data;
     };
 
     auto rl_callback = [this](std_msgs::msg::Float32 rl_flipper_msg_) -> void {
-        flipper_cmd_[3] = rl_flipper_msg_.data;
+        flipperCMD[3] = rl_flipper_msg_.data;
     };
 
     // configure subscribers to listen to command topics from teleop node
@@ -118,9 +118,10 @@ controller_interface::CallbackReturn FlipperController::on_configure(const rclcp
 
 
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        flipper_cmd_[i] = 0.0;
-        pos_cmd_[i]     = 0.0;
-        torque_cmd_[i]  = 0.0;
+        flipperCMD[i]  = 0.0;
+        positionCMD[i] = 0.0;
+        velocityCMD[i] = 0.0;
+        posOld[i]      = 0.0;
     }
 
     return CallbackReturn::SUCCESS;
@@ -128,7 +129,8 @@ controller_interface::CallbackReturn FlipperController::on_configure(const rclcp
 
 controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp_lifecycle::State &) {
     // clear out vectors in case of restart
-    joint_effort_command_interface_.clear();
+    joint_position_command_interface_.clear();
+    joint_velocity_command_interface_.clear();
     joint_position_state_interface_.clear();
     joint_velocity_state_interface_.clear();
     joint_effort_state_interface_.clear();
@@ -148,22 +150,15 @@ controller_interface::CallbackReturn FlipperController::on_activate(const rclcpp
 }
 
 controller_interface::return_type FlipperController::update(
-  const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/) {
+  const rclcpp::Time & /*time*/, const rclcpp::Duration &period) {
     for (std::size_t i = 0; i < joint_names_.size(); i++) {
-        if (flipper_cmd_[i] != 0.0) {
-            double dir_cmd = flipper_cmd_[i] / abs(flipper_cmd_[i]);
-            double dir_vel = joint_velocity_state_interface_[i].get().get_optional().value() / abs(joint_velocity_state_interface_[i].get().get_optional().value());
-            if (dir_vel != dir_cmd) {
-                torque_cmd_[i] += flipper_cmd_[i] * 0.05;
-                if (abs(torque_cmd_[i]) >= max_torque_) {
-                    torque_cmd_[i] = max_torque_ * dir_cmd;
-                }
-            }
+        velocityCMD[i] = maxSpeed * flipperCMD[i];
+        if (velocityCMD[i] != 0.0) {
+            posOld[i] = joint_position_state_interface_[i].get().get_optional().value();
         }
-        else {
-            torque_cmd_[i] = 0.0;
-        }
-        (void)joint_effort_command_interface_[i].get().set_value(torque_cmd_[i]);
+        positionCMD[i] = posOld[i] + velocityCMD[i] * period.seconds();
+        (void)joint_position_command_interface_[i].get().set_value(positionCMD[i]);
+        (void)joint_velocity_command_interface_[i].get().set_value(velocityCMD[i]);
     }
 
     return controller_interface::return_type::OK;

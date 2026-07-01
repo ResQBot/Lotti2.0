@@ -103,7 +103,7 @@
       lower="-3.2"
       upper="3.2"
       effort="0"
-      velocity="0" />
+      velocity="8" />
   </joint>
 
   <link name="arm2_link">
@@ -156,7 +156,7 @@
       lower="-0.1"
       upper="3.3"
       effort="0"
-      velocity="0" />
+      velocity="8" />
   </joint>
 
   <link name="arm3_link">
@@ -209,7 +209,7 @@
       lower="-0.1"
       upper="3.3"
       effort="0"
-      velocity="0" />
+      velocity="8" />
   </joint>
 
   <link name="arm4_link">
@@ -262,7 +262,7 @@
       lower="-3.3"
       upper="3.3"
       effort="0"
-      velocity="0" />
+      velocity="8" />
   </joint>
 
   <link name="arm5_link">
@@ -315,7 +315,7 @@
       lower="-3.3"
       upper="3.3"
       effort="0"
-      velocity="0" />
+      velocity="8" />
   </joint>
 
   <link name="arm6_link">
@@ -368,7 +368,7 @@
       lower="-3.3"
       upper="3.3"
       effort="0"
-      velocity="0" />
+      velocity="8" />
   </joint>
 
   <link name="arm7_link">
@@ -421,7 +421,7 @@
       lower="-0.6"
       upper="1.2"
       effort="0"
-      velocity="0" />
+      velocity="8" />
   </joint>
 
 

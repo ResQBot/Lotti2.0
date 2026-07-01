@@ -157,21 +157,21 @@ class DriveComms {
         // Read CMD byte
         if (!read_exact(&b, 1) || b != 0xE8) {
             // throw std::runtime_error("Invalid CMD byte");
-            std::cout << "invalid CMD byte" << static_cast<char>(b);
+            std::cout << "invalid CMD byte" << static_cast<char>(b) << std::endl;
         }
         // Read CAN ID (4 bytes)
         uint8_t id4, id3, id2, id1;
         if (!read_exact(&id4, 1) || !read_exact(&id3, 1) || !read_exact(&id2, 1) || !read_exact(&id1, 1)) {
-            throw std::runtime_error("Failed to read CAN ID");
+            std::cout << "Failed to read CAN ID" << std::endl;
         }
         // Read 8 data bytes
         std::vector<uint8_t> data(8);
         if (!read_exact(data.data(), 8)) {
-            throw std::runtime_error("Failed to read data bytes");
+            std::cout << "Failed to read data bytes" << std::endl;
         }
         // Read tail byte
         if (!read_exact(&b, 1) || b != 0x55) {
-            throw std::runtime_error("Invalid tail byte");
+            std::cout << "Invalid tail byte" << std::endl;
         }
         uint32_t can_id = id4 | (id3 << 8) | (id2 << 16) | (id1 << 24);
 

@@ -29,7 +29,8 @@ lotti2_flipper_controller:
     - flipper_rr_joint
     - flipper_rl_joint
     command_interfaces:
-    - effort
+    - position
+    - velocity
     state_interfaces:
     - position
     - effort
@@ -46,7 +47,7 @@ lotti2_drive_controller:
     wheel_separation: 0.30
     wheel_radius: 0.11
 
-    wheel_separation_multiplier: 1.0
+    wheel_separation_multiplier: 4.0
     left_wheel_radius_multiplier: 1.0
     right_wheel_radius_multiplier: 1.0
 

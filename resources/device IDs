@@ -1,0 +1,27 @@
+Cameras:
+    Camera 1:
+        usb-Aukey-PC-LM1E_Camera_Aukey-PC-LM1E_Camera-video-index0
+        usb-Aukey-PC-LM1E_Camera_Aukey-PC-LM1E_Camera-video-index1
+    Camera 2:
+        usb-Creative_Technology_Ltd._Live__Cam_Sync_HD_VF0770-video-index0
+        usb-Creative_Technology_Ltd._Live__Cam_Sync_HD_VF0770-video-index1
+    Camera 3:
+        usb-H264_USB_Camera_H264_USB_Camera_2020032801-video-index0
+        usb-H264_USB_Camera_H264_USB_Camera_2020032801-video-index1
+    Camera 4:
+        usb-H264_USB_Camera_H264_USB_Camera_2020032801-video-index2
+        usb-H264_USB_Camera_H264_USB_Camera_2020032801-video-index3
+    Camera 5: 
+        usb-PC-LM1E_PC-LM1E_PC-LM1E-video-index0
+        usb-PC-LM1E_PC-LM1E_PC-LM1E-video-index1
+
+
+Serial-Dongles:
+    CAN Adapter:
+        usb-1a86_USB_Serial-if00-port0
+    
+    RS485 Arm:
+        usb-1a86_USB_Single_Serial_5A99054368-if00
+    
+    Unitree 3:
+        usb-FTDI_USB__-__Serial_Converter_FTA362Q0-if00-port0
