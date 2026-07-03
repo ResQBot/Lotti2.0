@@ -47,7 +47,7 @@ class ArmComms {
         for (size_t i = 1; i < 7; i++) {
             motor_id = static_cast<uint8_t>(i);
             sendRequest(cmd, motor_id, static_cast<uint8_t>(mode));  // issue the request to the motors
-            usleep(10000);
+            usleep(3000);
         }
     }
 
@@ -154,9 +154,6 @@ class ArmComms {
         }
         // serial_conn_.FlushIOBuffers();  // just in case
         serial_conn_.Write(reqMsg);  // the serial port issues a motor enable command
-    }
-
-    void sendArm() {
     }
 
 

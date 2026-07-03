@@ -13,8 +13,8 @@ class FFmpegCameraNode(Node):
         self.declare_parameter('device', '/dev/video0')
         self.declare_parameter('camera_name', 'camera_1')
         self.declare_parameter('width', 640)
-        self.declare_parameter('height', 480)
-        self.declare_parameter('fps', 20)
+        self.declare_parameter('height', 360)
+        self.declare_parameter('fps', 10)
 
         device      = self.get_parameter('device').value
         camera_name = self.get_parameter('camera_name').value
@@ -45,6 +45,7 @@ class FFmpegCameraNode(Node):
             '-video_size', f'{width}x{height}',
             '-i', device,
             '-err_detect', 'ignore_err',
+            '-q:v', '15',
             '-vcodec', 'copy',      
             '-f', 'mjpeg',          
             'pipe:1'

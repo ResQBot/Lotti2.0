@@ -212,6 +212,7 @@ def generate_launch_description():
     joy_node = Node(
         package='joy',
         executable='joy_node',
+        parameters='deadzone:="0.2"'
     )
 
     teleop_package = get_package_share_directory('lotti2_teleop')

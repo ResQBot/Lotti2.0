@@ -25,11 +25,11 @@ class CameraDashboard(Node):
         # Dynamically scales to any number of cameras added or renamed here.
         # =====================================================================
         self.camera_config = [
-            {'name': 'front_left',  'topic': '/camera_1/image_raw/compressed'},
-            {'name': 'front_right', 'topic': '/camera_2/image_raw/compressed'},
-            {'name': 'back_left',   'topic': '/camera_3/image_raw/compressed'},
+            {'name': 'front_left',  'topic': '/camera_1/image_raw/compressed'}, # front kamera
+            {'name': 'front_right', 'topic': '/camera_2/image_raw/compressed'}, #Armkamera umgedreht
+            {'name': 'back_left',   'topic': '/camera_3/image_raw/compressed'}, # Rückfahrkamera
             #{'name': 'back_right',  'topic': '/camera_4/image_raw/compressed'},
-            {'name': 'arm_camera',  'topic': '/camera_5/image_raw/compressed'}
+            {'name': 'arm_camera',  'topic': '/camera_5/image_raw/compressed'} # Rückfahrkamera umgedreht
         ]
 
         # Name of the specific camera designated for advanced AI analysis (YOLO + QR + Motion)
@@ -274,14 +274,22 @@ def main(args=None):
             
             for cam_name, frame in display_frames.items():
                 if frame is not None:
+
+# 1. Kameras anhand ihrer korrekten Config-Namen um 180 Grad drehen
+                    if (cam_name == 'front_right'):  
+                        frame = cv2.rotate(frame, cv2.ROTATE_180)
+
+                    if (cam_name == 'arm_camera'): 
+                        frame = cv2.rotate(frame, cv2.ROTATE_180)
+
                     text = display_text.get(cam_name, "")
                     if text: 
                         text_color = (0, 0, 255) if ("HAZARDS" in text or "MOTION: ACTIVE" in text) else (0, 255, 0)
                         cv2.putText(frame, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
                                     0.5, text_color, 2, cv2.LINE_AA)
-                    
                     window_title = cam_name.replace('_', ' ').upper() + " FEED"
                     cv2.imshow(window_title, frame)
+
 
             # Handle Keyboard Intercepts across UI Windows
             key = cv2.waitKey(1) & 0xFF

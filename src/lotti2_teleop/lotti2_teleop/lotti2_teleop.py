@@ -309,18 +309,24 @@ class TeleOp(Node):
     def __calcAndSendFlippers(self):
         # check if arm mode is active        
         if (self.__arm_enabled == False):
-            # left trigger lowers flippers, right trigger lifts flippers
-            self.__flipper_speed = ((self.__left_trigger + 1) / 2) - ((self.__right_trigger + 1) / 2)
-            self.__fr_flipper_cmd.data = self.__button_y * self.__flipper_speed
-            self.__fl_flipper_cmd.data = self.__button_x * self.__flipper_speed
-            self.__rr_flipper_cmd.data = self.__button_b * self.__flipper_speed         
-            self.__rl_flipper_cmd.data = self.__button_a * self.__flipper_speed
-            if (self.__button_rb == 1) :
-                self.__fr_flipper_cmd.data = self.__flipper_speed
-                self.__fl_flipper_cmd.data = self.__flipper_speed
-            if (self.__button_lb == 1) :
-                self.__rr_flipper_cmd.data = self.__flipper_speed
-                self.__rl_flipper_cmd.data = self.__flipper_speed
+            if (self.__button_y or self.__button_x or self.__button_a or self.__button_b):
+                self.__fr_flipper_cmd.data = -self.__button_y * self.__d_pad_y
+                self.__fl_flipper_cmd.data = -self.__button_x * self.__d_pad_y
+                self.__rr_flipper_cmd.data = -self.__button_b * self.__d_pad_y         
+                self.__rl_flipper_cmd.data = -self.__button_a * self.__d_pad_y
+            else:         
+                if (self.__button_rb == 1):
+                    self.__fr_flipper_cmd.data = -1.0
+                    self.__fl_flipper_cmd.data = -1.0
+                else:
+                    self.__fr_flipper_cmd.data = -(self.__right_trigger-1)/2
+                    self.__fl_flipper_cmd.data = -(self.__right_trigger-1)/2
+                if (self.__button_lb == 1) :
+                    self.__rr_flipper_cmd.data = -1.0
+                    self.__rl_flipper_cmd.data = -1.0
+                else:
+                    self.__rr_flipper_cmd.data = -(self.__left_trigger-1)/2
+                    self.__rl_flipper_cmd.data = -(self.__left_trigger-1)/2
 
         else:
             self.__fr_flipper_cmd.data = 0.0
@@ -347,16 +353,10 @@ class TeleOp(Node):
                 self.__chains_angle = self.__left_stick_x
             # check "backward driving" button for convenience
             if (self.__direction == True):
-                if (abs(self.__left_stick_y)<0.2):
-                    self.__chain_msg.twist.linear.x = 0.0
-                else:
-                    self.__chain_msg.twist.linear.x = -self.__left_stick_y
+                self.__chain_msg.twist.linear.x = -self.__left_stick_y
                 self.__chain_msg.twist.angular.z = -self.__chains_angle
             else:
-                if (abs(self.__left_stick_y)<0.2):
-                    self.__chain_msg.twist.linear.x = 0.0
-                else:
-                    self.__chain_msg.twist.linear.x = self.__left_stick_y
+                self.__chain_msg.twist.linear.x = self.__left_stick_y
                 self.__chain_msg.twist.angular.z = self.__chains_angle
         else:       
             self.__chain_msg.twist.linear.x = 0.0
@@ -374,7 +374,6 @@ class TeleOp(Node):
         if (self.__arm_enabled == True):
             # calc arm tilt        
             tilt = abs((self.__right_trigger -1)/2) + (self.__left_trigger -1)/2
-            
             # construct arm message
             # linear x-y-z is for linear motion relative to the reference link
             # angular x-y-z is for rotation around the reference links axes
@@ -386,12 +385,12 @@ class TeleOp(Node):
             self.__arm_msg.twist.angular.x = self.__d_pad_x
             
             # construct joint message
-            joint1 = float(self.__button_rb -self.__button_lb)
+            joint1 = float(self.__button_lb - self.__button_rb)
             joint2 = float(self.__button_x - self.__button_a)
             joint3 = float(self.__button_y - self.__button_b)
             #gripper = float(self.__right_stick_press - self.__left_stick_press)
             
-            self.__gripper_msg.velocities = [joint1, joint2, joint3, - self.__right_stick_x, self.__right_stick_y, tilt]
+            self.__gripper_msg.velocities = [joint1, joint2, joint3, -self.__right_stick_x, self.__right_stick_y, tilt]
 
         else:
             self.__arm_msg.twist.linear.x = 0.0
