@@ -1,0 +1,43 @@
+# Robotics Project Academic License v1.0 (RPAL-1.0)
+Copyright (c) 2026 [Res.Q Bots Austria]
+## 1. Scope
+This license applies to all contents of this repository, including but not limited to:
+* Source code
+* Firmware
+* Hardware designs
+* CAD files
+* Schematics
+* PCB layouts
+* Documentation
+* Bill of Materials (BOM)
+* Images and other project assets
+## 2. Permitted Use
+Permission is hereby granted, free of charge, to use, copy, modify, and distribute this project for the following purposes only:
+* Academic research
+* Education and teaching
+* Private use
+* Other non-commercial activities
+All use is subject to the terms and conditions of this license.
+## 3. Attribution
+Any distribution, publication, public presentation, or derivative work based on this project must clearly acknowledge:
+* the original authors,
+* the affiliated university or institute (if applicable), and
+* the original project repository.
+## 4. Commercial Use
+Commercial use of this project, in whole or in part, is prohibited without prior written permission from the copyright holders.
+Commercial use includes, but is not limited to:
+* selling products or services incorporating this project;
+* integrating this project into commercial software or hardware;
+* manufacturing, selling, or distributing hardware based on the provided designs;
+* using this project in support of commercial services or consulting;
+* any use primarily intended for commercial advantage or monetary compensation.
+## 5. Redistribution
+Redistributions of this project, whether modified or unmodified, must include this license in its entirety.
+## 6. Disclaimer of Warranty
+THIS PROJECT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+## 7. Limitation of Liability
+IN NO EVENT SHALL THE AUTHORS, COPYRIGHT HOLDERS, OR THEIR AFFILIATED UNIVERSITY OR INSTITUTE BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THIS PROJECT OR THE USE OF THIS PROJECT.
+## 8. Commercial Licensing
+Organizations or individuals wishing to use this project for commercial purposes must obtain a separate written license from the copyright holders.
+Commercial licensing inquiries should be directed to:
+**[[resqbots@hcw.ac.at](mailto:resqbots@hcw.ac.at)]**
