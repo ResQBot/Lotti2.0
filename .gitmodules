@@ -1,0 +1,6 @@
+[submodule "external/athena"]
+	path = external/athena
+	url = https://github.com/tu-darmstadt-ros-pkg/athena.git
+[submodule "external/hector_ros2_utils"]
+	path = external/hector_ros2_utils
+	url = https://github.com/tu-darmstadt-ros-pkg/hector_ros2_utils.git
