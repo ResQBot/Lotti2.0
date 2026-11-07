@@ -1,0 +1,10 @@
+.antigravity/
+.claude/
+.idea/
+.vscode/
+build/
+cmake-build-*/
+log/
+install/
+AGENTS.md
+CLAUDE.md

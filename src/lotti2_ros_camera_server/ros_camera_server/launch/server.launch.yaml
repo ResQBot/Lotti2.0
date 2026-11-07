@@ -1,0 +1,25 @@
+launch:
+  - arg:
+      name: "name"
+      default: "$(anon camera_server)"
+  - arg:
+      name: "config_path"
+      default: "$(find-pkg-share ros_camera_server)/config/config.yaml"
+  # Increase timeouts to give more time for cleaning up resources.
+  - arg:
+      name: "sigterm_timeout"
+      default: "20"
+  - arg:
+      name: "sigkill_timeout"
+      default: "30"
+  - arg:
+      name: "log_level"
+      default: "info"
+  - node:
+      pkg: "ros_camera_server"
+      exec: "camera_server_standalone"
+      name: "$(var name)"
+      args: "--ros-args --log-level ros_camera_server:=$(var log_level)"
+      param:
+        - name: config_path
+          value: "$(var config_path)"

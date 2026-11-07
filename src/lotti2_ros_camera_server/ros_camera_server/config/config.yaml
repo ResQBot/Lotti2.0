@@ -1,0 +1,23 @@
+robot: "lotti2"
+address: "0.0.0.0"
+signaling_port: 8443
+
+cameras:
+  acer_fhd_camera:
+    name: "Acer FHD Camera"
+    input:
+      type: v4l2
+      device: "/dev/video0"
+      width: 1280
+      height: 720
+      framerate: "30/1"
+      media_type: "image/jpeg"
+
+    outputs:
+      - type: webrtc
+        codec: h264
+        width: 1280
+        height: 720
+        bitrate: 800                # Reduziere die Bitrate leicht auf 800 kbps
+        # Falls vom ros_camera_server unterstützt, Latenz auf 0 setzen:
+        latency: 0                  # Erzwingt minimale Pufferung
