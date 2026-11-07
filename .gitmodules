@@ -1,0 +1,6 @@
+[submodule "external/ros_camera_server"]
+	path = external/ros_camera_server
+	url = https://github.com/StefanFabian/ros_camera_server.git
+[submodule "external/gstreamer_ros_babel_fish"]
+	path = external/gstreamer_ros_babel_fish
+	url = https://github.com/StefanFabian/gstreamer_ros_babel_fish.git
