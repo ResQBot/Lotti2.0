@@ -12,12 +12,17 @@ cameras:
       height: 720
       framerate: "30/1"
       media_type: "image/jpeg"
-
     outputs:
       - type: webrtc
         codec: h264
         width: 1280
         height: 720
-        bitrate: 800                # Reduziere die Bitrate leicht auf 800 kbps
-        # Falls vom ros_camera_server unterstützt, Latenz auf 0 setzen:
-        latency: 0                  # Erzwingt minimale Pufferung
+        bitrate: 800
+        latency: 0
+        
+      - type: srt
+        codec: h264
+        port: 7101
+        bitrate: 800
+        width: 1280
+        height: 720
