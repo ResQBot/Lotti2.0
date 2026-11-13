@@ -12,6 +12,7 @@ See -> what is missing from the Backup.
 ## Step 2 - If it's just not properly providing power
 Measure if the Batteries provide the Proper voltage.
 If they do then check and replace the fuse.
+#### CHECK THE FUESES FIRST, THEY CAN AND WILL BURN THROUGH AND THE DEVICE WILL STOP PROVIDING POWER. THAT IS WHAT THEY ARE USED FOR
 
 You can check if the Relais click if you turn them on.
 
